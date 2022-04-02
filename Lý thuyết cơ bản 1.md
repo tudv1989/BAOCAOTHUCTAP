@@ -92,14 +92,14 @@ Nên người ta đã phát triển ra IPv6.
 
 ## Một địa chỉ IPv6 có thể được phân thành 1 trong 3 loại:
 
-- Unicast
-  Một địa chỉ unicast được định nghĩa duy nhất trên một cổng của một node IPv6. Một gói tin được gởi đến một địa chỉ unicast được đưa đến cổng được định nghĩa bởi địa chỉ đó.
+- *Unicast*:
+  một địa chỉ unicast được định nghĩa duy nhất trên một cổng của một node IPv6. Một gói tin được gởi đến một địa chỉ unicast được đưa đến cổng được định nghĩa bởi địa chỉ đó.
 
-- Multicast
- Một địa chỉ multicast định nghĩa một nhóm các cổng IPv6. Một gói tin gởi đến địa chỉ multicast được xử lý bởi tất cả những thành viên của nhóm multicast.
+- *Multicast*:
+ một địa chỉ multicast định nghĩa một nhóm các cổng IPv6. Một gói tin gởi đến địa chỉ multicast được xử lý bởi tất cả những thành viên của nhóm multicast.
 
-- Anycast
- Một địa chỉ anycast được đăng kí cho nhiều cổng (trên nhiều node). Một gói tin được gởi đến một địa chỉ anycast là được chuyển đến chỉ một trong số các cổng này, thường là gần nhất.
+- *Anycast*:
+ một địa chỉ anycast được đăng kí cho nhiều cổng (trên nhiều node). Một gói tin được gởi đến một địa chỉ anycast là được chuyển đến chỉ một trong số các cổng này, thường là gần nhất.
  # 7.VLAN
  ## Định nghĩa
  - Vlan (Lan ảo)là khái niệm chia mạng LAN ra thành nhiều mạng LAN con nhỏ hơn,  về mặt logic nhưng vẫn chung hạ tầng.
@@ -108,18 +108,20 @@ Nên người ta đã phát triển ra IPv6.
  ## Định nghĩa: 
 - Định tuyến là quá trình xác định hướng đi của  gói tin của thiết bị layer 3 như router,sw lớp 3.
 - Có 2 loại định tuyến là định tuyến động và định tuyến tĩnh
-Định tuyến tĩnh: xác định đường đi cố định cho thiết bị(default rout)
-Định tuyến động : Khi cấu hình giao thức định tuyến động trên router, Tùy thuộc metrix của giao thức mà router sẽ chọn ra phương thức định tuyến có metrix thấp chuyển bản tin.1 số giao thức động như RIP,OSPF,BGP...
+
+    - Định tuyến tĩnh: xác định đường đi cố định cho thiết bị(default rout)
+
+    - Định tuyến động : Khi cấu hình giao thức định tuyến động trên router, Tùy thuộc metrix của giao thức mà router sẽ chọn ra phương thức định tuyến có metrix thấp chuyển bản tin.1 số giao thức động như RIP,OSPF,BGP...
 
 # 9.NAT
 ## Định nghĩa
 Nói đến NAT ta phải nói đến loại địa chỉ IP Public và IP private
-- Địa chỉ Private lớp A :  10,0.0.0 đến 10.255.255.255
+- Địa chỉ Private lớp A :  10.0.0.0 đến 10.255.255.255
 - Địa chỉ Private lớp B :172.16.0.0 đến 172.31.255.255
 - Địa chỉ Private lớp C :  192.168.0.0 đến 192.168.255.255
 Do nhu cầu cấp thiết và khan hiếm địa chỉ IP nên người ta đã phát minh 2 loại IP trên,và phát minh ra công nghệ NAT (Network Address Translation ) tức là chuyển dịch loại địa chỉ  IP Local sang IP Public
 ## Vài loại NAT cơ bản như: 
-- Static NAT là kỹ thuật dùng để thay đổi, biến một IP này thành một IP khác. Bằng cách sử dụng phương pháp cố định cụ thể từ địa chỉ IP cục bộ sang Public.
-- Dynamic NAT là kỹ thuật dùng để ánh xạ một địa chỉ IP này sang một địa chỉ IP khác (one – to – one) bằng phương pháp tự động. Thông thường, Dynamic NAT sẽ chuyển đổi từ IP mạng cục bộ sang địa chỉ IP được đăng ký hợp lệ
-- NAT Overload còn có tên gọi khác là PAT (Port Address Translation). Đây là một dạng biến thể khác của Dynamic NAT. Nó cũng thực hiện chuyển đổi địa chỉ IP một cách tự động. Tuy nhiên, kiểu chuyển dịch địa chỉ của NAT Overload là dạng many – to – one (ánh xạ nhiều địa chỉ IP thành 1 địa chỉ IP) và dùng các chỉ số cổng (port) khác nhau để phân biệt cho từng chuyển đổi.
+- *Static NAT* là kỹ thuật dùng để thay đổi, biến một IP này thành một IP khác. Bằng cách sử dụng phương pháp cố định cụ thể từ địa chỉ IP cục bộ sang Public.
+- *Dynamic NAT* là kỹ thuật dùng để ánh xạ một địa chỉ IP này sang một địa chỉ IP khác (one – to – one) bằng phương pháp tự động. Thông thường, Dynamic NAT sẽ chuyển đổi từ IP mạng cục bộ sang địa chỉ IP được đăng ký hợp lệ
+- *NAT Overload* còn có tên gọi khác là PAT (Port Address Translation). Đây là một dạng biến thể khác của Dynamic NAT. Nó cũng thực hiện chuyển đổi địa chỉ IP một cách tự động. Tuy nhiên, kiểu chuyển dịch địa chỉ của NAT Overload là dạng many – to – one (ánh xạ nhiều địa chỉ IP thành 1 địa chỉ IP) và dùng các chỉ số cổng (port) khác nhau để phân biệt cho từng chuyển đổi.
 
