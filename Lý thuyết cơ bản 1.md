@@ -62,7 +62,7 @@ Tầng này có 2 giao thức chính là TCP ( Transmisson Control Protocol) và
 - **DHCP** là giao thức cấp phát địa chỉ IP tự động,khi 1 host tham gia 1 mạng nếu chưa có địa chỉ IP thì host đó sẽ tiến hành 1 quá trình đi xin cấp địa chỉ do DHCP server cung cấp
 - **ARP** (viết tắt của cụm từ Address Resolution Protocol) là giao thức mạng được dùng để tìm ra địa chỉ phần cứng (địa chỉ MAC) của thiết bị từ một địa chỉ IP nguồn
 - **SNMP** là viết tắt của từ Simple Network Monitoring Protocol ,Là 1 giao thức dùng để giám sát các thiết bị quang trọng với các thông số cần thiết để giám sát.
-- **SMTP** là giao thứ gửi thư đơn giản hoạt động ở port TCP=25 không mã hóa, Hoặc có mã hóa SSL/TLS là TCP 465
+- **SMTP** là giao thức gửi thư đơn giản hoạt động ở port TCP=25 không mã hóa, Hoặc có mã hóa SSL/TLS là TCP 465
 # 4.Phân Biệt TCP/UDP
 - Định nghĩa: TCP là giao thức truyền tin tin cậy, còn UDP là không tin cậy
 So sánh theo định nghĩa thì TCP là truyền tin theo dạng gói - ở giao thức này nếu gói tin bị rớt thì sẽ được gửi lại(đảm bảo tính trọn vẹn của bản tin), còn UDP là truyền tin theo thời gian thực(gói tin bị rớt sẽ không cần gửi lại, không thể khôi phục-dùng  streaming,truyền hình trực tiếp,gọi điện... ) chỉ có lưu lại hoặc xem lại.
