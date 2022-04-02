@@ -2,8 +2,6 @@
 ## Định Nghĩa
 - Là mô hình truyền dữ liệu,nó chia làm 7 tầng, mỗi tầng thực hiện 1 chức năng ,nhiêm vụ để đảm bảo 1 gói tin truyền đi tìm đến được đích.
 
-##Mô hình bảy tầng
-
 ![2ba4804d27da9dc85d415381958b2205](https://uphinh.vn/images/2022/04/02/2ba4804d27da9dc85d415381958b2205.png)
 >Tầng 1: Tầng vật lý (Physical Layer) 
 Là các thiết bị nhìn thấy trong mạng: Dây mạng,ổ điện,trang thiết bị phần cứng...
