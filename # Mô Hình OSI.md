@@ -42,7 +42,10 @@ Chuyển tiếp: chuyển tiếp gói tin từ cổng nguồn tới cổng đíc
 Tầng này có 2 giao thức chính là TCP ( Transmisson Control Protocol) và UDP ( User Datagram Protocol )
 - Tầng 4: Tầng ứng dụng (Application). Nó cung cấp giao tiếp đến người dùng,cung cấp các ứng dụng cho phép người dùng trao đổi dữ liệu ứng dụng thông qua các dịch vụ mạng khác nhau (như duyệt web, chat, gửi email,...).Các giao thức tầng này : http, ftp,snmp,dns....
 
-
+# Tìm hiểu các giao thức :
+- HTTP là giao thức truyền tải siêu văn bản (web) không mã hóa dữ liệu khi truyền, sử dụng port TCP=80
+- DNS là là viết tắt của cụm từ Domain Name System, mang ý nghĩa đầy đủ là hệ thống phân giải tên miền
+  Khi chúng ta truy cập vào 1 dịch vụ của 1 host nào đó chúng ta rất khó nhớ địa chỉ IP của nó, nên DNS được sinh ra
 
 
 
