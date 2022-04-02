@@ -66,7 +66,7 @@ Tầng này có 2 giao thức chính là TCP ( Transmisson Control Protocol) và
 # 4.Phân Biệt TCP/UDP
 - Định nghĩa: TCP là giao thức truyền tin tin cậy, còn UDP là không tin cậy
 
-So sánh theo định nghĩa thì TCP là truyền tin theo dạng gói - ở giao thức này nếu gói tin bị rớt thì sẽ được gửi lại(đảm bảo tính trọn vẹn của bản tin), còn UDP là truyền tin theo thời gian thực(gói tin bị rớt sẽ không cần gửi lại, không thể khôi phục-dùng  streaming,truyền hình trực tiếp,gọi điện... ) chỉ có lưu lại hoặc xem lại.
+ So sánh theo định nghĩa thì TCP là truyền tin theo dạng gói - ở giao thức này nếu gói tin bị rớt thì   sẽ được gửi lại(đảm bảo tính trọn vẹn của bản tin), còn UDP là truyền tin theo thời gian thực(gói tin bị rớt sẽ không cần gửi lại, không thể khôi phục-dùng  streaming,truyền hình trực tiếp,gọi điện... ) chỉ có lưu lại hoặc xem lại.
 # 5.IPv4
 - Địa chỉ IPv4 là 1 dãy 32 bit nhị phân liên tiếp nhau,32 bít này chia làm 4 octet, mỗi octet là 8 bit, Mỗi octet này sẽ có vai trò tính chất là phần net hoặc host của địa chỉ.
 - Có 5 lớp Ipv4 A,B,C,D,E.
