@@ -119,6 +119,7 @@ Nói đến NAT ta phải nói đến loại địa chỉ IP Public và IP priva
 - Địa chỉ Private lớp A :  10.0.0.0 đến 10.255.255.255
 - Địa chỉ Private lớp B :172.16.0.0 đến 172.31.255.255
 - Địa chỉ Private lớp C :  192.168.0.0 đến 192.168.255.255
+
 Do nhu cầu cấp thiết và khan hiếm địa chỉ IP nên người ta đã phát minh 2 loại IP trên,và phát minh ra công nghệ NAT (Network Address Translation ) tức là chuyển dịch loại địa chỉ  IP Local sang IP Public
 ## Vài loại NAT cơ bản như: 
 - *Static NAT* là kỹ thuật dùng để thay đổi, biến một IP này thành một IP khác. Bằng cách sử dụng phương pháp cố định cụ thể từ địa chỉ IP cục bộ sang Public.
