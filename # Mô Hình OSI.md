@@ -8,7 +8,7 @@
 
 
 
-# Mô Hình OSI
+## 1.Mô Hình OSI
 
  Là mô hình truyền dữ liệu,nó chia làm 7 tầng, mỗi tầng thực hiện 1 chức năng ,nhiêm vụ để đảm bảo 1 gói tin truyền đi tìm đến được đích.
 
@@ -37,7 +37,7 @@ Tầng trình diễn hoạt động như tầng dữ liệu trên mạng. Tầng
 - Tầng 7: Tầng ứng dụng (Application layer)
 Tầng ứng dụng là tầng gần với người sử dụng nhất. Nó cung cấp phương tiện cho người dùng truy nhập các thông tin và dữ liệu trên mạng thông qua chương trình ứng dụng. Tầng này là giao diện chính để người dùng tương tác với máy tính thông qua chương trình ứng dụng. Một số ví dụ về các ứng dụng trong tầng này bao gồm HTTP, Telnet, FTP (giao thức truyền tập tin) và các giao thức truyền thư điện tử như SMTP, IMAP, POP3.
 
-# Mô Hình TCP/IP
+## 2.Mô Hình TCP/IP
 
 Là mô hình truyền tin nhưng người ta đã rút gọn còn 4 tầng chồng lên nhau :
 - Tầng 1: Tầng vật lý (Network Access Nó là sự kết hợp của tầng Data Link và Physical trong mô hình OSI 
@@ -53,7 +53,7 @@ Chuyển tiếp: chuyển tiếp gói tin từ cổng nguồn tới cổng đíc
 Tầng này có 2 giao thức chính là TCP ( Transmisson Control Protocol) và UDP ( User Datagram Protocol )
 - Tầng 4: Tầng ứng dụng (Application). Nó cung cấp giao tiếp đến người dùng,cung cấp các ứng dụng cho phép người dùng trao đổi dữ liệu ứng dụng thông qua các dịch vụ mạng khác nhau (như duyệt web, chat, gửi email,...).Các giao thức tầng này : http, ftp,snmp,dns....
 
-# Tìm hiểu các giao thức :
+## 3.Tìm hiểu các giao thức :
 - **HTTP**: là giao thức truyền tải siêu văn bản (web) không mã hóa dữ liệu khi truyền, sử dụng port mặc định TCP=80
 - **DNS**: là là viết tắt của cụm từ Domain Name System, mang ý nghĩa đầy đủ là hệ thống phân giải tên miền
   Khi chúng ta truy cập vào 1 dịch vụ của 1 host nào đó chúng ta rất khó nhớ địa chỉ IP của nó, nên DNS được sinh ra.Port mặc định TCP và UDP đều =53
@@ -63,6 +63,7 @@ Tầng này có 2 giao thức chính là TCP ( Transmisson Control Protocol) và
 - **ARP** (viết tắt của cụm từ Address Resolution Protocol) là giao thức mạng được dùng để tìm ra địa chỉ phần cứng (địa chỉ MAC) của thiết bị từ một địa chỉ IP nguồn
 - **SNMP** là viết tắt của từ Simple Network Monitoring Protocol ,Là 1 giao thức dùng để giám sát các thiết bị quang trọng với các thông số cần thiết để giám sát.
 - **SMTP** là giao thứ gửi thư đơn giản hoạt động ở port TCP=25 không mã hóa, Hoặc có mã hóa SSL/TLS là TCP 465
-# Phân Biệt TCP/UDP
+# 4.Phân Biệt TCP/UDP
 - Định nghĩa: TCP là giao thức truyền tin tin cậy, còn UDP là không tin cậy
  So sánh theo định nghĩa thì TCP là truyền tin theo dạng gói - ở giao thức này nếu gói tin bị rớt thì sẽ được gửi lại(đảm bảo tính trọn vẹn của bản tin), còn UDP là truyền tin theo thời gian thực(gói tin bị rớt sẽ không cần gửi lại, không thể khôi phục-dùng  streaming,truyền hình trực tiếp,gọi điện... ) chỉ có lưu lại hoặc xem lại.
+ 
