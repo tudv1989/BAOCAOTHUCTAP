@@ -6,7 +6,7 @@
 - 5.Định nghĩa và cấu trúc IPv4,IPv6
 - 6.Định nghĩa về routing ,NAT,VLAN...
 
-
+<img src="img/1.png">
 
 ## 1.Mô Hình OSI
 
@@ -75,5 +75,5 @@ Lớp C của địa chỉ Ipv4 dùng 3 octet đầu làm phần net và 1 octet
 Lớp D được sử dụng làm các địa chỉ multicast và dải địa chỉ lớp D từ 224.0.0.0 -> 239.255.255.255. Lấy ví dụ như Ví dụ: 224.0.0.5 dùng cho OSPF; 224.0.0.9 dùng cho RIPv2.
 Lớp E gồm các giải số từ 240.0.0.0 trở đi và được sử dụng cho mục đích dự phòng.
 Do thế giới ngày càng sản xuất ra nhiều thiết bị tham gia mạng nên tình trạng địa chỉ IP đang bị thiếu
-Nên người ta đã phát triển ra IPv6
+Nên người ta đã phát triển ra IPv6.
 # 6.IPv6
