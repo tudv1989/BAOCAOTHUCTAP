@@ -6,7 +6,7 @@
 - 5.Định nghĩa và cấu trúc IPv4,IPv6
 - 6.Định nghĩa về routing ,NAT,VLAN...
 
-<img src="img/1.png">
+
 
 ## 1.Mô Hình OSI
 
