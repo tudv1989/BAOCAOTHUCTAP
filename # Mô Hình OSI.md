@@ -1,4 +1,4 @@
-# 1-Mô Hình OSI
+# Mô Hình OSI
 
  Là mô hình truyền dữ liệu,nó chia làm 7 tầng, mỗi tầng thực hiện 1 chức năng ,nhiêm vụ để đảm bảo 1 gói tin truyền đi tìm đến được đích.
 
@@ -41,7 +41,7 @@ Chuyển tiếp: chuyển tiếp gói tin từ cổng nguồn tới cổng đíc
 Tầng này có 2 giao thức chính là TCP ( Transmisson Control Protocol) và UDP ( User Datagram Protocol )
 - Tầng 4: Tầng ứng dụng (Application). Nó cung cấp giao tiếp đến người dùng,cung cấp các ứng dụng cho phép người dùng trao đổi dữ liệu ứng dụng thông qua các dịch vụ mạng khác nhau (như duyệt web, chat, gửi email,...).
 Các giao thức tầng này : http, ftp,snmp,dns....
-### So Sánh 2 mô hình OSI và TCP/IP
+# So Sánh 2 Mô Hình Trên
 
 
 
