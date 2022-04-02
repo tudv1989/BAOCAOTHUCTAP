@@ -30,6 +30,26 @@ Tầng trình diễn hoạt động như tầng dữ liệu trên mạng. Tầng
 Tầng 7: Tầng ứng dụng (Application layer)
 Tầng ứng dụng là tầng gần với người sử dụng nhất. Nó cung cấp phương tiện cho người dùng truy nhập các thông tin và dữ liệu trên mạng thông qua chương trình ứng dụng. Tầng này là giao diện chính để người dùng tương tác với chương trình ứng dụng, và qua đó với mạng. Một số ví dụ về các ứng dụng trong tầng này bao gồm HTTP, Telnet, FTP (giao thức truyền tập tin) và các giao thức truyền thư điện tử như SMTP, IMAP, X.400 Mail.
 
+### Mô Hình TCP/IP
+Cũng là mô hình truyền tin nhưng người ta đã rút gọn còn 4 tầng chồng lên nhau :
+
+
+Tầng 1: Tầng vật lý (Network Access Nó là sự kết hợp của tầng Data Link và Physical trong mô hình OSI (Mô hình này các bạn tìm hiểu thêm nhé. Bản chất nó cũng tương tự như TCP/IP)
+Là tầng thấp nhất trong mô hình TCP/IP.
+Chịu trách nhiệm truyền dữ liệu giữa các thiết bị trong cùng một mạng. Tại đây, các gói dữ liệu được đóng vào khung (Frame) và được định tuyến đi đến đích được chỉ định ban đầu
+
+Tầng 2: Tầng mạng (Internet) Xử lý quá trình truyền gói tin trên mạng.
+Định tuyến: tìm tuyến đường qua các nút trung gian để gửi dữ liệu từ nguồn tới đích.
+Chuyển tiếp: chuyển tiếp gói tin từ cổng nguồn tới cổng đích theo tuyến đường.
+Định địa chỉ : định danh cho các nút mạng.
+Đóng gói dữ liệu: nhận dữ liệu từ giao thức ở trên, chèn thêm phần Header chứa thông tin của tầng mạng và tiếp tục được chuyển đến tầng tiếp theo.
+Đảm bảo chất lượng dịch vụ(QoS): đảm bảo các thông số phù hợp của đường truyền theo từng dịch vụ.
+Tầng 3: Tầng giao vận (Transport) Chịu trách nhiệm duy trì liên lạc đầu cuối trên toàn mạng.
+Tầng này có 2 giao thức chính là TCP ( Transmisson Control Protocol) và UDP ( User Datagram Protocol )
+Tầng 4: Tầng ứng dụng (Application). Nó cung cấp giao tiếp đến người dùng,cung cấp các ứng dụng cho phép người dùng trao đổi dữ liệu ứng dụng thông qua các dịch vụ mạng khác nhau (như duyệt web, chat, gửi email,...).
+Dữ liệu khi đến đây sẽ được định dạng theo kiểu byte nối byte, cùng với đó là các thông tin định tuyến giúp xác định đường đi đúng của một gói tin.
+Các giao thức tầng này : http, ftp,snmp,dns....
+
 
 
 
