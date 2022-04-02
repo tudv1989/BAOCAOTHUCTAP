@@ -72,3 +72,8 @@ So sánh theo định nghĩa thì TCP là truyền tin theo dạng gói - ở gi
 Các tổ chức,doanh nghiệp có số lượng host tham gia mạng càng lớn thì địa chỉ càng gần các lớp A.Bit đầu tiên của địa chỉ lớp A luôn được chọn là 0. Dải địa chỉ mạng lớp A chạy từ 1.0.0.0 đến 126.0.0.0. Vì vậy lớp A sẽ có tổng cộng 126 mạng. Trong khi đó mạng Loopback là 127.0.0.0. Phần net của lớp A là 8 bit, host của lớp A có tất cả 24 bit
 Lớp B của địa chỉ Ipv4 sử dụng 2 obtet đầu làm phần mạng và 2 obtet sau làm phần host. Hai bit đầu tiên của lớp B luôn là 1 và 0. Dải địa chỉ mạng lớp B chạy từ 128.0.0.0 đến 191.255.0.0. Như vậy lớp B sẽ có tổng cộng 214 mạng.Phần net và host của lớp B là 16 bit
 Lớp C của địa chỉ Ipv4 dùng 3 octet đầu làm phần net và 1 octet sau làm phần host. Địa chỉ lớp C luôn có 3 bit đầu là 1 1 0. Dải mạng lớp C chạy từ 192.0.0.0 -> 223.255.255.0. Như vậy sẽ có 221 mạng trong lớp C.Phần net của lớp C sẽ là 24 bit, host chiếm 8 bit.
+Lớp D được sử dụng làm các địa chỉ multicast và dải địa chỉ lớp D từ 224.0.0.0 -> 239.255.255.255. Lấy ví dụ như Ví dụ: 224.0.0.5 dùng cho OSPF; 224.0.0.9 dùng cho RIPv2.
+Lớp E gồm các giải số từ 240.0.0.0 trở đi và được sử dụng cho mục đích dự phòng.
+Do thế giới ngày càng sản xuất ra nhiều thiết bị tham gia mạng nên tình trạng địa chỉ IP đang bị thiếu
+Nên người ta đã phát triển ra IPv6
+# 6.IPv6
