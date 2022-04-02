@@ -9,7 +9,7 @@ Là các thiết bị nhìn thấy trong mạng: Dây mạng,ổ điện,trang t
 
 - Tầng 2: Tầng liên kết dữ liệu (Data-Link Layer)
 Tầng liên kết dữ liệu cung cấp các phương tiện có tính chức năng và quy trình để truyền dữ liệu giữa các thực thể mạng (truy cập đường truyền, đưa dữ liệu vào mạng). Cách đánh địa chỉ mang tính vật lý, nghĩa là địa chỉ (địa chỉ MAC) được mã hóa cứng vào trong các thẻ mạng (network card) khi chúng được sản xuất .
-Tầng này ta chỉ nên quan tâm đến các thiết bị như SWitch,HUB,địa chỉ MAC của card mạng.
+Tầng này ta chỉ nên quan tâm đến các thiết bị như Switch,Hub,địa chỉ MAC của card mạng.
 
 - Tầng 3: Tầng mạng (Network Layer)
 Tầng mạng thực hiện chức năng định tuyến. Các thiết bị định tuyến (router) hoạt động tại tầng này ,1 gói tin khi đi ra khỏi router đi đường nào là do cấu hình giao thức định tuyến tại router này  (còn có thiết bị chuyển mạch (switch) tầng 3, còn gọi là chuyển mạch IP). tầng 3 chúng ta quan tâm đến địa chỉ IP.
@@ -27,6 +27,7 @@ Tầng trình diễn hoạt động như tầng dữ liệu trên mạng. Tầng
 Tầng ứng dụng là tầng gần với người sử dụng nhất. Nó cung cấp phương tiện cho người dùng truy nhập các thông tin và dữ liệu trên mạng thông qua chương trình ứng dụng. Tầng này là giao diện chính để người dùng tương tác với chương trình ứng dụng, và qua đó với mạng. Một số ví dụ về các ứng dụng trong tầng này bao gồm HTTP, Telnet, FTP (giao thức truyền tập tin) và các giao thức truyền thư điện tử như SMTP, IMAP, POP3.
 
 # Mô Hình TCP/IP
+
 Là mô hình truyền tin nhưng người ta đã rút gọn còn 4 tầng chồng lên nhau :
 - Tầng 1: Tầng vật lý (Network Access Nó là sự kết hợp của tầng Data Link và Physical trong mô hình OSI 
 Là tầng thấp nhất trong mô hình TCP/IP.Chịu trách nhiệm truyền dữ liệu giữa các thiết bị trong cùng một mạng. Tại đây, các gói dữ liệu được đóng vào khung (Frame) và được định tuyến đi đến đích được chỉ định ban đầu
@@ -41,7 +42,8 @@ Chuyển tiếp: chuyển tiếp gói tin từ cổng nguồn tới cổng đíc
 Tầng này có 2 giao thức chính là TCP ( Transmisson Control Protocol) và UDP ( User Datagram Protocol )
 - Tầng 4: Tầng ứng dụng (Application). Nó cung cấp giao tiếp đến người dùng,cung cấp các ứng dụng cho phép người dùng trao đổi dữ liệu ứng dụng thông qua các dịch vụ mạng khác nhau (như duyệt web, chat, gửi email,...).
 Các giao thức tầng này : http, ftp,snmp,dns....
-# So Sánh OSI và TCP/IP
+
+
 
 
 
