@@ -43,11 +43,14 @@ Tầng này có 2 giao thức chính là TCP ( Transmisson Control Protocol) và
 - Tầng 4: Tầng ứng dụng (Application). Nó cung cấp giao tiếp đến người dùng,cung cấp các ứng dụng cho phép người dùng trao đổi dữ liệu ứng dụng thông qua các dịch vụ mạng khác nhau (như duyệt web, chat, gửi email,...).Các giao thức tầng này : http, ftp,snmp,dns....
 
 # Tìm hiểu các giao thức :
-- **HTTP** là giao thức truyền tải siêu văn bản (web) không mã hóa dữ liệu khi truyền, sử dụng port TCP=80
-- **DNS** là là viết tắt của cụm từ Domain Name System, mang ý nghĩa đầy đủ là hệ thống phân giải tên miền
-  Khi chúng ta truy cập vào 1 dịch vụ của 1 host nào đó chúng ta rất khó nhớ địa chỉ IP của nó, nên DNS được sinh ra
-
-
-
-
-
+- **HTTP**: là giao thức truyền tải siêu văn bản (web) không mã hóa dữ liệu khi truyền, sử dụng port TCP=80
+- **DNS**: là là viết tắt của cụm từ Domain Name System, mang ý nghĩa đầy đủ là hệ thống phân giải tên miền
+  Khi chúng ta truy cập vào 1 dịch vụ của 1 host nào đó chúng ta rất khó nhớ địa chỉ IP của nó, nên DNS được sinh ra.Port mặc định TCP và UDP đều =53
+- **FTP**: là giao thức truyền dữ liệu (File tranfer protocol) không được mã hóa hoạt động theo kiểu Server-Client.Port mặc định TCP=21
+- **SSH** là giao thức kết nối điều khiển được bảo mật ,dữ liệu được mã hóa rất an toàn.port TCP mặc định 22
+- **DHCP** là giao thức cấp phát địa chỉ IP tự động,khi 1 host tham gia 1 mạng nếu chưa có địa chỉ IP thì host đó sẽ tiến hành 1 quá trình đi xin cấp địa chỉ.
+- **ARP** (viết tắt của cụm từ Address Resolution Protocol) là giao thức mạng được dùng để tìm ra địa chỉ phần cứng (địa chỉ MAC) của thiết bị từ một địa chỉ IP nguồn
+- **SNMP** là viết tắt của từ Simple Network Monitoring Protocol ,Là 1 giao thức dùng để giám sát các thiết bị quang trọng với các thông số cần thiết để giám sát.
+- **SMTP** là giao thứ gửi thư đơn giản hoạt động ở port TCP=25 không mã hóa, Hoặc có mã hóa SSL/TLS là TCP 465
+# Phân Biệt TCP/UDP
+Về định nghĩa thì TCP là truyền tin theo dạng gói (đảm bảo tính trọn vẹn của bản tin), còn UDP là truyền tin theo thời gian thực(gói tin bị rớt sẽ không thể khôi phục-dùng  streaming,truyền hình trực tiếp,gọi điện... )
