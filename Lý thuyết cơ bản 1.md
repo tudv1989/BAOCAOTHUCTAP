@@ -12,8 +12,8 @@
 
  Là mô hình truyền dữ liệu,nó chia làm 7 tầng, mỗi tầng thực hiện 1 chức năng ,nhiêm vụ để đảm bảo 1 gói tin truyền đi tìm đến được đích.
 
-![2ba4804d27da9dc85d415381958b2205](https://uphinh.vn/images/2022/04/02/2ba4804d27da9dc85d415381958b2205.png)
-### Chức năng và nhiệm vụ từng tầng
+<img src="img/2.png">
+
 - Tầng 1: Tầng vật lý (Physical Layer) 
 Em hiểu nó các thiết bị nhìn thấy trong mạng: Dây mạng,ổ điện,trang thiết bị phần cứng...
 
@@ -69,11 +69,57 @@ So sánh theo định nghĩa thì TCP là truyền tin theo dạng gói - ở gi
 # 5.IPv4
 - Địa chỉ IPv4 là 1 dãy 32 bit nhị phân liên tiếp nhau,32 bít này chia làm 4 octet, mỗi octet là 8 bit, Mỗi octet này sẽ có vai trò tính chất là phần net hoặc host của địa chỉ.
 - Có 5 lớp Ipv4 A,B,C,D,E.
-Các tổ chức,doanh nghiệp có số lượng host tham gia mạng càng lớn thì địa chỉ càng gần các lớp A.Bit đầu tiên của địa chỉ lớp A luôn được chọn là 0. Dải địa chỉ mạng lớp A chạy từ 1.0.0.0 đến 126.0.0.0. Vì vậy lớp A sẽ có tổng cộng 126 mạng. Trong khi đó mạng Loopback là 127.0.0.0. Phần net của lớp A là 8 bit, host của lớp A có tất cả 24 bit
-Lớp B của địa chỉ Ipv4 sử dụng 2 obtet đầu làm phần mạng và 2 obtet sau làm phần host. Hai bit đầu tiên của lớp B luôn là 1 và 0. Dải địa chỉ mạng lớp B chạy từ 128.0.0.0 đến 191.255.0.0. Như vậy lớp B sẽ có tổng cộng 214 mạng.Phần net và host của lớp B là 16 bit
-Lớp C của địa chỉ Ipv4 dùng 3 octet đầu làm phần net và 1 octet sau làm phần host. Địa chỉ lớp C luôn có 3 bit đầu là 1 1 0. Dải mạng lớp C chạy từ 192.0.0.0 -> 223.255.255.0. Như vậy sẽ có 221 mạng trong lớp C.Phần net của lớp C sẽ là 24 bit, host chiếm 8 bit.
-Lớp D được sử dụng làm các địa chỉ multicast và dải địa chỉ lớp D từ 224.0.0.0 -> 239.255.255.255. Lấy ví dụ như Ví dụ: 224.0.0.5 dùng cho OSPF; 224.0.0.9 dùng cho RIPv2.
-Lớp E gồm các giải số từ 240.0.0.0 trở đi và được sử dụng cho mục đích dự phòng.
-Do thế giới ngày càng sản xuất ra nhiều thiết bị tham gia mạng nên tình trạng địa chỉ IP đang bị thiếu
+    - Các tổ chức,doanh nghiệp có số lượng host tham gia mạng càng lớn thì địa chỉ càng gần các lớp A.Bit đầu tiên của địa chỉ lớp A luôn được chọn là 0. Dải địa chỉ mạng lớp A chạy từ 1.0.0.0 đến 126.0.0.0. Vì vậy lớp A sẽ có tổng cộng 126 mạng. Trong khi đó mạng Loopback là 127.0.0.0. Phần net của lớp A là 8 bit, host của lớp A có tất cả 24 bit
+    - Lớp B của địa chỉ Ipv4 sử dụng 2 obtet đầu làm phần mạng và 2 obtet sau làm phần host. Hai bit đầu tiên của lớp B luôn là 1 và 0. Dải địa chỉ mạng lớp B chạy từ 128.0.0.0 đến 191.255.0.0. Như vậy lớp B sẽ có tổng cộng 214 mạng.Phần net và host của lớp B là 16 bit
+   -Lớp C của địa chỉ Ipv4 dùng 3 octet đầu làm phần net và 1 octet sau làm phần host. Địa chỉ lớp C luôn có 3 bit đầu là 1 1 0. Dải mạng lớp C chạy từ 192.0.0.0 -> 223.255.255.0. Như vậy sẽ có 221 mạng trong lớp C.Phần net của lớp C sẽ là 24 bit, host chiếm 8 bit.
+   - Lớp D được sử dụng làm các địa chỉ multicast và dải địa chỉ lớp D từ 224.0.0.0 -> 239.255.255.255. Lấy ví dụ như Ví dụ: 224.0.0.5 dùng cho OSPF; 224.0.0.9 dùng cho RIPv2
+
+   - Lớp E gồm các giải số từ 240.0.0.0 trở đi và được sử dụng cho mục đích dự phòng.
+
+ - Do thế giới ngày càng sản xuất ra nhiều thiết bị tham gia mạng nên tình trạng địa chỉ IP đang bị thiếu
 Nên người ta đã phát triển ra IPv6.
 # 6.IPv6
+## Biểu diễn của địa chỉ
+- Địa chỉ IPv6 dài 128 bit, được chia làm 8 nhóm, mỗi nhóm gồm 16 bit, được ngăn cách với nhau bằng dấu hai chấm “:”. Mỗi nhóm được biểu diễn bằng 4 số hexa.
+
+- Ví dụ: FEDC:BA98:768A:0C98:FEBA:CB87:7678:1111
+1080:0000:0000:0070:0000:0989:CB45:345
+
+- Prefix của địa chỉ IPv6 được biểu diễn tương tự với kí hiệu IPv4 CIDR. IPv6 prefix được biểu diễn như sau: IPv6-address/ prefix-length
+
+  Trong đó:
+  IPv6-address là bất kì địa chỉ có giá trị, Prefix-length là số bit liền kề nhau được bao gồm trong prefix.
+
+## Một địa chỉ IPv6 có thể được phân thành 1 trong 3 loại:
+
+- Unicast
+  Một địa chỉ unicast được định nghĩa duy nhất trên một cổng của một node IPv6. Một gói tin được gởi đến một địa chỉ unicast được đưa đến cổng được định nghĩa bởi địa chỉ đó.
+
+- Multicast
+ Một địa chỉ multicast định nghĩa một nhóm các cổng IPv6. Một gói tin gởi đến địa chỉ multicast được xử lý bởi tất cả những thành viên của nhóm multicast.
+
+- Anycast
+ Một địa chỉ anycast được đăng kí cho nhiều cổng (trên nhiều node). Một gói tin được gởi đến một địa chỉ anycast là được chuyển đến chỉ một trong số các cổng này, thường là gần nhất.
+ # 7.VLAN
+ ## Định nghĩa
+ - Vlan (Lan ảo)là khái niệm chia mạng LAN ra thành nhiều mạng LAN con nhỏ hơn,  về mặt logic nhưng vẫn chung hạ tầng.
+ - Một vài ý nghĩa  khi chia VLAN : Chia để kiểm soát ,thi hành chính sách theo nhóm,chia để tiết kiệm IP
+ # 8.Routing
+ ## Định nghĩa: 
+- Định tuyến là quá trình xác định hướng đi của  gói tin của thiết bị layer 3 như router,sw lớp 3.
+- Có 2 loại định tuyến là định tuyến động và định tuyến tĩnh
+Định tuyến tĩnh: xác định đường đi cố định cho thiết bị(default rout)
+Định tuyến động : Khi cấu hình giao thức định tuyến động trên router, Tùy thuộc metrix của giao thức mà router sẽ chọn ra phương thức định tuyến có metrix thấp chuyển bản tin.1 số giao thức động như RIP,OSPF,BGP...
+
+# 9.NAT
+## Định nghĩa
+Nói đến NAT ta phải nói đến loại địa chỉ IP Public và IP private
+- Địa chỉ Private lớp A :  10,0.0.0 đến 10.255.255.255
+- Địa chỉ Private lớp B :172.16.0.0 đến 172.31.255.255
+- Địa chỉ Private lớp C :  192.168.0.0 đến 192.168.255.255
+Do nhu cầu cấp thiết và khan hiếm địa chỉ IP nên người ta đã phát minh 2 loại IP trên,và phát minh ra công nghệ NAT (Network Address Translation ) tức là chuyển dịch loại địa chỉ  IP Local sang IP Public
+## Vài loại NAT cơ bản như: 
+- Static NAT là kỹ thuật dùng để thay đổi, biến một IP này thành một IP khác. Bằng cách sử dụng phương pháp cố định cụ thể từ địa chỉ IP cục bộ sang Public.
+- Dynamic NAT là kỹ thuật dùng để ánh xạ một địa chỉ IP này sang một địa chỉ IP khác (one – to – one) bằng phương pháp tự động. Thông thường, Dynamic NAT sẽ chuyển đổi từ IP mạng cục bộ sang địa chỉ IP được đăng ký hợp lệ
+- NAT Overload còn có tên gọi khác là PAT (Port Address Translation). Đây là một dạng biến thể khác của Dynamic NAT. Nó cũng thực hiện chuyển đổi địa chỉ IP một cách tự động. Tuy nhiên, kiểu chuyển dịch địa chỉ của NAT Overload là dạng many – to – one (ánh xạ nhiều địa chỉ IP thành 1 địa chỉ IP) và dùng các chỉ số cổng (port) khác nhau để phân biệt cho từng chuyển đổi.
+
