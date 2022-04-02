@@ -1,3 +1,13 @@
+# BÀI KIỂM TRA LÝ THUYẾT LẦN 1 ngày 2/4/2022
+- 1.Mô hình OSI
+- 2.Mô hình TCP/IP
+- 3.Định nghĩa các giao thức cơ bản HTTP DNS FTP SSH DHCP ARP SNMP SMTP
+- 4.Phân Biệt TCP/UDP
+- 5.Định nghĩa và cấu trúc IPv4,IPv6
+- 6.Định nghĩa về routing ,NAT,VLAN...
+
+
+
 # Mô Hình OSI
 
  Là mô hình truyền dữ liệu,nó chia làm 7 tầng, mỗi tầng thực hiện 1 chức năng ,nhiêm vụ để đảm bảo 1 gói tin truyền đi tìm đến được đích.
