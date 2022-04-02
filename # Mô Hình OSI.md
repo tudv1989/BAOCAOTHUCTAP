@@ -26,9 +26,8 @@ Tầng trình diễn hoạt động như tầng dữ liệu trên mạng. Tầng
 - Tầng 7: Tầng ứng dụng (Application layer)
 Tầng ứng dụng là tầng gần với người sử dụng nhất. Nó cung cấp phương tiện cho người dùng truy nhập các thông tin và dữ liệu trên mạng thông qua chương trình ứng dụng. Tầng này là giao diện chính để người dùng tương tác với chương trình ứng dụng, và qua đó với mạng. Một số ví dụ về các ứng dụng trong tầng này bao gồm HTTP, Telnet, FTP (giao thức truyền tập tin) và các giao thức truyền thư điện tử như SMTP, IMAP, POP3.
 
-## Mô Hình TCP/IP
-
-- Cũng là mô hình truyền tin nhưng người ta đã rút gọn còn 4 tầng chồng lên nhau :
+# Mô Hình TCP/IP
+Là mô hình truyền tin nhưng người ta đã rút gọn còn 4 tầng chồng lên nhau :
 - Tầng 1: Tầng vật lý (Network Access Nó là sự kết hợp của tầng Data Link và Physical trong mô hình OSI 
 Là tầng thấp nhất trong mô hình TCP/IP.Chịu trách nhiệm truyền dữ liệu giữa các thiết bị trong cùng một mạng. Tại đây, các gói dữ liệu được đóng vào khung (Frame) và được định tuyến đi đến đích được chỉ định ban đầu
 
