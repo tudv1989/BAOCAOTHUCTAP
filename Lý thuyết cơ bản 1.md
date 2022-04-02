@@ -82,7 +82,7 @@ Nên người ta đã phát triển ra IPv6.
 ## Biểu diễn của địa chỉ
 - Địa chỉ IPv6 dài 128 bit, được chia làm 8 nhóm, mỗi nhóm gồm 16 bit, được ngăn cách với nhau bằng dấu hai chấm “:”. Mỗi nhóm được biểu diễn bằng 4 số hexa.
 
-- Ví dụ: FEDC:BA98:768A:0C98:FEBA:CB87:7678:1111
+  Ví dụ: FEDC:BA98:768A:0C98:FEBA:CB87:7678:1111
 1080:0000:0000:0070:0000:0989:CB45:345
 
 - Prefix của địa chỉ IPv6 được biểu diễn tương tự với kí hiệu IPv4 CIDR. IPv6 prefix được biểu diễn như sau: IPv6-address/ prefix-length
