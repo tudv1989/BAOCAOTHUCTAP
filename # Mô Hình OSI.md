@@ -5,26 +5,27 @@
 ![2ba4804d27da9dc85d415381958b2205](https://uphinh.vn/images/2022/04/02/2ba4804d27da9dc85d415381958b2205.png)
 ### Chức năng và nhiệm vụ từng tầng
 - Tầng 1: Tầng vật lý (Physical Layer) 
-Là các thiết bị nhìn thấy trong mạng: Dây mạng,ổ điện,trang thiết bị phần cứng...
+Em hiểu nó các thiết bị nhìn thấy trong mạng: Dây mạng,ổ điện,trang thiết bị phần cứng...
 
 - Tầng 2: Tầng liên kết dữ liệu (Data-Link Layer)
 Tầng liên kết dữ liệu cung cấp các phương tiện có tính chức năng và quy trình để truyền dữ liệu giữa các thực thể mạng (truy cập đường truyền, đưa dữ liệu vào mạng).
-Tầng này ta chỉ nên quan tâm đến các thiết bị như Switch,Hub,địa chỉ MAC của card mạng.
+Tầng này theo em chỉ nên quan tâm đến các thiết bị như Switch,Hub,địa chỉ MAC của card mạng.
 
 - Tầng 3: Tầng mạng (Network Layer)
-Tầng mạng thực hiện chức năng định tuyến. Các thiết bị định tuyến (router) hoạt động tại tầng này ,1 gói tin khi đi ra khỏi router đi đường nào là do cấu hình giao thức định tuyến tại router này  (còn có thiết bị chuyển mạch (switch) tầng 3, còn gọi là chuyển mạch IP). tầng 3 chúng ta quan tâm đến địa chỉ IP.
+Tầng mạng thực hiện chức năng định tuyến. Các thiết bị định tuyến (router) hoạt động tại tầng này ,1 gói tin khi đi ra khỏi router đi đường nào là do cấu hình giao thức định tuyến tại router này  (còn có thiết bị chuyển mạch (switch) tầng 3, còn gọi là chuyển mạch IP).Ở tầng 3 này em hiểu chỉ quan tâm đến địa chỉ IP là chính.
 
 - Tầng 4: Tầng giao vận (Transport Layer)
 Tầng giao vận cung cấp dịch vụ chuyên dụng chuyển dữ liệu giữa các người dùng tại đầu cuối, nhờ đó các tầng trên không phải quan tâm đến việc cung cấp dịch vụ truyền dữ liệu đáng tin cậy và hiệu quả. Tầng giao vận kiểm soát độ tin cậy của một kết nối được cho trước. Tầng này ta quan đến 2 giao thức TCP hoặc UDP
 
 - Tầng 5: Tầng phiên (Session layer)
-Tầng phiên kiểm soát các (phiên) hội thoại giữa các máy tính. Tầng này thiết lập, quản lý và kết thúc các kết nối giữa trình ứng dụng địa phương và trình ứng dụng ở xa.
+Tầng phiên kiểm soát các (phiên) hội thoại giữa các máy tính. Tầng này thiết lập, quản lý và kết thúc các kết nối giữa trình ứng dụng ở các địa điểm khác nhau
 
 - Tầng 6: Tầng trình diễn (Presentation layer)
-Tầng trình diễn hoạt động như tầng dữ liệu trên mạng. Tầng này trên máy tính truyền dữ liệu làm nhiệm vụ dịch dữ liệu được gửi từ tầng ứng dụng sang địng dạng chung. Và tại máy tính nhận, lại chuyển từ định dạng chung sang định dạng của tầng ứng dụng.
+Theo em hiểu nó là tầng phiên dịch,
+Tầng trình diễn hoạt động như tầng dữ liệu trên mạng. Tầng này trên máy tính truyền dữ liệu làm nhiệm vụ dịch dữ liệu được gửi từ tầng ứng dụng sang địng dạng chung. Và tại máy tính nhận, lại chuyển từ định dạng chung sang định dạng của tầng ứng dụng.Nói chung chung theo em hiểu nó là tầng phiên dịch ngôn ngữ tầng 7 sang ngôn ngữ máy( nhị phân)
 
 - Tầng 7: Tầng ứng dụng (Application layer)
-Tầng ứng dụng là tầng gần với người sử dụng nhất. Nó cung cấp phương tiện cho người dùng truy nhập các thông tin và dữ liệu trên mạng thông qua chương trình ứng dụng. Tầng này là giao diện chính để người dùng tương tác với chương trình ứng dụng, và qua đó với mạng. Một số ví dụ về các ứng dụng trong tầng này bao gồm HTTP, Telnet, FTP (giao thức truyền tập tin) và các giao thức truyền thư điện tử như SMTP, IMAP, POP3.
+Tầng ứng dụng là tầng gần với người sử dụng nhất. Nó cung cấp phương tiện cho người dùng truy nhập các thông tin và dữ liệu trên mạng thông qua chương trình ứng dụng. Tầng này là giao diện chính để người dùng tương tác với máy tính thông qua chương trình ứng dụng. Một số ví dụ về các ứng dụng trong tầng này bao gồm HTTP, Telnet, FTP (giao thức truyền tập tin) và các giao thức truyền thư điện tử như SMTP, IMAP, POP3.
 
 # Mô Hình TCP/IP
 
@@ -43,16 +44,15 @@ Tầng này có 2 giao thức chính là TCP ( Transmisson Control Protocol) và
 - Tầng 4: Tầng ứng dụng (Application). Nó cung cấp giao tiếp đến người dùng,cung cấp các ứng dụng cho phép người dùng trao đổi dữ liệu ứng dụng thông qua các dịch vụ mạng khác nhau (như duyệt web, chat, gửi email,...).Các giao thức tầng này : http, ftp,snmp,dns....
 
 # Tìm hiểu các giao thức :
-- **HTTP**: là giao thức truyền tải siêu văn bản (web) không mã hóa dữ liệu khi truyền, sử dụng port TCP=80
+- **HTTP**: là giao thức truyền tải siêu văn bản (web) không mã hóa dữ liệu khi truyền, sử dụng port mặc định TCP=80
 - **DNS**: là là viết tắt của cụm từ Domain Name System, mang ý nghĩa đầy đủ là hệ thống phân giải tên miền
   Khi chúng ta truy cập vào 1 dịch vụ của 1 host nào đó chúng ta rất khó nhớ địa chỉ IP của nó, nên DNS được sinh ra.Port mặc định TCP và UDP đều =53
 - **FTP**: là giao thức truyền dữ liệu (File tranfer protocol) không được mã hóa hoạt động theo kiểu Server-Client.Port mặc định TCP=21
-- **SSH** là giao thức kết nối điều khiển được bảo mật ,dữ liệu được mã hóa rất an toàn.port TCP mặc định 22
-- **DHCP** là giao thức cấp phát địa chỉ IP tự động,khi 1 host tham gia 1 mạng nếu chưa có địa chỉ IP thì host đó sẽ tiến hành 1 quá trình đi xin cấp địa chỉ.
+- **SSH** là giao thức kết nối điều khiển thiết bị mạng được bảo mật ,dữ liệu được mã hóa rất an toàn.port TCP mặc định 22
+- **DHCP** là giao thức cấp phát địa chỉ IP tự động,khi 1 host tham gia 1 mạng nếu chưa có địa chỉ IP thì host đó sẽ tiến hành 1 quá trình đi xin cấp địa chỉ do DHCP server cung cấp
 - **ARP** (viết tắt của cụm từ Address Resolution Protocol) là giao thức mạng được dùng để tìm ra địa chỉ phần cứng (địa chỉ MAC) của thiết bị từ một địa chỉ IP nguồn
 - **SNMP** là viết tắt của từ Simple Network Monitoring Protocol ,Là 1 giao thức dùng để giám sát các thiết bị quang trọng với các thông số cần thiết để giám sát.
 - **SMTP** là giao thứ gửi thư đơn giản hoạt động ở port TCP=25 không mã hóa, Hoặc có mã hóa SSL/TLS là TCP 465
 # Phân Biệt TCP/UDP
 - Định nghĩa: TCP là giao thức truyền tin tin cậy, còn UDP là không tin cậy
  So sánh theo định nghĩa thì TCP là truyền tin theo dạng gói - ở giao thức này nếu gói tin bị rớt thì sẽ được gửi lại(đảm bảo tính trọn vẹn của bản tin), còn UDP là truyền tin theo thời gian thực(gói tin bị rớt sẽ không cần gửi lại, không thể khôi phục-dùng  streaming,truyền hình trực tiếp,gọi điện... ) chỉ có lưu lại hoặc xem lại.
- 
