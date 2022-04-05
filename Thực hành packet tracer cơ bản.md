@@ -23,7 +23,7 @@ với VLAN 40 thì cây phải đi theo kiểu khác (per vlan)
 
 <img src="imgpacket/1.png">
 
-# 2.Cấu hình( Nếu không cấu hình pvst+ thì sw1 sẽ là root sw của 2 vlan 30 40)
+# 2.Cấu hình
 ### **2.1 SW0 1 2 3** 
 Trên sw0 cấu hình các cổng 1-9 access vlan10:
 
@@ -107,7 +107,7 @@ Xét từ trái sang phải từng giá trị hexa thì switch nào có MAC nh�
 
   - Đi vào: cộng cost
 
-3. Cấu hình
+3. Cấu hình ( Nếu không cấu hình pvst+ thì sw1 sẽ là root sw của 2 vlan 30 40)
 - **Trên sw 1 và 3** (Vlan 30 theo chuẩn ieee mặc định block port 23 ở sw3)
 
 <img src="imgpacket/sp1.png">
