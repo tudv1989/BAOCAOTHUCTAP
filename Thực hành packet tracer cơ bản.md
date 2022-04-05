@@ -217,7 +217,7 @@ tạo các tài khoản mail client và cài đặt thông số nhận gửi mai
 <img src="imgpacket/29.png">
 
 <img src="imgpacket/30.png">
-<img src="imgpacket/31.png">
+<img src="imgpacket/cf pc6.png">
 
 
 
@@ -232,7 +232,9 @@ tạo các tài khoản mail client và cài đặt thông số nhận gửi mai
 
 - Test gửi mail từ PC 6 về PC 2
 
-<img src="imgpacket/35.png">(
+<img src="imgpacket/mail1.png">
+<img src="imgpacket/mail2.png">
+
 
 - Truy cập HTTP từ 1 máy tính ở VLAN 30( PC2)
 <img src="imgpacket/36.png">
