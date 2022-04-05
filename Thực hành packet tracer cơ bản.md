@@ -106,6 +106,18 @@ Xét từ trái sang phải từng giá trị hexa thì switch nào có MAC nh�
 
   - Đi vào: cộng cost
 
+3. Cấu hình
+- **Trên sw 1 và 3**
+
+<img src="imgpacket/sp1.png">
+<img src="imgpacket/sw3sp30.png">
+
+- **Trên sw 2 và 3**
+
+<img src="imgpacket/sp2.png">
+<img src="imgpacket/sp3sp40.png">
+
+
 ### 2.2 SWCORE
 
 Đầu tiên ta khai báo các VLAN trong mạng có các ID =10 20 30 40 50
