@@ -1,6 +1,7 @@
 # 1.Mô hình cơ bản
 Em thực hành bài lab cơ bản trên phần mềm mô phỏng topo mạng cisco packet tracer của hãng cisco
-Cả bài tập có liên quan đến các kiến thức : cấu hình SW layer2,SW core layer3 ,VLAN,TRUNKING,SPANNING TREE PER VLAN,DHCP,ROUT TĨNH,MAIL SERVER,DNS ,DHCP ,WEB .
+
+Cả bài tập có liên quan đến các kiến thức cơ bản : cấu hình SW layer2,SW core layer3 ,VLAN,TRUNKING,SPANNING TREE PER VLAN,DHCP,ROUT TĨNH,MAIL SERVER,DNS ,DHCP ,WEB .
 
 **# YÊU CẦU kết quả**: Các client trong mạng ping được nhau ,truy cập các dịch vụ đơn sơ: web,mail,dns.
 Spanning tree với VLAN 30 theo mặc định thông số của SW không điều chỉnh
