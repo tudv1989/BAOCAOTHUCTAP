@@ -197,7 +197,7 @@ IP MAILSERVER : 8.8.8.3/24( kèm cả web dinhtu.com)
 ### 2.6 CÁC SERVER WEB,MAIL ,DNS
 
 #### 2.7 DNS SERVER
-Kích hoạt dịch vụ DNS và tạo các bản ghi HOST A ,CNAME
+Kích hoạt dịch vụ DNS và tạo các bản ghi  A ,CNAME
 
 <img src="imgpacket/27.png">
 
