@@ -27,31 +27,31 @@ với VLAN 40 thì cây phải đi theo kiểu khác (per vlan)
 ### **2.1 SW0 1 2 3** 
 Trên sw0 cấu hình các cổng 1-9 access vlan10:
 
-sw1(config)#hostname sw0       **//đổi tên sw1 thành sw0**
+sw1(config)#hostname sw0       //**đổi tên sw1 thành sw0**
 
-sw0(config)#vlan 10            **//khai báo vlan 10**
+sw0(config)#vlan 10            //**khai báo vlan 10**
 
 sw0(config-vlan)#exit      
 
-sw0(config-vlan)#vlan 20       **//khai báo vlan 20**
+sw0(config-vlan)#vlan 20       //**khai báo vlan 20**
 
 sw0(config-vlan)#exit          
 
-sw0(config)#interface range fastEthernet 0/1-10   **//chọn các cổng 1-10**
+sw0(config)#interface range fastEthernet 0/1-10   //**chọn các cổng 1-10**
 
-sw0(config-if-range)#sw access vlan 10    **//access vlan10**
-
-sw0(config-if-range)#exit 
-
-sw0(config)#interface range fastEthernet 0/11-20   **//chọn các cổng 11-20**
-
-sw0(config-if-range)#sw access vlan 20            **//access vlan 20**
+sw0(config-if-range)#sw access vlan 10    //**access vlan10**
 
 sw0(config-if-range)#exit 
 
-sw0(config)#interface fastEthernet 0/24     **khai báo cổng 24 chạy trunk**
+sw0(config)#interface range fastEthernet 0/11-20   //**chọn các cổng 11-20**
 
-sw0(config-if)#sw mode trunk               **khai báo cổng 24 chạy trunk**
+sw0(config-if-range)#sw access vlan 20            //**access vlan 20**
+
+sw0(config-if-range)#exit 
+
+sw0(config)#interface fastEthernet 0/24     //**khai báo cổng 24 chạy trunk**
+
+sw0(config-if)#sw mode trunk               //**khai báo cổng 24 chạy trunk**
 
 <img src="imgpacket/2.png">
 
