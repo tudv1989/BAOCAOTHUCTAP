@@ -167,7 +167,7 @@ và định tuyến với mạng 8.8.8.0/24 bên kia của R2
 
 <img src="imgpacket/23.png">
 
-### R2:
+### 2.4 R2
 Nhiệm vụ của R2 là định tuyến cho mạng 8.8.8.0/24 ra ngoài mạng, kết nối với mạng bên kia của R1
 
 với các interface f0/0 mang vai trò default gateway 8.8.8.1/24, s2/0 có ip 192.168.101.2/24 kết nối trực tiếp với R1
@@ -182,7 +182,7 @@ Gán các ip cho các interface
 
 <img src="imgpacket/25.png">
 
-### 2.4 SW 4
+### 2.5 SW 4
 
 SW 4 làm nhiệm vụ chuyển mạch cho 1 Vlan 8 trong mạng có khả năng giao tiếp với bên ngoài, chứa các SV : DNS,WEB,MAIL
 
@@ -194,20 +194,20 @@ IP MAILSERVER : 8.8.8.3/24( kèm cả web dinhtu.com)
 
 <img src="imgpacket/26.png">
 
-### 2.5 CÁC SERVER WEB,MAIL ,DNS
+### 2.6 CÁC SERVER WEB,MAIL ,DNS
 
-#### 2.5.1 DNS SERVER
+#### 2.7 DNS SERVER
 Kích hoạt dịch vụ DNS và tạo các bản ghi HOST A ,CNAME
 
 <img src="imgpacket/27.png">
 
-#### 2.5.2 WEB SERVER dinhtu.local
+#### 2.8 WEB SERVER dinhtu.local
 
 Bật dịch vụ http
 
 <img src="imgpacket/28.png">
 
-### 2.5.3 MAIL SERVER @dinhtu.com 
+### 2.9 MAIL SERVER @dinhtu.com 
 
 Bật dịch vụ gửi thư SMTP và đọc thư POP3 trên máy chủ
 
