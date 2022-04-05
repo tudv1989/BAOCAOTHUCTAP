@@ -23,7 +23,7 @@ với VLAN 40 thì cây phải đi theo kiểu khác (per vlan)
 
 <img src="imgpacket/1.png">
 
-# 2.Cấu hình
+# 2.Cấu hình( Nếu không cấu hình pvst+ thì sw1 sẽ là root sw của 2 vlan 30 40)
 ### **2.1 SW0 1 2 3** 
 Trên sw0 cấu hình các cổng 1-9 access vlan10:
 
