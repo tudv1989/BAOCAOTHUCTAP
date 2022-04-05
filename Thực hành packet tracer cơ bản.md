@@ -3,7 +3,7 @@ Em thực hành bài lab cơ bản trên phần mềm mô phỏng topo mạng ci
 
 Cả bài tập có liên quan đến các kiến thức cơ bản : cấu hình SW layer2,SW core layer3 ,VLAN,TRUNKING,SPANNING TREE PER VLAN,DHCP,ROUT TĨNH,MAIL SERVER,DNS ,DHCP ,WEB .
 
-**# YÊU CẦU KẾT QUẢ**: Các client trong mạng ping được nhau ,truy cập các dịch vụ đơn sơ: web,mail,dns.
+ YÊU CẦU KẾT QUẢ: Các client trong mạng ping được nhau ,truy cập các dịch vụ đơn sơ: web,mail,dns.
 Spanning tree với VLAN 30 theo mặc định thông số của SW không điều chỉnh
 với VLAN 40 thì cây phải đi theo kiểu khác (per vlan)
 
