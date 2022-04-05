@@ -227,14 +227,14 @@ tạo các tài khoản mail client và cài đặt thông số nhận gửi mai
 
 <img src="imgpacket/34.png">
 
-- 1 PC ở VLAN 10 ping 8.8.8.8
+- PC ở VLAN 10 ping 8.8.8.8
 <img src="imgpacket/32.png">
 
 - Test gửi mail từ PC 6 về PC 2
 
 <img src="imgpacket/35.png">(
 
--Truy cập HTTP từ 1 máy tính ở VLAN 30( PC2)
+- Truy cập HTTP từ 1 máy tính ở VLAN 30( PC2)
 <img src="imgpacket/36.png">
 http trên mail server
 <img src="imgpacket/37.png">
