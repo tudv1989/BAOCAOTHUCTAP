@@ -116,7 +116,7 @@ Xét từ trái sang phải từng giá trị hexa thì switch nào có MAC nh�
 - **Trên sw 2 và 3**
 
 <img src="imgpacket/sp2.png">
-<img src="imgpacket/sp3sp40.png">
+<img src="imgpacket/sw3sp40.png">
 
 
 ### 2.2 SWCORE
