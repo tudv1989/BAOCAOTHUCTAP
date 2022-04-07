@@ -113,29 +113,33 @@ Nhược điểm của DHCP
 
 # 6- Giao thức ARP
 
-Trong một hệ thống mạng máy tính, có 2 địa chỉ được gán cho máy tính là:
-
-Địa chỉ logic: là địa chỉ của các giao thức mạng như IP, IPX, ... Loại địa chỉ này chỉ mang tính chất tương đói, có thể thay đổi theo sự cần thiết của người dùng. Các địa chỉ này thường được phân thành 2 phần riêng biệt là phần địa chỉ mạng và phần địa chỉ máy. Cách đánh địa chỉ như vậy nhắm giúp cho việc tìm ra các đường kết nối từ hệ thống mạng này sang hệ thống mạng khác dễ dàng hơn.
-
-Địa chỉ vật lý: hay còn gọi là địa chỉ MAC - Medium Access Control address là địa chỉ 48 bit, dùng để định danh duy nhất do nhà cung cấp gán cho mỗi thiết bị. Đây là loại địa chỉ phẳng, không phân lớp, nên rất khó dùng để định tuyến.
-
-Trên thực tế, các card mạng (NIC) chỉ có thể kết nối với nhau theo địa chỉ MAC, địa chỉ cố định và duy nhất của phần cứng.
-
-=> Do vậy phải có một cơ chế để ánh xạ địa chỉ logic - lớp 3 sang địa chỉ vật lý - lớp 2 để các thiết bị có thể giao tiếp với nhau.
-
-Từ đó, ta có giao thức phân giải địa chỉ ARP - Address Resolution Protocol giải quyết vấn đề trên.
-
-- ARP là phương thức phân giải địa chỉ động giữa địa chỉ lớp network và địa chỉ lớp datalink. Quá trình thực hiện bằng cách: một thiết bị IP trong mạng gửi một gói tin local broadcast đến toàn mạng yêu cầu thiết bị khác gửi trả lại địa chỉ phần cứng ( địa chỉ lớp datalink ) hay còn gọi là Mac Address của mình.
-
-- ARP là giao thức lớp 2 - Data link layer trong mô hình OSI và là giao thức lớp Link layer trong mô hình TCP/IP.
-
-- Ban đầu ARP chỉ được sử dụng trong mạng Ethernet để phân giải địa chỉ IP và địa chỉ MAC. Nhưng ngày nay ARP đã được ứng dụng rộng rãi và dùng trong các công nghệ khác dựa trên lớp hai.
-
-## Cấu trúc bản tin ARP
-
-Kích thước bản tin ARP là 28 byte, được đóng gói trong frame Ethernet II nên trong mô hình OSI, ARP được coi như là giao thức lớp 3 cấp thấp.
-
-Cấu trúc bản tin ARP được mô tả như hình sau:
+Trong mô hình OSI, gói tin ở lớp 3 có địa chỉ IP nguồn, địa chỉ IP đích sau đó sẽ được chuyển xuống lớp 2 đóng thành các frame trong đó có MAC đích và MAC nguồn rồi sau đó mới có thể  truyền thông tin giữa hai máy tính trong cùng một mạng vật lý 
 
 <img src="imgosi/34.png">
+
+ARP là phương thức phân giải địa chỉ động giữa địa chỉ lớp network và địa chỉ lớp datalink. Quá trình thực hiện bằng cách: một thiết bị IP trong mạng gửi một gói tin broadcast đến toàn mạng yêu cầu thiết bị khác gửi trả lại địa chỉ phần cứng ( địa chỉ lớp datalink ) của mình.
+
+ARP về cơ bản là một quá trình 2 chiều request/response giữa các thiết bị trong cùng mạng nội bộ. Thiết bị nguồn request bằng cách gửi một bản tin broadcast trên toàn mạng. Thiết bị đích response bằng một bản tin unicast đến thiết bị nguồn
+
+Có hai dạng bản tin trong ARP : một được gửi từ nguồn đến đích, và một được gửi từ đích tới nguồn.
+
+Request : Khởi tạo quá trình, gói tin được gửi từ thiết bị nguồn tới thiết bị đích
+Reply : Là quá trình đáp trả gói tin ARP request, được gửi từ máy đích đến máy nguồn
+Thông thường, máy gửi đã biết địa chỉ IP của máy nhận. Vì thế, sau khi xác định được địa chỉ IP của máy nhận thì lớp Network của máy gửi sẽ so sánh địa chỉ IP của máy nhận và địa chỉ IP của chính nó: Nếu cùng địa chỉ mạng thì máy gửi sẽ tìm trong bảng MAC table của mình để có được địa chỉ MAC của máy nhận. Trong trường hợp không có được địa chỉ MAC tương ứng, nó sẽ thực hiện giao thức ARP để truy tìm địa chỉ MAC. Sau khi tìm được địa chỉ MAC, nó sẽ lưu địa chỉ MAC này vào trong bảng MAC table để lớp Datalink sử dụng ở các lần gửi sau. Sau khi có địa chỉ MAC thì máy gửi sẽ gởi gói tin đi.
+
+DEMO
+Máy A có địa chi IP là :` 192.168.1.11 `  địa chỉ MAC : ` 00-0C-29-F3-01-12`
+Máy B có địa chỉ IP là : 192.168.1.19
+Máy A muốn tìm địa chỉ MAC của máy B
+Trên máy A ta mở cmd sử dụng câu lệnh:
+`arp –a`
+Ta thấy hiện tại trong MAC table của máy A chưa có địa chỉ MAC của máy B
+Ta thử ping đến địa chỉ IP của máy B đã biết bằng cách gõ:
+`Ping 192.168.1.19`
+
+<img src="imgosi/35.png">
+
+Và kết quả thu được là đã có địa chỉ MAC của máy B trong MAC table.
+
+<img src="imgosi/36.png">
 
