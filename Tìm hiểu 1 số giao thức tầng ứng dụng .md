@@ -128,18 +128,73 @@ Reply : Là quá trình đáp trả gói tin ARP request, được gửi từ m�
 Thông thường, máy gửi đã biết địa chỉ IP của máy nhận. Vì thế, sau khi xác định được địa chỉ IP của máy nhận thì lớp Network của máy gửi sẽ so sánh địa chỉ IP của máy nhận và địa chỉ IP của chính nó: Nếu cùng địa chỉ mạng thì máy gửi sẽ tìm trong bảng MAC table của mình để có được địa chỉ MAC của máy nhận. Trong trường hợp không có được địa chỉ MAC tương ứng, nó sẽ thực hiện giao thức ARP để truy tìm địa chỉ MAC. Sau khi tìm được địa chỉ MAC, nó sẽ lưu địa chỉ MAC này vào trong bảng MAC table để lớp Datalink sử dụng ở các lần gửi sau. Sau khi có địa chỉ MAC thì máy gửi sẽ gởi gói tin đi.
 
 DEMO
-Máy A có địa chi IP là :` 192.168.1.11 `  địa chỉ MAC : ` 00-0C-29-F3-01-12`
-Máy B có địa chỉ IP là : 192.168.1.19
+Máy A có địa chi IP là : `172.16.0.82`
+Máy B có địa chỉ IP là : `172.16.0.3`
 Máy A muốn tìm địa chỉ MAC của máy B
 Trên máy A ta mở cmd sử dụng câu lệnh:
 `arp –a`
 Ta thấy hiện tại trong MAC table của máy A chưa có địa chỉ MAC của máy B
 Ta thử ping đến địa chỉ IP của máy B đã biết bằng cách gõ:
-`Ping 192.168.1.19`
+`Ping 172.16.0.3`
 
-<img src="imgosi/35.png">
 
 Và kết quả thu được là đã có địa chỉ MAC của máy B trong MAC table.
 
 <img src="imgosi/36.png">
+
+
+# 7-Tìm hiểu giao thức SNMP
+
+### Simple Network Management Protocol|(SNMP)
+
+SNMP là một giao thức tầng ứng dụng quy định bởi IAB trong RFC1157 để trao đổi thông tin quản lý giữa các thiết bị mạng.
+
+SNMP là một tập hợp các giao thức không chỉ cho phép kiểm tra tài nguyên và giám sát lưu lượng các thiết bị mạng như router,switch hay server đang vận hành mà còn hỗ trợ vận hành các thiết bị này một cách tối ưu. Ngoài ra SNMP còn cho phép quản lý các thiết bị mạng từ xa/
+Giao thức SNMP được thiết kế để cung cấp một phương thức đơn giản để quản lý tập trung mạng TCP/IP. Nếu bạn muốn quản lý các thiết bị từ 1 vị trí tập trung, giao thức SNMP sẽ vận chuyển dữ liệu từ client (thiết bị mà bạn đang giám sát) đến server nơi mà dữ liệu được lưu trong log file nhằm phân tích dễ dàng hơn
+
+SNMP dùng để quản lý tức là có thể theo dõi, có thể lấy thông tin, có thể được thông báo, và có thể tác động để hệ thống hoạt động như ý muốn.
+
+Ví dụ một số khả năng của SNMP:
+
+- Theo dõi tốc độ đường truyền của một router/máy chủ, biết được tổng số byte đã truyền/nhận.
+
+- Lấy thông tin máy chủ đang có bao nhiêu ổ cứng, mỗi ổ cứng còn trống bao nhiêu
+
+- Tự động nhận cảnh báo khi switch có 1 port bị down
+
+- Điều khiển shutdown các port trên switch.
+
+### SNMP hoạt động như thế nào
+<img src="imgosi/37.png">
+
+Có 2 phương pháp giám sát là poll và alert
+
+Poll: Manager sẽ thường xuyên hỏi thông tin của agent. Nếu manager không hỏi thì agent không trả lời
+
+Alert: Mỗi khi agent xảy ra event nào đó thì nó sẽ tự động gửi thông báo cho manager
+
+SNMP sử dụng UDP (User Datagram Protocol) làm giao thức truyền tải thông tin giữa manager và các agent. Việc sử dụng UDP, thay vì TCP, bởi vì UDP là phương thức truyền mà trong đó hai đầu thông tin không cần thiết lập kết nối trứơc khi dữ liệu được trao đổi (connectionless), thuộc tính này phù hợp trong điều kiện mạng gặp trục trặc, hư hỏng... cần ưu tiên về mặt tốc độ.
+
+Trong các ứng dụng của SNMP, một hoặc nhiều máy tính quản trị được gọi là các máy managers có nhiệm vụ giám sát hoặc quản lý một nhóm máy chủ hoặc thiết bị trên mạng máy tính. Mỗi hệ thống được quản lý được gọi là một agent báo cáo thông tin thông qua SNMP cho máy manager.
+
+Một số phần mềm giám sát máy chủ, hệ thống mạng : Zabrix,Carti,Solawind.
+
+# 8- Tìm hiểu giao thức SMTP
+
+### Định nghĩa giao thức SMTP
+
+Simple Mail Transfer Protocol (viết tắt là SMTP) là hệ thống giao thức có nhiệm vụ nhận hay truyền tải dữ liệu trong email của người dùng. Hệ thống chỉ nhận và gửi thư điện tử email thông qua thiết bị có kết nối mạng Internet. Những thiết bị nhận và gửi email được gọi là máy chủ SMTP, mỗi máy chủ đều liên kết tới cổng mạng Internet 25 – cổng TCP.
+
+SMTP cho phép doanh nghiệp và các tổ chức gửi và nhận Mail một cách đơn giản và hiệu quả, ưu việt hơn hẳn các loại mail miễn phí khác. Ngày nay SMTP đóng vai trò quan trọng cho các doanh nghiệp sử dụng mail hay bất kỳ dịch vụ có sự tham gia của giao thức SMTP để có thể gửi và nhận email
+
+### Hệ thống hoạt động của SMTP
+
+Việc gửi thông báo được thực hiện bắt đầu bằng việc chuyển thông báo đến một SMTP Server chỉ định. Dựa vào tên miền của địa chỉ e-mail nhận (ví dụ, ‘tenemail.com’), SMTP Server bắt đầu trao đổi liên lạc với một DNS Server mà sẽ tìm kiếm và trả về host name của SMTP Server đích (ví dụ ‘mail.ten-email.com’) cho tên miền đó. Sau cùng SMTP Server đầu tiên trao đổi thông tin trực tiếp với SMTP Server đích thông qua cổng 25 của TCP/IP.
+
+Nếu tên người dùng của địa chỉ e-mail nhận trùng khớp với một trong những tài khoản người dùng được phép trong máy chủ đích. Thì thông báo e-mail gốc cuối cùng sẽ được đưa đến máy chủ này, rồi chỉ chờ người nhận lấy thông báo thông qua một chương trình gửi nhận mail như mail server Outlook chẳng hạn.
+
+Trong trường hợp SMTP Server đầu tiên không thể liên lạc và trao đổi thông tin trực tiếp với máy chủ đích, thì giao thức SMTP có cung cấp các cơ chế để chuyển các thông báo thông qua một hay nhiều SMTP Server chuyển tiếp trung gian. Một máy chủ trung gian sẽ nhận thông báo gốc và sau đó sẽ gửi nó tới máy chủ đích hoặc cũng có thể gửi nó một lần nữa tới một máy chủ trung gian khác. Quá trình này sẽ được thao tác nhiều lần cho đến khi thông báo được chuyển đi hoặc thời gian lưu giữ thông báo hết hạn.
+
+<img src="imgosi/38.png">
+
 
