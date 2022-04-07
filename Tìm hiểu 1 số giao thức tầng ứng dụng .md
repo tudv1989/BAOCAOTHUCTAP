@@ -165,7 +165,7 @@ Ví dụ một số khả năng của SNMP:
 - Điều khiển shutdown các port trên switch.
 
 ### SNMP hoạt động như thế nào
-<img src="imgosi/37.png">
+<img src="imgosi/40.png">
 
 Có 2 phương pháp giám sát là poll và alert
 
@@ -198,7 +198,7 @@ SMTP cho phép doanh nghiệp và các tổ chức gửi và nhận Mail một c
 - Bước 4: Nếu tên người dùng của địa chỉ email nhận trùng khớp với một trong những tài khoản người dùng được phép trong máy chủ đích thì thông báo email gốc cuối cùng sẽ được đưa đến máy chủ này, rồi chỉ chờ người nhận lấy thông báo thông qua một chương trình gửi nhận mail (ví dụ như mail server Outlook chẳng hạn).
 
 
-<img src="imgosi/38.png">
+<img src="imgosi/41.png">
 
 POP3  
 - là viết tắt của Post Office Protocol version 3 là một giao thức tầng ứng dụng, dùng để lấy thư điện tử từ server mail, thông qua kết nối TCP/IP.
