@@ -189,12 +189,46 @@ SMTP cho phép doanh nghiệp và các tổ chức gửi và nhận Mail một c
 
 ### Hệ thống hoạt động của SMTP
 
-Việc gửi thông báo được thực hiện bắt đầu bằng việc chuyển thông báo đến một SMTP Server chỉ định. Dựa vào tên miền của địa chỉ e-mail nhận (ví dụ, ‘tenemail.com’), SMTP Server bắt đầu trao đổi liên lạc với một DNS Server mà sẽ tìm kiếm và trả về host name của SMTP Server đích (ví dụ ‘mail.ten-email.com’) cho tên miền đó. Sau cùng SMTP Server đầu tiên trao đổi thông tin trực tiếp với SMTP Server đích thông qua cổng 25 của TCP/IP.
+- Bước 1: Đầu tiên, việc gửi thông báo được bắt đầu bằng việc chuyển thông báo đến một SMTP Server chỉ định.
 
-Nếu tên người dùng của địa chỉ e-mail nhận trùng khớp với một trong những tài khoản người dùng được phép trong máy chủ đích. Thì thông báo e-mail gốc cuối cùng sẽ được đưa đến máy chủ này, rồi chỉ chờ người nhận lấy thông báo thông qua một chương trình gửi nhận mail như mail server Outlook chẳng hạn.
+- Bước 2: Dựa vào tên miền của địa chỉ e-mail nhận (ví dụ, 'tenemail.com'), SMTP Server bắt đầu trao đổi liên lạc với một DNS Server mà sẽ tìm kiếm và trả về host name của SMTP Server đích (ví dụ 'mail.ten-email.com') cho tên miền đó.
 
-Trong trường hợp SMTP Server đầu tiên không thể liên lạc và trao đổi thông tin trực tiếp với máy chủ đích, thì giao thức SMTP có cung cấp các cơ chế để chuyển các thông báo thông qua một hay nhiều SMTP Server chuyển tiếp trung gian. Một máy chủ trung gian sẽ nhận thông báo gốc và sau đó sẽ gửi nó tới máy chủ đích hoặc cũng có thể gửi nó một lần nữa tới một máy chủ trung gian khác. Quá trình này sẽ được thao tác nhiều lần cho đến khi thông báo được chuyển đi hoặc thời gian lưu giữ thông báo hết hạn.
+- Bước 3: Sau cùng SMTP Server đầu tiên trao đổi thông tin trực tiếp với SMTP Server đích thông qua cổng 25 của TCP/IP.
+
+- Bước 4: Nếu tên người dùng của địa chỉ email nhận trùng khớp với một trong những tài khoản người dùng được phép trong máy chủ đích thì thông báo email gốc cuối cùng sẽ được đưa đến máy chủ này, rồi chỉ chờ người nhận lấy thông báo thông qua một chương trình gửi nhận mail (ví dụ như mail server Outlook chẳng hạn).
+
 
 <img src="imgosi/38.png">
+
+POP3  
+- là viết tắt của Post Office Protocol version 3 là một giao thức tầng ứng dụng, dùng để lấy thư điện tử từ server mail, thông qua kết nối TCP/IP.
+
+POP3 được sử dụng để kết nối tới server email và tải email xuống máy tính cá nhân thông qua ứng dụng email client như Outlook, Thunderbird, Windows Mail, Mac Mail…
+
+Thông  thường, email client sẽ có tùy chọn bạn có muốn giữ mail trên server sau khi tải về hay không. Nếu bạn đang truy cập một tài khoản bằng nhiều thiết, chúng tôi khuyên là nên chọn giữ lại bản copy trên server nếu không thiết bị thứ 2 sẽ không thể tải mail về được vì nó đã bị xóa sau khi tải về trên thiết bị 1.
+
+POP3 là giao thức 1 chiều, có nghĩa là email được “kéo” từ email server từ xa xuống email client.
+
+Mặc định, port POP3 là:
+
+- Port 110 – port không mã hóa
+- Port 995 – SSL/TLS port, cũng có thể được gọi là POP3S
+
+IMAP
+- là viết tắt của Internet Message Access Protocol, là giao thức chuẩn Internet được sử dụng bởi các ứng dụng email để truy xuất thư email từ máy chủ thư qua kết nối TCP/IP.
+
+Giống như POP3, IMAP cũng  được dùng để kéo email về emails client, tuy nhiên khác biệt với POP3 là nó chỉ kéo email headers về, nội dung email vẫn còn trên server. Đây là kênh liên lạc 2 chiều, thay đổi trên mail client sẽ được chuyển lên server.
+
+SMTP ports:
+
+Port 25 – port không mã hóa
+
+Port 465 – SSL/TLS port, cũng có thể được gọi là SMTPS
+
+Tùy vào kiểu mã hóa SSL/TLS và kiểu đọc thư Pop3 hay imap mà ta sẽ tiến hành chọn port phù hợp ở mail client ( nếu dùng phần mềm thứ 3 đọc mail)
+
+
+
+
 
 
