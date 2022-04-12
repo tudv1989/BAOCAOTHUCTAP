@@ -51,10 +51,10 @@ UNIX là một hệ điều hành được phát triển vào thập kỷ 60. N�
 
 
 
-### 2.1 Hệ điều hành Linux
-Hệ điều hành Linux được phát triển dựa vào hệ điều hành Unix và được phát hành miễn phí. Server Linux thường được sử dụng nhiều hơn là Windows hay bất kì hệ điều hành nào khác. 
+### 2.1 Hệ điều hành nhân Linux
+Hệ điều hành nhân Linux được phát triển dựa vào hệ điều hành Unix và được phát hành miễn phí. Server Linux thường được sử dụng nhiều hơn là Windows hay bất kì hệ điều hành nào khác. 
 
-Một số bản phân phối phát triển từ linux:
+Một số bản phân phối phát triển từ nhân linux:
 
 - Ubuntu
 - Linux Mint
@@ -72,7 +72,7 @@ Một số bản phân phối phát triển từ linux:
 - Có thể hoạt động tốt trên các máy tính cấu hình yếu
 
 Nhược điểm :
-- ố lượng ứng dụng được hỗ trợ trên Linux còn hạn chế.
+- Số lượng ứng dụng được hỗ trợ trên Linux còn hạn chế.
 - Một số nhà sản xuất không phát triển driver hỗ trợ nền tảng Linux.
 
 
@@ -86,7 +86,7 @@ Nhược điểm :
 
 ### 2.3 Hệ điều hành window server( máy chủ):
 
-- Dùng để cung cấp các dịch vụ máy chủ như :WEB IIS,DNS,Mail exchange,FTP...
+- Dùng để cung cấp các dịch vụ máy chủ trong mạng và ngoài mạng như :Xác thực,File,WEB IIS,DNS,Mail exchange,FTP,DHCP...
 
 ### 2.4 Hệ điều hành IOS
 
@@ -102,13 +102,9 @@ Nhược điểm :
 
 - Ưu điểm: Là một hệ điều hành mở với một kho ứng dụng khổng lồ. Hệ điều hành có khả năng tùy biến cao và dễ dàng đặt lại nếu quên mật khẩu. 
 - Nhược điểm: Độ bảo mật tương đối cao nhưng vẫn thua iOS. 
-### 2.6 Hệ điều hành IOS
+### 2.6 Và rất nhiều phiên bản khác
 
-Là một hệ điều hành được dùng ở trên điện thoại nhà Apple và chính thức ra mắt vào năm 2007. Hệ điều hành này được tạo ra và trở thành một cuộc cách mạng công nghệ phần mềm. iOS cũng được đánh giá cao về tính năng lẫn sự ổn định. 
-
-- Ưu điểm: Bảo mật cao và khả năng tối ưu các phần mềm khá tốt. Hiệu năng hệ điều hành ổn định mà không cần quá nhiều yêu cầu về cấu hình. 
-- Nhược điểm: Chỉ sử dụng cho các dòng điện thoại do Apple sản xuất và không thể cài đặt ở trên các dòng điện thoại khác. Kho ứng dụng tương đối ít. 
-
+Có rất nhiều các nhà sản xuất thiết bị , sản phẩm điện tử trên thế giới đều có thể dựa vào nhân Linux để tùy biến tạo ra các hệ điều hành chuyên biệt , các hệ điều hành này tương thích, giao tiếp  với các phần cứng trên main sản phẩm của họ .Hiện nay có hàng trăm loại phân phối như vậy.
 
 
 
