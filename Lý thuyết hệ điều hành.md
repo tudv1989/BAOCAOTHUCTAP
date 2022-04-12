@@ -46,10 +46,6 @@ Hệ điều hành thư viện là hệ điều hành trong đó các dịch v�
 
 Hệ điều hành mã nguồn mở là một thuật ngữ chung để chỉ một loại hệ điều hành chạy trên các thiết bị điện toán, cho phép người dùng xem và sửa đổi toàn bộ mã nguồn của nó (cấu trúc bên trong). Hầu hết các hệ điều hành mã nguồn mở đều cho phép sử dụng miễn phí, đây là đặc điểm nổi bật nhất của hệ điều hành này.
 
-So với Windows, iOS, ... hệ điều hành mã nguồn mở chiếm thị phần nhỏ, còn khá xa lạ với người dùng phổ thông, nhưng lại được giới sinh viên, nhà nghiên cứu và các chuyên gia chuyên ngành máy tính đặc biệt ưa chuộng.
-
-Mặc dù được cho là "mã nguồn mở", việc phát hành và sử dụng mã nguồn trên vẫn phải tuân theo một loạt các quy tắc được xác định trước (ví dụ, giấy phép GNU GPL)
-
 UNIX là một hệ điều hành được phát triển vào thập kỷ 60. Nó là một hệ thống đa nhiệm, đa người dùng và ổn định đối với các máy chủ, máy trạm hoặc các laptop. Các hệ thống UNIX cũng có một giao diện đồ họa (GUI) giống như Windows của Microsoft, tạo sự dễ dàng trong sử dụng. Tuy vậy bạn vẫn phải cần đến rất nhiều kiến thức cần thiết cho các hoạt động của UNIX, đây là các kiến thức không được mô tả bằng chương trình đồ họa, hoặc không có giao diện cửa sổ, ví dụ trong một phiên telnet.
 
 
