@@ -48,4 +48,4 @@ Các nhà dịch vụ đám mây  sẽ cung cấp cho bạn các gói dị
 
                              Bảng tổng quát dịch vụ
 
-Bảng trên xuất hiện khái niệm On-premise nó chính là làm tất cả từ A-Z ,từ network >phần cứng máy chủ >hệ điều hành> bổ trợ>phần mềm>...đến user sử dụng dịch vụ .( Hoặc nói 1 cách khác chính là việc bạn không thuê cloud hoặc có thuê mà chỉ thuê chỗ đặt cloud để đảm bảo có điện dự phòng và liên tục)                    
+Bảng trên xuất hiện khái niệm On-premise nó chính là làm tất cả từ A-Z ,từ network >phần cứng máy chủ >hệ điều hành> bổ trợ>phần mềm>...đến user sử dụng dịch vụ .( Hoặc nói 1 cách khác chính là việc bạn không thuê cloud hoặc có thuê mà chỉ thuê chỗ đặt cloud để đảm bảo có điện dự phòng và liên tục)     .               
