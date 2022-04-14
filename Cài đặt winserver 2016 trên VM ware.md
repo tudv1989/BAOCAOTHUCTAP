@@ -45,8 +45,13 @@ Bước này chúng ta chọn chèn file iso sau
 
 - Bước tiếp chọn card mạng có 4 tùy chọn
   - Bridged : máy ảo như máy host giao tiếp mạng LAN và internet
+
   - NAT     : giao tiếp với host và internet ,ko giao tiếp với LAN ngoài
-  - 2 tùy chọn còn lại là chỉ giao tiếp với host hoặc cô lập hoàn toàn.
+
+  - Host only : Giống như switch các máy ảo giao tiếp với nhau,ko có internet, ko kết nối với host
+
+  - Custom  : Tùy chọn nhiều sw ảo...khi cài nhiều máy ảo sẽ dùng.
+  
 
 <img src="img/26.png">  
 
