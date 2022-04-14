@@ -54,7 +54,7 @@ Phân tích 1 phiên bản linux nào đó dựa trên nhân LINUX ta có c
 
 **4.1 Kernel**
 
-Làm việc trực tiếp với phần cứng:( là câù nối giữa người dùng hoặc ứng dụng)
+Làm việc trực tiếp với phần cứng:
 
 - Quản lý tiến trình CPU
 
