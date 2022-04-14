@@ -60,7 +60,7 @@ Bước này chúng ta chọn chèn file iso sau
 
 <img src="img/29.png">
 
-- Bước này ta chọn tùy chọn như vậy để chọn ổ cứng theo kiểu dùng đến đâu trong 60GB thì lấy tới đó và là 1 file duy nhất vì định dạng dữ liệu của mình là NTFS
+- Bước này ta chọn tùy chọn như vậy để chọn ổ cứng theo kiểu dùng đến đâu trong 60GB thì lấy tới đó và là 1 file duy nhất vì định dạng dữ liệu ổ cứng của host là NTFS
 
 <img src="img/30.png">
 
