@@ -8,7 +8,7 @@ Linux được thiết kế theo dạng cây (tree) khởi nguồn là ky�
 
 / : thư mục gốc gốc của cấu trúc cây thư mục Linux, trong đó các file là các nút lá
 
-/bin : thư mục chứa các lệnh thực thi cơ bản ((binary applications)
+***/bin*** : thư mục chứa các lệnh thực thi cơ bản ((binary applications)
 
 /sbin: thư mục chứa các lệnh quản trị hệ thống (system binaries)
 
