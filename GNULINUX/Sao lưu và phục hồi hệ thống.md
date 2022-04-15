@@ -48,7 +48,7 @@ ssh trên hệ thống Linux để bảo mật.
 
 Cú pháp: rsync -options source destination
 
-Đồng bộ dữ liệu: SERVER1: /var/www/html ›› SERVER2: /var/www
+Đồng bộ dữ liệu: SERVER1: /var/www/html ›› SERVER2: /var/www/
 
 Thực hiện rsync trên SERVER2
 
