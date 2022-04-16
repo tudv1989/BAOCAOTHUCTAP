@@ -81,6 +81,8 @@ Cấp cho user1 được thực thi tất cả nhưng ngoại trừ reboot máy
 
 Cấp cho user1 được thực thi tất cả trong sbin 
 
-%user1  ALL=(root)    /sbin/*
+%user1  ALL=(root)    /sbin/*  và ko yêu cầu pass khi sudo
+
+
 
 <img src="img/74.png">
