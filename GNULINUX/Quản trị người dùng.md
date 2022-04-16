@@ -82,3 +82,5 @@ Cấp cho user1 được thực thi tất cả nhưng ngoại trừ reboot máy
 Cấp cho user1 được thực thi tất cả trong sbin 
 
 %abc  ALL=(root)    /sbin/*
+
+<img src="img/74.png">
