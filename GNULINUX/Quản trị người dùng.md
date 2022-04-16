@@ -77,11 +77,11 @@ subadmin linux01 = /usr/bin/*
 %user1       ALL=(root)      /etc/init.d/sshd, /sbin/shutdown, /usr/sbin/useradd, /sbin/service, /usr/bin/passwd, /sbin/reboot 
 
 Cấp cho user1 được thực thi tất cả nhưng ngoại trừ reboot máy
-%abc    ALL=(root)      ALL, !/sbin/reboot
+%user1    ALL=(root)      ALL, !/sbin/reboot
 
 Cấp cho user1 được thực thi tất cả trong sbin 
 
-%user1  ALL=(root)    /sbin/*  và ko yêu cầu pass khi sudo
+- %user1  ALL=(root)    /sbin/*  và ko yêu cầu pass khi sudo
 
 
 
