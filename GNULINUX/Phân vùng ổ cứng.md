@@ -3,7 +3,7 @@
 Một file system xác định cách lưu trữ dữ liệu hoặc thông tin và truy xuất từ ​​đĩa lưu trữ. Đối với hệ điều hành Windows thì các file systems phổ biến là FAT32 và NTFS. Trên hệ điều hành Linux, các file system phổ biến là ext2, ext3, ext4, xfs, vfat, swap, ZFS và GlusterFS.Hiện trên centos7 sử dụng chuẩn mới là xfs.
 Trên window đc xác định bằng các ký tự A B C D...Trên Linux là các mountpoint
 
-- fdisk chỉ tạo phân vùng trên ổ đĩa mbr tạo tối đa 3 phân vùng chính và 1 phân vùng mở rộng
+- fdisk chỉ tạo phân vùng trên ổ đĩa mbr tạo tối đa 4 phân vùng chính
 
 - ổ cứng GPT tạo đc 128 phân vùng chính ( sử dụng công cụ parted để phân vùng)
 

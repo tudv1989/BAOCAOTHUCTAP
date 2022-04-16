@@ -1,6 +1,5 @@
 # Quản trị người dùng Linux
 
-1. Quản trị tài khoản người dùng
 
 Có hai loại tài khoản:
 
@@ -46,3 +45,40 @@ Quản lý người dùng hệ thống bằng lệnh
 - groupdel: xóa group khỏi hệ thống
 
 - groupmod: chỉnh sửa thông tin group.
+
+# 2. Nhóm sudoers
+
+/etc/sudoers
+
+<img src="img/71.png">
+
+•	Chỉ thị ” root ALL=(ALL) ALL” tuân theo đúng cú pháp thường gặp, có nghĩa là người dùng root, trên tất cả các máy, có thể mượn quyền tất cả các người dùng, để thực thi tất cả các lệnh.
+
+•	Chỉ thị “%admin ALL=(ALL) ALL” cũng tuân theo cú pháp đó, có nghĩa là nhóm người dùng admin, trên tất cả các máy, có thể mượn quyền tất cả các người dùng, để thực thi tất cả các lệnh
+
+Một số ví dụ thực tế khác
+
+a) Cho phép user subadmin được thực thi nhiều lệnh với quyền root
+
+subadmin ALL=(root) /sbin/shutdown, /bin/kill, /etc/init.d/httpd
+
+b) Cho phép user subadmin được tắt máy mà không cần phải xác nhận bằng mật khẩu
+
+subadmin localhost= NOPASSWD: /sbin/shutdown
+
+c) Cho phép user subadmin được thực hiện bất kỳ lệnh nào trong /usr/bin ở máy linux01
+
+subadmin linux01 = /usr/bin/*
+
+/usr/bin/passwd, /usr/sbin/useradd, /sbin/reboot
+
+### Cấp 1 vài quyền cho tudv
+
+%tudv       ALL=(root)      /etc/init.d/sshd, /sbin/shutdown, /usr/sbin/useradd, /sbin/service, /usr/bin/passwd, /sbin/reboot 
+
+Cấp cho tudv được thực thi tất cả nhưng ngoại trừ reboot máy
+%tudv    ALL=(root)      ALL, !/sbin/reboot
+
+Cấp cho tudv được thực thi tất cả trong sbin 
+
+%tudv  ALL=(root)    /sbin/*

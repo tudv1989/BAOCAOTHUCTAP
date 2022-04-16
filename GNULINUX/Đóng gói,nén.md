@@ -1,13 +1,16 @@
 # Trong hệ điều hành Linux phân chia thành 3 trường hợp: 
 
 - TH1: Nén (dữ liệu được nén lại với kích thước nhỏ hơn dữ liệu
-gốc)
+gốc) 
 - TH2: Đóng gói (để phục vụ cho nhiều dữ liệu nhỏ không bị phân
-mảnh, chúng ta gom lại thành 1 khối)
+mảnh, chúng ta gom lại thành 1 khối) 
 - TH3: Đóng gói và nén (Dữ liệu vừa được gói và nén lại, vừa đảm
-bảo sự đồng bộ 1 khối cũng như thu gọn lại kích thước dữ liệu
+bảo sự đồng bộ 1 khối cũng như thu gọn lại kích thước dữ liệu 
+
+
 
 ### Nén và giải nén:
+
 
 Có 3 định dạng nén là: *.zip; *.gz; *.bz2
 ## *.zip: 
