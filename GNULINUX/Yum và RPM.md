@@ -107,13 +107,13 @@ Cài lại:
 # RPM
 
 
-### 1.	Cài gói:
+### 1.Cài gói:
 
 - rpm -ivh “tên gói”
 
 - rpm -ivh --nodeps “tên gói”
 
-### 2.	Xóa gói:
+### 2.Xóa gói:
 
 - rpm -e “tên gói”
 
@@ -123,7 +123,7 @@ Cài lại:
 
   - rpm -e xóa hết cả gói phụ thuộc, trừ những gói phụ thuộc đang được dung bởi chương trình khác
 
-3.	Tìm kiếm:
+### 3.Tìm kiếm:
 
 - rpm -q “tên gói”  tìm kiếm 1 gói cụ thể đã được cài
 

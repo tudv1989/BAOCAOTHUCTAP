@@ -46,15 +46,15 @@ Quản lý người dùng hệ thống bằng lệnh
 
 - groupmod: chỉnh sửa thông tin group.
 
-# 2. Nhóm sudoers
+# Sudoers
 
 /etc/sudoers
 
 <img src="img/71.png">
 
-•	Chỉ thị ” root ALL=(ALL) ALL” tuân theo đúng cú pháp thường gặp, có nghĩa là người dùng root, trên tất cả các máy, có thể mượn quyền tất cả các người dùng, để thực thi tất cả các lệnh.
+•	Dòng ” root ALL=(ALL) ALL” nghĩa là người dùng root, trên tất cả các máy, có thể mượn quyền tất cả các người dùng, để thực thi tất cả các lệnh.
 
-•	Chỉ thị “%admin ALL=(ALL) ALL” cũng tuân theo cú pháp đó, có nghĩa là nhóm người dùng admin, trên tất cả các máy, có thể mượn quyền tất cả các người dùng, để thực thi tất cả các lệnh
+
 
 Một số ví dụ thực tế khác
 
@@ -72,13 +72,13 @@ subadmin linux01 = /usr/bin/*
 
 /usr/bin/passwd, /usr/sbin/useradd, /sbin/reboot
 
-### Cấp 1 vài quyền cho tudv
+### Cấp 1 vài quyền cho user1
 
-%tudv       ALL=(root)      /etc/init.d/sshd, /sbin/shutdown, /usr/sbin/useradd, /sbin/service, /usr/bin/passwd, /sbin/reboot 
+%user1       ALL=(root)      /etc/init.d/sshd, /sbin/shutdown, /usr/sbin/useradd, /sbin/service, /usr/bin/passwd, /sbin/reboot 
 
-Cấp cho tudv được thực thi tất cả nhưng ngoại trừ reboot máy
-%tudv    ALL=(root)      ALL, !/sbin/reboot
+Cấp cho user1 được thực thi tất cả nhưng ngoại trừ reboot máy
+%abc    ALL=(root)      ALL, !/sbin/reboot
 
-Cấp cho tudv được thực thi tất cả trong sbin 
+Cấp cho user1 được thực thi tất cả trong sbin 
 
-%tudv  ALL=(root)    /sbin/*
+%abc  ALL=(root)    /sbin/*
