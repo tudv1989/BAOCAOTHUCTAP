@@ -139,6 +139,8 @@ vào vi /etc/iscsi/initiatorname.iscsi
 
 #systemctl enable iscsi.service
 
+sử dụng lệnh tìm kiếm iscsiadm thêm  -l login luôn
+
 <img src="img/120.png">
 
 
