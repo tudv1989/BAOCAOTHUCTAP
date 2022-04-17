@@ -88,7 +88,7 @@ show lv vừa tạo
 
 - Tạo đĩa tên disk1 từ phân vùng LVM
 
-create disk1 /dev/VG/LV
+- create disk1 /dev/VG/LV
 
 <img src="img/113.png">
 
