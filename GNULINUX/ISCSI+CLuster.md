@@ -125,7 +125,7 @@ exit và khởi động lại dv , khởi động cùng hệ thống
 
 <img src="img/118.png">
 
-Sang cent2 ktra gói iscsi initiator
+## Sang cent2 ktra gói iscsi initiator
 
 vào vi /etc/iscsi/initiatorname.iscsi 
 
