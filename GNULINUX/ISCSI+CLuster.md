@@ -113,7 +113,7 @@ Khai báo kết nối cho cả 2 máy vào 1 disk
 
 create iqn.2022-4.dinhtu.local.target:cent2
 
-create iqn.2022-4.dinhtu.local.target:cent3
+
 
 cd vao create iqn.2022-4.dinhtu.local.target:cent1/tpg1/luns
 
