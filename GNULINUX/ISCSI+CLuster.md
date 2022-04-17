@@ -109,11 +109,9 @@ cd tiếp vào /iscsi/iqn..:cent1/tpg1/acls
 acls: accesslist, kiểu điều kiện kết nối
 <img src="img/115.png">
 
-Khai báo kết nối cho cả  máy vào 1 disk
+Khai báo kết nối cho cả  máy vào 1 lun
 
 create iqn.2022-4.dinhtu.local.target:cent2
-
-
 
 cd vao create iqn.2022-4.dinhtu.local.target:cent1/tpg1/luns
 
