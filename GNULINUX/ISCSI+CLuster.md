@@ -109,7 +109,7 @@ cd tiếp vào /iscsi/iqn..:cent1/tpg1/acls
 acls: accesslist, kiểu điều kiện kết nối
 <img src="img/115.png">
 
-Khai báo kết nối cho cả 2 máy vào 1 disk
+Khai báo kết nối cho cả  máy vào 1 disk
 
 create iqn.2022-4.dinhtu.local.target:cent2
 
