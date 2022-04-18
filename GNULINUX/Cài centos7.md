@@ -73,7 +73,7 @@ Set pass cho root và 1 user
 
 <img src="img/159.png">
 
-Bản minimal không paste được lệnh nên phải cài ssh thao tác cho nhanh.
+
 
 
 
