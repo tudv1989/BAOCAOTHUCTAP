@@ -50,7 +50,7 @@ Là một giao thức dựa trên IP, iSCSI tận dụng lợi ích của TCP/IP
 # Thực hành
 
 - 2 máy cent1 cent2 
- ip lần lượt 192.168.1.222/24 192.168.1.223/24 192.168.1.224/24,máy 1 làm server, máy còn lại sẽ lấy storage scsi của máy 192.168.1.222 
+ ip lần lượt 192.168.1.222/24 192.168.1.223/24 ,máy 1 làm server, máy còn lại sẽ lấy storage scsi của máy 192.168.1.222 
 
 - Trên cent1 gắn thêm 1 sdc 10G
 
@@ -81,7 +81,7 @@ show lv vừa tạo
 
 - Login vào targetcli đã cài ở trên và di chuyển đến khối block để khởi tạo ISCSI
 
-  - gõ targetcli
+gõ targetcli
 
 <img src="img/112.png">
 - Cài iscsi trên máy chủ 
@@ -96,9 +96,9 @@ Trở lại  targetcli
 
 cd /iscsi tạo iqn
 
-create iqn.2022-4.dinhtu.local.target:cent1
+create iqn.2022-04.dinhtu.local.target:cent1
    - 2022-4 là mốc thời gian
-   - dinhtu.com là tên miền cty
+   - dinhtu.local là tên miền cty
    - target chỉ máy chủ
    - cent1 tên máy chủ
 
@@ -109,11 +109,10 @@ cd tiếp vào /iscsi/iqn..:cent1/tpg1/acls
 acls: accesslist, kiểu điều kiện kết nối
 <img src="img/115.png">
 
-Khai báo kết nối cho cả 2 máy vào 1 disk
+Khai báo kết nối cho máy vào lun của disk
 
-create iqn.2022-4.dinhtu.local.target:cent2
+create iqn.2022-04.dinhtu.local.target:cent2
 
-create iqn.2022-4.dinhtu.local.target:cent3
 
 cd vao create iqn.2022-4.dinhtu.local.target:cent1/tpg1/luns
 
