@@ -223,10 +223,15 @@ Ta đang có file chome.deb ngoài màn hình
   - gắn 1 ổ 20 Gb vào máy ảo
 
     <img src="imgubuntu/48.png">
- - phân vùng lấy hết 20Gb cho /dev/sdb1
+  - phân vùng lấy hết 20Gb cho /dev/sdb1
     <img src="imgubuntu/49.png">
- - Phân vùng dạng ext4
+  - Phân vùng dạng ext4
     <img src="imgubuntu/50.png">
+  - Ghi thông tin vào fstab và mount đến data ngoài màn hình của user
+
+    <img src="imgubuntu/52.png">
+
+    <img src="imgubuntu/53.png">
  
 
 
