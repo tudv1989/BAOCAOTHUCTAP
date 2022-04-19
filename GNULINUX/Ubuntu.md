@@ -101,7 +101,7 @@ Chọn theo gợi ý .<img src="imgubuntu/11.png">
 
 - Bấm tùy chọn tìm file iso của ubuntu
 và finish
-<img src="imgubuntu/15.png">
+<img src="imgubuntu/17.png">
 <img src="imgubuntu/18.png">
 
 - Sau khi hoàn tất các chọn lựa ta power on máy ảo
