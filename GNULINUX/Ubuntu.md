@@ -1,4 +1,4 @@
-## **HĐH UBUNTU**
+## HĐH UBUNTU
 
 Ubuntu là phản phân phối theo nhánh Debian
 
@@ -39,6 +39,10 @@ Ubuntu là phản phân phối theo nhánh Debian
    - systemctl enable ufw
 
    ....
+
+**Gói phần mềm của ubuntu**
+
+<img src="imgubuntu/47.png">
 
 ## CÀI ĐẶT UBUNTU TRÊN VMWARE
 
