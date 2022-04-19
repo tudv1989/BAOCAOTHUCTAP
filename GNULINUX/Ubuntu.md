@@ -1,8 +1,8 @@
 ## **HĐH UBUNTU**
 
-- Ubuntu là phản phân phối theo nhánh Debian
+Ubuntu là phản phân phối theo nhánh Debian
 
-- Packetmanager là ***apt-get***
+- Advanced Packaging Tool (APT) 
 
 - Hoặc cài đặt bằng file ***.deb*** theo cấu trúc
 
