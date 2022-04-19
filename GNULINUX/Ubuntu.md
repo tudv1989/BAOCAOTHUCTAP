@@ -206,7 +206,7 @@ Ta đang có file chome.deb ngoài màn hình
 - Cài đặt gói Opera .rpm
 
   - Đầu tiên ta phải đổi từ .rpm sang .deb sau đó cài bình thường
-    - cài thêm thư viện alien
+    - cài thêm utinity alien
 
     <img src="imgubuntu/44.png">
 
