@@ -72,7 +72,7 @@ vì thực tế có những bo mạch chủ chạy nhiều cpu, trên mô�
   - NAT : Giao tiếp với host và đi ra được internet
   - Host Only : chỉ giao tiếp với host và ko ra internet
   - Custom cũng có tùy chọn VM switch khi ta có nhiều máy ảo muốn connect với nhau và ko giao tiếp bên ngoài ta sẽ chọn các sw ảo.
-  - Tùy chọn cuối cùng : ko cần internet và môi trường LAN ngoài, chỉ kết nối internet.
+  - Tùy chọn cuối cùng : ko kết nối với cái j hết
  <img src="imgubuntu/10.png">
 
 - Chọn SCSI controller (BusLogic Parallel, LSI Logic Parallel, LSI Logic SAS và VMware Paravirtual
