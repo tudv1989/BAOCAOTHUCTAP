@@ -108,7 +108,7 @@ dang nhap docker.com tao tai khoan dockerhub
 
 
 
-5- tren centos go lenh: docker login va nhap tai khoan pass vua tao tai dockerhub
+5- trên centos gõ lệnh: docker login và nhập tài khoản và pass vừa tạo ở docker hub
 
 <img src="img/7.png">
 
