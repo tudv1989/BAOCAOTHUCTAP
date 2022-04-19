@@ -225,6 +225,7 @@ Ta đang có file chome.deb ngoài màn hình
     <img src="imgubuntu/48.png">
   - phân vùng lấy hết 20Gb cho /dev/sdb1
     <img src="imgubuntu/49.png">
+    <img src="imgubuntu/54.png">
   - Phân vùng dạng ext4
     <img src="imgubuntu/50.png">
   - Ghi thông tin vào fstab và mount đến data ngoài màn hình của user
