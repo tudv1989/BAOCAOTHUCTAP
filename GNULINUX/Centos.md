@@ -102,7 +102,7 @@ Finish
 
 <img src="imgcentos7/15.png">
 
-Bấm tùy chọn tìm file iso của ubuntu
+Bấm tùy chọn CD/DVD tìm file iso của centos7
 và finish
 
 <img src="imgcentos7/16.png">
