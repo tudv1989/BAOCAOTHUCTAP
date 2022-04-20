@@ -229,5 +229,5 @@ CÀi bind
 - Tạo 1 folder /data , ghi thử 1 file text
 <img src="imgcentos7/43.png">
 
-in nội dung file texlr dùng **cat**
+in nội dung file text dùng **cat**
 <img src="imgcentos7/45.png">
