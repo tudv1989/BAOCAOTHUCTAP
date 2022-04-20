@@ -1,6 +1,7 @@
-# Thực hành cài centos 7 trên vmw
+# Thực hành cài centos 7 trên vmw 
 
-Mở phần mềm ảo hóa Phầnvmw workstation 16 pro
+
+Mở phần mềm ảo hóa Phầnvmw workstation 16 pro 
 
 
 <img src="imgcentos7/1.png">
@@ -27,7 +28,7 @@ Tùy chọn cài hệ điều hành cuối cùng
 
 
 
-Chọn loại hệ điều hành và phiên bản muốn cài, ở đây mình cài ubuntu nên chọn Linux và chọn Centos7 64bit
+Chọn loại hệ điều hành và phiên bản muốn cài, ở đây mình cài centos nên chọn Linux và chọn Centos7 64bit
 
 <img src="imgcentos7/5.png">
 
@@ -43,7 +44,9 @@ Tiếp theo ta chọn đường dẫn lưu các file của hệ điều ha
 
 
 Chọn số lượng cpu cài lên và số core trên cpu cài lên
+
 vì thực tế có những bo mạch chủ chạy nhiều cpu, trên mỗi cpu lại có nhiều nhân.
+
 <img src="imgcentos7/7.png">
 
 
@@ -126,6 +129,8 @@ Ta chọn múi giờ , thời gian
 <img src="imgcentos7/21.png">
 
 Tùy vào mục đích sử dụng, ở đây mình cài bản không có giao diện
+
+
 <img src="imgcentos7/22.png">
 
 
@@ -134,6 +139,7 @@ Tùy vào mục đích sử dụng, ở đây mình cài bản không có giao d
 
 
 Đến tùy chọn phân vùng ổ cứng tự động hoặc thủ công, mình chọn thủ công
+
 <img src="imgcentos7/24.png">
 
 
