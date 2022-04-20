@@ -197,7 +197,7 @@ chỉnh sửa ssh tại
 
 
 
-Tùy chọn root login
+Tùy chọn cho phép root kết nối được ssh ( thông thường là hạn chế việc sử dụng root cho SSH cũng là 1 dự phòng bảo mật vì root có mọi quyền trên hệ thống)
 
 <img src="imgcentos7/37.png">
 
