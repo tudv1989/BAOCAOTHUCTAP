@@ -1,4 +1,10 @@
+# Thực hành cài centos 7 trên vmw
+
+Mở phần mềm ảo hóa Phầnvmw workstation 16 pro
+
+
 <img src="imgcentos7/1.png">
+
 - Click Create a New Vitual machine
 
 - Typical là cài đặt tự động do app vmw tự đề xuất cho mình về các thông số...
@@ -172,9 +178,9 @@ Quá trình hoàn tất , login root và mật khẩu
 
 <img src="imgcentos7/35.png">
 
-Cai dat ssh
+Cài đặt ssh
 
-va chinh sua tai
+chỉnh sửa ssh tại
 
 /etc/ssh/sshd_config
 
@@ -185,25 +191,37 @@ va chinh sua tai
 
 
 
-Tuy chon root login
+Tùy chọn root login
+
 <img src="imgcentos7/37.png">
 
-Disabled selinux tai
+Disabled selinux tại
+
 /etc/sysconfig/selinux
+
 <img src="imgcentos7/38.png">
 
-Cho ssh khoi dong cung he thong
+Cho SSH khởi động cùng hệ thống mỗi khi reboot
 
 <img src="imgcentos7/39.png">
 
-Cau hinh dia chi IP
+Cấu hình IP tĩnh
+
+/etc/sysconfig/network-scrip/ifcfg-enss33
+
+<img src="imgcentos7/40.png">
 
 
-
-<img src="imgcentos7/42.png">
 
 
 <img src="imgcentos7/41.png">
 
-SSH tu host vao VT
+CÀi bind
 
+<img src="imgcentos7/42.png">
+
+
+<img src="imgcentos7/43.png">
+
+
+<img src="imgcentos7/45.png">
