@@ -122,7 +122,7 @@ Trên  centos7 gõ lệnh:
 
 <img src="img/164.png">
 
-Ta thấy image tải về có 76MB , nó ko phải file iso của centos7 ~ 4.4 GB
+Ta thấy image tải về có 204 MB , nó ko phải file iso của centos7 ~ 4.4 GB
 mà là 1 phiên bản container được đóng gói thành image trong đó có chứa các thư viện tập lệnh có giá trị rất nhỏ, khi sử dụng nó sẽ sử dụng nhân của hdh bên ngoài máy centos đang chạy thông qua 1 teminal là công cụ đứng giữa, có những image rất nhỏ ~ vài MB nhưng chứa rất nhiều tập tin thư viện bên trong .
 
 Sau khi đã load thành công gõ:
