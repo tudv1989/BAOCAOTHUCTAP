@@ -37,6 +37,8 @@ Hầu hết các thông số này đều được monitor truyền ra ph
 
   - Dây mạng ( 2 sợi , 1 sợi là IP public, công ty có thể đăng ký 1 dải IPv4/23 và dùng dần các địa chỉ /32, gắn với sw core chắc định tuyến default  firewall DC và .1 sợi là local dùng backup, sợi này đấu với các sw mình tự cắm thêm vào tủ để có thể làm nhiệm vụ backup đến 1 storage nào đó bên mình đặt ở đó).
 
+  - Hoàn tất các công việc : dán nhãn dây : Tên mã máy chủ ,chủ sở hữu, nhãn đánh dấu 2 đầu các dây mạng, dây nguồn... để công việc bảo trì hoặc xử lý sự cố lần sau đỡ mất thời gian.
+
 # Kết thúc làm việc 
 
 - Đem trả thẻ, lấy cmt căn cước, đồ gửi..và ra về
