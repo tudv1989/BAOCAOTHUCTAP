@@ -26,7 +26,7 @@ Hiện nay các thể loại raid phổ biến  là raid 0 1 5 6 và 10 l
 
 ## 1-RAID 0
 
-<img src="img/173.png">
+
 
 Đây là loại RAID khá phổ biến và được nhiều người dùng do có khả năng nâng cao hiệu suất trao đổi dữ liệu của đĩa cứng.
 
