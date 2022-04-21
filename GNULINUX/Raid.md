@@ -114,6 +114,8 @@ Sau khi bộ điều khiển đã nhận biết hoàn hảo hệ đĩa cứng m�
 
 <img src="th/18.png">
 
+mã hex của phân vùng raid là fd
+
 Làm tương tự với /dev/sdc
 
  <img src="th/19.png">
