@@ -48,7 +48,6 @@ Nếu RAID 0 tập trung ưu tiên cho tốc độ thì RAID 1 lại hoàn toàn
 
 ## 3 - RAID 1+0
 
-<img src="img/175.png">
 
 Đây là loại RAID kết hợp giữa RAID 0 và RAID 1 nhưng là hai cơ chế hoàn toàn khác.
 
