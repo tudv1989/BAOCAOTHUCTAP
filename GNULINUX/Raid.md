@@ -102,7 +102,6 @@ Sau thao tác này, bạn sẽ lưu thông số rồi khởi động lại máy 
 
 + Chỉ định Block Size: Đây là chìa khóa ảnh hưởng rất lớn tới hiệu năng của giàn ổ cứng chạy RAID. Đối với RAID dạng Striping, Block size cũng có nghĩa là Stripe Size. Nếu thông số này thiết lập không phù hợp với nhu cầu sử dụng thì sẽ gây lãng phí bộ nhớ và giảm hiệu năng. Ví dụ nếu Block Size có giá trị là 64KB thì tối thiểu sẽ có 64KB được ghi vào ổ đĩa trong mọi trường hợp, ngay cả khi đó là một file text có dung lượng 2KB. Vì thế giá trị này nên xấp xỉ tương ứng với kích thước trung bình của các file bạn dùng. Nếu ổ cứng chứa nhiều file nhỏ ví dụ tài liệu Word, bạn nên để block size bé, nếu chứa nhiều phim ảnh hoặc nhạc, block size lớn sẽ cho hiệu năng cao hơn (nhất là với hệ thống RAID 0).
 
-Bên cạnh đó, Block size còn có một chức năng khác quyết định việc file sẽ được ghi vào đâu. Quay về với ví dụ Block Size 64KB, nếu như file có kích thước nhỏ hơn 64KB, nó sẽ chỉ được ghi vào một ổ cứng trong hệ thống RAID và như vậy sẽ không có bất cứ sự cải thiện hiệu năng nào. Trong một trường hợp khác, một file có kích thước 150KB sẽ được ghi vào 3 ổ đĩa với các đoạn 64KB + 64KB + 22KB và bộ điều khiển có thể đọc thông tin từ ba ổ cùng lúc cho phép tăng tốc đáng kể. Nếu bạn chọn block size là 128KB thì file đó chỉ được ghi vào 2 ổ 128KB + 22KB mà thôi. Thực tế bạn nên chọn Block Size là 128KB cho các máy tính để bàn trừ khi có nhu cầu riêng.
 
 Sau khi bộ điều khiển đã nhận biết hoàn hảo hệ đĩa cứng mới, bạn tiến hành cài đặt hệ điều hành cũng như format ổ RAID
 
