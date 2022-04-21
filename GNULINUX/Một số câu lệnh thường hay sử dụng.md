@@ -3,6 +3,7 @@
 - `# exit` hoặc `# logout` : thoát ra khỏi trạng thái đăng nhập
 - `# reboot`: Khởi động lại hệ thống
 - `# ps`: Liệt kê các tiến trình đang hiện hành và PID (Process ID) của tiến trình đó.
+
 <img src="th/1.png">
 
 - `# sleep <thoi_gian>`: Cho phép hệ thống ngừng hoạt động trong một thời gian (thoi_gian tính bằng giây). Ví dụ `# sleep 6`, thì máy chủ sẽ tạm thời ngưng hoạt động trong 6 giây
@@ -10,9 +11,11 @@
 
 
 - `# passwd <ten_user>`: Cập nhật mật khẩu cho user đã tạo. Ví dụ
+
 <img src="th/3.png">
 
 - `# who`: Cho biết user nào đang sử dụng hệ thống
+
 <img src="th/2.png">
 
 - `# whoami`: Cho biết user nào đang đăng nhập
@@ -20,12 +23,14 @@
 
 
 - `# top`: Hiển thị các tiến trình đang chạy trên hệ thống. Tương tự nhu task manager của window
+
 <img src="th/4.png">
 
 - `# usermod -aG wheel <username>`: Cho phép user sử dụng quyền sudo
 
 
 - `#su - <username>`: Đăng nhập bằng user khác
+
 <img src="th/5.png">
 
 - Nhấn tổ hợp "ctrl + L" hoặc `# clear` đề làm sạch commandline
@@ -41,6 +46,7 @@
 	+ -k: Hiển thị dưới dạng Kb
 	+ -m: Hiển thị dưới dạng Mb
 	+ -g: Hiển thị dưới dạng Gb
+
 <img src="th/6.png">
 
 - `# hostnamectl`: Xem thông tin hostname hiện tại của máy
@@ -49,44 +55,83 @@
 - `# init 0`: Tắt máy
 - `# init 6`: Khởi động lại 
 - `# w`: Kiểm tra các phiên SSH
+
 <img src="th/7.png">
+
 - `# df -h`: Hiển thị dung lượng ổ cứng của máy (dung lượng sẵn sàng và được sử dụng...)
+
 <img src="th/8.png">
+
 - `# df -i`: Hiển thị thông tin Inodes của máy (tổng số file đã tạo ra, số file còn có thể tạo, số file đã tạo...)
+
 # 2. Thao tác với tập tin
+
 - `# ls`: Xem danh sách các file và thư mục hiện hành
+
 - `# ll`: Xem danh sách các file và thư mục hiện hành chi tiết
+
 - Chuyển thư mục (change directory): `# cd`
+
 	+ cd /etc/selinux: Chuyển tới thư mục /selinux/
+
 	+ cd: Chuyển về thư mục chính của người dùng
+
 	+ cd A && ls: Chuyển tới thư mục A và hiển thị danh sách file và các thư mục của nó
+
 	+ cd ..: Chuyển về thư mục cha của thư mục hiện tại
+
 - Tạo 1 thư mục mới: `# mkdir <ten_thu_muc>`
+
 - Tạo 1 tập tin: `# touch <ten_tap_tin>`
+
 - Tạo 1 tập tin dạng text: `# echo "" >> ~/<ten_tap_tin>`
+
 - Xóa tập tin: `# rm`
+
 	+ `# rm <ten_tap_tin>`: Xóa 1 tập tin
+
 	+ `# rm <tap_tin_1> <tap_tin_2>`: Xóa nhiều tập tin
+
 	+ `# rm /a/b/c/<tap_tin>`: Xóa tập tin theo đường dẫn
+
 	+ `# rm -i`: Xóa có xác nhận lại
+
 	+ `# rm -f`: Xóa không xác nhận
+
 	+ `# rm -I <ten_thu_muc>/file*`: Xóa hàng loạt file có cấu trúc file[...]
+
 - Xóa thư mục: `# rmdir`
+
 	+ `# rmdir <ten_thu_muc>`: hoặc `# rm -d`: Xóa 1 thư mục rỗng
+
 	+ `# rm -r <ten_thu_muc>`: Xóa thư mục chứa các thư mục con và tập tin (có xác nhận cho từng đối tượng)
+
 	+ `# rm -rf <ten_thu_muc>`: Xóa thư mục chứa các thư mục con và tập tin (không xác nhận)
+
 - Mở tập tin: `# cat <tap_tin>`hoặc `# tail <tap_tin>` hoặc `head <tap_tin>`
+
 <img src="th/9.png">
+
 - Khởi động trình soạn thảo VI:
+
 	+ Câu lệnh `# vi <ten_file>`
+
 	+ Nếu file chưa tồn tại thì hệ thống sẽ tạo ra file đó
+
 	+ Nhấn phía "i" (Insert): Để chỉnh sửa văn bản
+
 	+ Nhấn phím "ESC" để thoát khoải trạng thái nhập
+
 	+ Nhập `:wq` (Để lưu lại file sửa đổi) hoặc `:q!` (Để thoát mà không lưu)
+
 	+ Nhập `: <so_dong>`: Để chuyển đến dòng muốn tới
+
 	+ Nhập `/ <tu_muon_tim_kiem>`: Để tìm kiếm trong file file đó
+
 - Copy file: `# cp`
+
 	+ Copy file A thành file B tại thư mục hiện hành
+	
 	```sh
 	cp A.txt B.txt 
 	```
