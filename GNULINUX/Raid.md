@@ -87,7 +87,7 @@ RAID 6 yêu cầu tối thiểu 4 ổ cứng. Khi sử dụng đến 4 ổ ứng
 
 
 
-# Cài đặt RAID
+# Cài đặt RAID trước cài đặt HĐH
 Việc cài đặt RAID  chủ yếu dựa vào BIOS của mainboard, RAID Controller .
 
 Sau khi đã cắm ổ cứng vào đúng vị trí RAID trên bo mạch , bạn vào BIOS  để bật bộ điều khiển RAID ...
@@ -105,3 +105,50 @@ Sau thao tác này, bạn sẽ lưu thông số rồi khởi động lại máy 
 
 Sau khi bộ điều khiển đã nhận biết hoàn hảo hệ đĩa cứng mới, bạn tiến hành cài đặt hệ điều hành cũng như format ổ RAID
 
+# CÀI RAID 1 chứa DATA trên centos 7
+
+- Gắn thêm 2 ổ mỗi ổ 5GB vào máy centos7 và tạo phân vùng dạng raid.
+
+<img src="th/16.png">
+
+<img src="th/17.png">
+
+<img src="th/18.png">
+
+Làm tương tự với /dev/sdc
+
+ <img src="th/19.png">
+
+- Kiểm tra công cụ `mdadm`
+
+<img src="th/20.png">
+
+- Nếu chưa có thì ` yum install mdadm -y`
+
+<img src="th/21.png">
+
+- Tạo Raid 1 trên thiết bị
+
+<img src="th/21.png">
+
+<img src="th/22.png">
+
+<img src="th/23.png">
+
+-Lệnh này bao gồm các thông số như tạo ra đĩa nhóm đại diện /dev/md0, loại raid=1, số lượng đĩa tham gia =2
+
+và chi tiết ổ physical tham gia
+
+-Kiểm tra đĩa đã raid `mdadm --detail /dev/md0`
+
+<img src="th/24.png">
+
+- Tiến hành mount và ghi vào fstab
+
+<img src="th/25.png">
+
+<img src="th/26.png">
+
+Khởi động lại máy xem trạng thái ổ cứng
+
+<img src="th/27.png">
