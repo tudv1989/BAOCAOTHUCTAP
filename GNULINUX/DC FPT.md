@@ -33,9 +33,11 @@ Hầu hết các thông số này đều được monitor truyền ra ph
 
   - Dây nguồn : cắm 2 dây nguồn ( 1 sợi chỉ dự phòng )
 
-  - Dây quản lý máy chủ IDRAC( Nếu như có tài khoản VPN đến mình có thể cấu hình máy chủ qua giao diện web)
+  - Dây mạng IDRAC, loại địa chỉ này dễ là IP private này dùng để giám sát, nâng cấp, cập nhật ... cho máy chủ dạng có thể kết nối từ xa tùy từng loại liense.
 
-  - Dây mạng ( 2 sợi , 1 sợi là IP public, công ty có thể đăng ký 1 dải IPv4/23 và dùng dần các địa chỉ /32, gắn với sw core chắc định tuyến default  firewall DC và .1 sợi là local dùng backup, sợi này đấu với các sw mình tự cắm thêm vào tủ để có thể làm nhiệm vụ backup đến 1 storage nào đó bên mình đặt ở đó).
+  - Dây mạng IP public, công ty có thể đăng ký 1 dải IPv4/23 và dùng dần các địa chỉ /32, gắn với sw core chắc định tuyến default  firewall DC
+
+  - Và 1 sợi là local dùng backup, sợi này đấu với sw và các máy chủ khác mình tự cắm thêm vào tủ để có thể làm nhiệm vụ backup đến 1 storage nào đó bên mình đặt ở đó).
 
   - Hoàn tất các công việc : dán nhãn dây : Tên mã máy chủ ,chủ sở hữu, nhãn đánh dấu 2 đầu các dây mạng, dây nguồn... để công việc bảo trì hoặc xử lý sự cố lần sau đỡ mất thời gian.
 
