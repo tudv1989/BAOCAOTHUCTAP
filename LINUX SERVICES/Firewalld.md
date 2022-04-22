@@ -112,9 +112,9 @@ Output = running
 
   - `firewall-cmd --reload`
 
-  <img src="imgservices/9.png">
-
   - ` firewall-cmd --zone=publicweb --list-all`
+
+  <img src="imgservices/9.png">
 
   - `firewall-cmd --zone=publicweb --add-port=22/tcp --permanent`
   - `firewall-cmd --zone=publicweb --add-port=80/tcp --permanent`
