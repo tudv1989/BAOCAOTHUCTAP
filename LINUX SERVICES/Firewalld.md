@@ -102,7 +102,7 @@ Output = running
   
 
 
-- Add service ssh http và https  và các port 22 80 443 ( **Lưu ý tham số có mặt --permanent hoặc ko có mặt --permanent, điều này liên quan đến add các service tạm thời -sau lệnh restart dịch vụ firewalld hoặc vĩnh viễn, nếu vĩnh viễn thì thêm tham số --permanent** )
+- Add service ssh http và https  và các port 22 80 443 (--permanent )
 
   - `firewall-cmd --zone=publicweb --add-service=ssh --permanent`
 
