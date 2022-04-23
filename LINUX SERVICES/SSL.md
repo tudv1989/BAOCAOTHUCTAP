@@ -29,14 +29,4 @@ tăng niềm tin của khách hàng đối với website, tăng số lượng gi
 giao dịch trực tuyến của khách hàng)
 
 
-# Thực hành
-
-## OpenSSL
-
-OpenSSL - www.openssl.org dự án mã nguồn mở phát triển một kỹ thuật bảo mật dạng 
-thương mại, đầy đủ các đặc trưng. OpenSSL thực thi các giao thức như Secure Sockets 
-Layer (SSL v2/v3) và Transport Layer Security (TSL v1) với những thuật toán mã hóa 
-phức tạp: RSA, DSA…
-
-## Cài đặt
 

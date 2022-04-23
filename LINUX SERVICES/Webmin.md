@@ -1,5 +1,11 @@
 # WEBMIN
 
+Webmin là một giao diện web để quản trị hệ thống cho Linux. Nó cho phép điều khiển nhiều máy tính thông qua một giao diện duy nhất. Hoặc đăng nhập liền mạch trên các Webmin host khác trên cùng một subnet hoặc mạng LAN. Bạn có thể sử dụng bất kỳ trình duyệt web hiện đại nào để kết nối với server của bạn.
+
+Webmin loại bỏ nhu cầu chỉnh sửa các file cấu hình Linux  theo cách thủ công. Nó cũng cho phép bạn quản lý server từ xa hoặc bảng điều khiển. Với Webmin, bạn có thể định cấu hình hệ điều hành nội bộ như users, service. Hoặc là các file cấu hình, disk quotas. Bên cạnh đó là sửa đổi và kiểm soát các ứng dụng nguồn mở (open-source) như Apache hay Tomcat, PHP, MySQL, DNS và chia sẻ file. Webmin, dựa trên Perl, chạy như một quy trình và web server của riêng nó.
+
+# Thực hành
+
 - Cài đặt:
 
 - IP 172.16.2.223/20

@@ -1,4 +1,4 @@
-# Tìm hiểu và cài đặt webserver sử dụng apache và sử dụng nginx.
+# Tìm hiểu và cài đặt webserver sử dụng apache 
 ## 1. Web server là gì?
 - Ở khía cạnh phần cứng, web server là một server lưu trữ các tài nguyên mà tạo nên một trang web và nó gửi các tài nguyên đó đến client yêu cầu.
 - Ở khía cạnh phần mềm, web server bao gồm một số phần mềm kiểm soát người dùng truy cập, nó sử lý thông tin và trả về trang web hay tài nguyên cho người dùng.
