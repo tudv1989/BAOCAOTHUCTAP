@@ -261,10 +261,25 @@ yum install php-mysql php-pecl-memcache php-pecl-memcached php-gd php-mbstring p
 
 - Sau khi cài xong ta cần phải khai báo  trong file ``wp-config.php`` để kết nối database
 
+và 
+
+```
+chown -R nginx:nginx /var/lib/php/session/
+
+```
+
 <img src="imgservices/75.png">
 
 
 <img src="imgservices/76.png">
+
+- Khai báo vào database tên website ban nãy tạo
+
+<img src="imgservices/77.png">
+
+<img src="imgservices/81.png">
+
+- Truy cập lại 192.168.1.223 tạo web wordpress ,admin wpress và mail nhận đăng ký thông tin wpress
 
 <img src="imgservices/78.png">
 
