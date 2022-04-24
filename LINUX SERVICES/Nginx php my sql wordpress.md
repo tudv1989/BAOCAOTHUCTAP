@@ -13,7 +13,8 @@ vi /etc/sysconfig/selinux  :  selilux=disabled
 
 - Update yum và mở rộng thư viện :
 
-```yum update -y
+```
+yum update -y
 
 yum install epel-release -y
 
