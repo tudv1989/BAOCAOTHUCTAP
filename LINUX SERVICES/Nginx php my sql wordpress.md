@@ -110,6 +110,8 @@ yum -y install phpmyadmin
 
 ta sẽ tạo file default.conf và chỉnh thông số.
 
+
+
 ```
 vi /etc/nginx/conf.d/default.conf
 
