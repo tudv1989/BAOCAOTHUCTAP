@@ -70,11 +70,16 @@ Trước khi cài đặt phần mềm nào đó ví dụ như mysql, httpd, … 
 ```
 - Vô hiệu hóa SELinux vĩnh viễn
 
-   Chỉnh sửa nội dung trong file /etc/selinux/config với nội dung SELINUX=disabled
+   Chỉnh sửa nội dung trong file /etc/sysconfig/selinux với nội dung SELINUX=disabled
 
 - Kiểm tra lại trạng thái của SElinux
 
    Sau khi vô hiệu hóa vĩnh viễn xác nhận quá trình vô hiệu hóa thành công
+
+   ```
+   sestatus
+
+   ```
 
 
 
