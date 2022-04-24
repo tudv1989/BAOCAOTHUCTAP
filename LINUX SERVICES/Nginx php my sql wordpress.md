@@ -259,6 +259,7 @@ yum install php-mysql php-pecl-memcache php-pecl-memcached php-gd php-mbstring p
 
 - Sau khi cài xong ta cần phải khai báo  trong file ``wp-config.php`` để kết nối database
 
+
 và 
 
 ```
@@ -273,6 +274,10 @@ chown -R nginx:nginx /var/lib/php/session/
 
 - Khai báo vào database tên website ban nãy tạo
 
+```
+vi /usr/share/nginx/html/wp-config.php
+
+```
 <img src="imgservices/77.png">
 
 <img src="imgservices/81.png">
