@@ -119,7 +119,7 @@ vi /etc/nginx/conf.d/default.conf
 ```
 server {
     listen   80;
-    server_name  your_server_ip;
+    server_name  192.168.1.223;
 
     # note that these lines are originally from the "location /" block
     root   /usr/share/nginx/html;
