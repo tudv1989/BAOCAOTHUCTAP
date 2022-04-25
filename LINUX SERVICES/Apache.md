@@ -52,7 +52,14 @@ netstat -natp | grep httpd
 mkdir /www
 ```
 
-- Chỉnh sửa Document root /www , thêm vào các file giao diện indexx
+- Chỉnh sửa Document root /www , thêm vào các file giao diện index, 
+
+Chỉnh sửa file cấu hình của httpd
+
+```
+/etc/httpd/conf/httpd.conf
+
+```
 
 <img src="imgservices/18.png">
 
