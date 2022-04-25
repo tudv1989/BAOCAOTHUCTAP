@@ -269,8 +269,11 @@ service httpd restart
 <img src="imgservices/119.png">
 
 
-- Cài thử zabbix trên win10 và add các thông số 
-- Thử giám sát Win10 đang là host
+- Cài thử zabbix agent trên win10 và add các thông số 
 
-<img src="imgservices/121.png">
+- Thử giám sát Win10 đang là host.
+
+
+
+
 
