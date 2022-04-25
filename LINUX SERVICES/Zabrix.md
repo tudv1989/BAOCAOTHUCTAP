@@ -1,6 +1,31 @@
+# Zabbix
+
+Zabbix là một công cụ mã nguồn mở giải quyết cho ta các vấn đề về giám sát. Zabbix là phần mềm sử dụng các tham số của một mạng, tình trạng và tính toàn vẹn của Server cũng như các thiết bị mạng. Zabbix sử dụng một cơ chế thống báo linh hoạt cho phép người dùng cấu hình email hoặc sms để cảnh báo dựa trên sự kiện được ta thiết lập sẵn. Ngoài ra Zabbix cung cấp báo cáo và dữ liệu chính xác dựa trên cơ sở dữ liệu. Điều này khiến cho Zabbix trở nên lý tưởng hơn.
+Tất cả các cấu hình của Zabbix thông qua giao diện web. Việc lên kế hoạch và cấu hình một cách đúng đắn sẽ giúp cho việc giám sát trở nên dễ dàng và thuận tiện hơn. Zabbix đóng một vai trò quan trọng trong việc theo dõi hạ tầng mạng.
+
+Zabbix có các ưu điểm 
+
+- Giám sát cả Server và thiết bị mạng
+
+- Dễ dàng thao tác và cấu hình
+
+- Hỗ trợ máy chủ Linux, Solaris, FreeBSD …
+
+- Đáng tin cậy trong việc chứng thực người dùng
+
+- Linh hoạt trong việc phân quyền người dùng
+
+- Giao diện web đẹp mắt
+
+- Thông báo sự cố qua email và SMS
+
+- Biểu đổ theo dõi và báo cáo
+
+- Mã nguồn mở và chi phí thấp
+
+# Cài đặt
 
 
-```
 yum update -y
 
 ```
