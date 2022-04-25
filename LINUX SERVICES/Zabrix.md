@@ -25,12 +25,13 @@ Zabbix có các ưu điểm
 
 # Cài đặt
 
-
+``` 
 yum update -y
 
 ```
 
 - Cài đặt apache
+
 ```
 yum install httpd -y
 
