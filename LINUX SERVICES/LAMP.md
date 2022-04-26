@@ -264,6 +264,8 @@ vi wp-config.php
 
 <img src="imgservices/149.png">
 
+- Đăng nhập vào http://tudv.xyz
+
 <img src="imgservices/150.png">
 
 
