@@ -97,7 +97,7 @@ chmod 755 web             ;để mọi người có quyền vào đc
 
   
 
-- Cấu hình virtual host: /etc/httpd/conf.d/userdir.conf khi cài xong httpd sẽ được tạo ra
+- Cấu hình file userdir: /etc/httpd/conf.d/userdir.conf khi cài xong httpd sẽ được tạo ra
 
 ```
 vi /etc/httpd/conf.d/userdir.conf
