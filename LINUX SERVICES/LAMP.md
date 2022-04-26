@@ -1,5 +1,5 @@
 # LAMP
-<img src="imgservices/123.png">
+
 LAMP là sự kết hợp của Linux + Apache + MySQL + PHP.
 
 Nó là một chồng các ứng dụng hoạt động cùng nhau trên một máy chủ web để lưu trữ một trang web. Mỗi chương trình riêng lẻ phục vụ một mục đích khác nhau, được kết hợp lại để tạo thành một giải pháp máy chủ web linh hoạt.
