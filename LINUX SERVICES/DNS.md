@@ -42,6 +42,7 @@ Có 13 root server trên internet, tên được đặt từ A đến M. Chúng 
 
 ```
 yum install bind bind-utils -y
+
 ```
 
 - Cấu hình Dns server 
@@ -130,7 +131,9 @@ include "/etc/named.root.key";
 - Tạo file zone vừa xác định trong file /etc/named.conf
 ```
 vi /var/named/forward.unixmen
+
 ```
+
 ```
 $TTL 86400
 @ IN SOA masterdns.linux2.vn. root.linux2.vn. (
