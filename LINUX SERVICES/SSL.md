@@ -28,5 +28,33 @@ các giao dịch giữa khách hàng và doanh nghiệp, các dịch vụ truy n
 tăng niềm tin của khách hàng đối với website, tăng số lượng giao dịch, giá trị 
 giao dịch trực tuyến của khách hàng)
 
+# Cài SSL trên server LAMP dùng chứng chỉ miễn phí  Certbot-apache
+
+- Cài đặt EPEL reppsitory
+
+```
+yum install -y epel-release
+
+```
+
+Cài đặt certbot-apache
+
+```
+yum -y install certbot python2-certbot-apache mod_ssl
+
+```
+
+
+- Để cài đặt SSL cho website, ta sử dụng câu lệnh sau
+
+```
+certbot --apache -d anhntv.xyz -d www.anhntv.xyz
+```
+- Sau đó ta nhập email, chọn 'Y' để điều đồng ý với điều khoản, chọn 'N' để từ chối nhận thông tin, tin tức từ Let's Encrypt và Certbot
+
+
+
+
+
 
 
