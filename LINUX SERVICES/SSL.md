@@ -45,13 +45,23 @@ yum -y install certbot python2-certbot-apache mod_ssl
 ```
 
 
-- Để cài đặt SSL cho website, ta sử dụng câu lệnh sau
+- Để cài đặt SSL cho website, ta sử dụng câu lệnh sau:Trước tiên phải trỏ bản ghi A và Cname
+
+<img src="imgservices/215.png">
 
 ```
-certbot --apache -d anhntv.xyz -d www.anhntv.xyz
+certbot --apache -d tudv.xyz -d www.tudv.xyz
 ```
 - Sau đó ta nhập email, chọn 'Y' để điều đồng ý với điều khoản, chọn 'N' để từ chối nhận thông tin, tin tức từ Let's Encrypt và Certbot
 
+
+<img src="imgservices/212.png">
+
+- Mã key public key và private key.
+
+<img src="imgservices/213.png">
+
+<img src="imgservices/214.png">
 
 
 

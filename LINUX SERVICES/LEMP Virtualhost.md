@@ -386,12 +386,15 @@ vi /home/tudv1/public_html/index.php
 
 <img src="imgservices/184.png">
 
-- Kiểm tra đường dẫn  log của nginx:tại : ``/etc/nginx/nginx.conf``
+- Kiểm tra đường dẫn  log của nginx:tại : ``/etc/nginx/nginx.conf``: Có 2 request mới có từ 172.16.2.4 lúc 8h23
 
 <img src="imgservices/188.png">
 
 <img src="imgservices/187.png">
 
+- php-fpm.conf : error_log = /var/log/php-fpm/fpm-error.log  : trạng thái rảnh rỗi của pool , sẵn sàng điều worker xử lý  request
+
+<img src="imgservices/211.png">
 
 - Cài đặt database: Tạo 2 datase , mỗi 1 database wordpress1 và wordpress2 gắn liền với admin user tudv1 và tudv2
 
