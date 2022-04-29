@@ -145,7 +145,7 @@ chmod 755 /home/tudv2/public_html
 ```
 vi /etc/httpd/conf.d/virtualhost.conf
 ```
-<img src="imgservices/274.png">
+<img src="imgservices/281.png">
 
 - Khai báo thể hiện
 
@@ -319,3 +319,6 @@ và http://tudv2.tudv.xyz
 <img src="imgservices/279.png">
 
 
+```
+
+vi /home/tudv1/public_html/access.log
