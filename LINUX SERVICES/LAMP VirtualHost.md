@@ -67,7 +67,7 @@ firewall-cmd --reload
 <img src="imgservices/135.png">
 <img src="imgservices/136.png">
 
-- Tạo user tudv1 là user trong đó  /home/tudv1/web sẽ là thư mục chứa dataweb tudv.xyz
+- Tạo user tudv1 là user trong đó  /home/tudv1/web sẽ là thư mục chứa dataweb tudv1.tudv.xyz
   
   
 ```
@@ -79,18 +79,20 @@ passwd tudv1
 ``` 
 su tudv1
 
-mkdir /home/tudv1/web
+mkdir /home/tudv1/public_html
 
 chmod 711 /home/tudv1      ;mục đích chỉ có user tudv1 toàn quyền với home của user tudv1 
 
 cd home/tudv1/
 
 
-chmod 755 web             ;để mọi người có quyền vào đc
-
-
+chmod 755 public_html             ;để mọi người có quyền vào đc
 
 ```
+
+<img src="imgservices/270.png">
+
+
 <img src="imgservices/141.png">
 
 
@@ -103,26 +105,49 @@ chmod 755 web             ;để mọi người có quyền vào đc
 vi /etc/httpd/conf.d/userdir.conf
 ```
 
-<img src="imgservices/142.png">
+<img src="imgservices/271.png">
+
+
+   - Trong đó có 1 vài chỉ thị: Mặc định userdir tắt, phải bỏ # đằng trước để kích hoạt. Khi chúng ta dùng userdir thì mặc định đường dẫn chứa web theo gợi ý sẽ là /home/*/public_html  là document Root của website đó.
+
+   - AllowOverride= All 
+
+   - Options None: không có thêm điều kiện nào đó để được phép truy cập
+
+   
+
+- Làm tương tự với user tudv2
 
 ```
-Trong đó có 1 vài chỉ thị: Khi chúng ta sử dụng userdir thì mặc định đường dẫn chứa web theo gợi ý sẽ là /home/*/public_html nhưng mình thay public_html là web ( dòng 24 31), nó chính là document Root
-
-AllowOverride ALL : chấp nhận truy cập từ mọi nguồn 
+useradd tudv2
+passwd tudv2
 
 ```
+
+- Sau đó chuyển sang vai trò người dùng tudv2
+
+```
+
+su tudv2
+
+mkdir /home/tudv2/public_html
+chmod 711 /home/tudv2
+chmod 755 /home/tudv2/public_html
+
+```
+
+- Quay trở lại với user root:
+
+
 
 - Cấu hình file virtualhost.conf
 
 ```
 vi /etc/httpd/conf.d/virtualhost.conf
 ```
-<img src="imgservices/143.png">
+<img src="imgservices/274.png">
 
-2 cụm mũi tên thể hiện thông tin của 2 virtualhost trên 1 máy nếu như chúng ta thiết lập 2 tên miền trên cùng 1 máy. là tudv.xyz và anhntv.xyz
-
-  - Data của web tudv.xyz chứa trong home/tudv1/web
-  - Data của web anhntv.xyz chứa trong /home/tudv2/web với cách tạo và phân quyền folder của user tudv2 tương tự như với tudv1
+- Khai báo thể hiện
 
 
 ## 2- Cài mariadb
@@ -165,16 +190,20 @@ yum -y install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
 yum -y install epel-release yum-utils
 ```
 
-- Disable php 5.4 ( Nếu như có đã cài)và enable php 7.3
+- Muốn cài php8.0
 ```
-yum-config-manager --disable remi-php54 
-yum-config-manager --enable remi-php73
+ 
+
+yum-config-manager --enable remi-php80
+```
+- Cài các module của PHP 8.0
+
 ```
 
-- Cài đặt php 7.3
+yum install -y php php-fpm php-ldap php-zip php-embedded php-cli php-mysql php-common php-gd php-xml php-mbstring php-mcrypt php-pdo php-soap php-json php-simplexml php-process php-curl php-bcmath php-snmp php-pspell php-gmp php-intl php-imap perl-LWP-Protocol-https php-pear-Net-SMTP php-enchant php-pear php-devel php-zlib php-xmlrpc php-tidy php-opcache php-cli php-pecl-zip unzip gcc
+
 ```
-yum -y install php php-cli php-mysqlnd php-zip php-devel php-gd php-mcrypt php-mbstring php-curl php-xml php-pear php-bcmath php-json
-```
+
 
 - Sau khi cài đặt thành công ta có thể kiểm tra phiên bản php bằng lệnh 
 ```
@@ -205,12 +234,35 @@ CREATE DATABASE wordpress1;
 
 - Sau khi tạo xong cơ sở dữ liệu, ta cần tạo người dùng cho cơ sở dữ liệu đó.
 ```
-CREATE USER tudv1@localhost IDENTIFIED BY 'xxxxxxxxxx';
+CREATE USER tudv1@localhost IDENTIFIED BY 'Pp0967898808';
 ```
 
 - Gán quyền admin cho tudv1 với đoạn cơ sở wordpress mới tạo:
 ```
-GRANT ALL PRIVILEGES ON wordpress1.* TO tudv1@localhost IDENTIFIED BY 'xxxxxxxx';
+GRANT ALL PRIVILEGES ON wordpress1.* TO tudv1@localhost IDENTIFIED BY 'Pp0967898808';
+```
+
+- Bây giờ người dùng có quyền truy cập vào cơ sở dữ liệu, ta cần xóa các đặc quyền để MySQL biết về những thay đổi đặc quyền gần đây mà ta đã thực hiện
+```
+FLUSH PRIVILEGES;
+
+```
+<img src="imgservices/275.png">
+
+- Làm tương tự cho wordpress2:
+```
+CREATE DATABASE wordpress2;
+
+```
+
+- Sau khi tạo xong cơ sở dữ liệu, ta cần tạo người dùng cho cơ sở dữ liệu đó.
+```
+CREATE USER tudv2@localhost IDENTIFIED BY 'Pp0967898808';
+```
+
+- Gán quyền admin cho tudv2 với đoạn cơ sở wordpress mới tạo:
+```
+GRANT ALL PRIVILEGES ON wordpress2.* TO tudv2@localhost IDENTIFIED BY 'Pp0967898808';
 ```
 
 - Bây giờ người dùng có quyền truy cập vào cơ sở dữ liệu, ta cần xóa các đặc quyền để MySQL biết về những thay đổi đặc quyền gần đây mà ta đã thực hiện
@@ -220,19 +272,13 @@ FLUSH PRIVILEGES;
 exit
 
 ```
-
-<img src="imgservices/145.png">
-<img src="imgservices/146.png">
+<img src="imgservices/276.png">
 
 ## 5 - Cài đặt WordPress
 ```
 yum install wget
-```
-- mkdir /home/tudv1/data
 
-- cd /home/tudv1/data
-
-```
+mkdir /data && cd /data
 wget http://wordpress.org/latest.tar.gz
 ```
 
@@ -264,8 +310,10 @@ vi wp-config.php
 
 <img src="imgservices/149.png">
 
-- Đăng nhập vào http://tudv.xyz
+- Đăng nhập vào http://tudv1.tudv.xyz
 
-<img src="imgservices/150.png">
+<img src="imgservices/280.png">
 
+<img src="imgservices/279.png">
 
+và http://tudv2.tudv.xyz

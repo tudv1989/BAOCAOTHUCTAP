@@ -14,14 +14,14 @@
 
 - Trên server sẽ cấu hình chạy 2 web site là:
 
-    - tudv1 – đường dẫn: /home/tudv1/public_html
-    - tudv2 – đường dẫn: /home/tudv2/public_html
+    - tudv1.tudv.xyz – đường dẫn: /home/tudv1/public_html
+    - tudv2.tudv.xyz – đường dẫn: /home/tudv2/public_html
 
 # Cài đặt LEMP trên CentOS 7
 
 ### Cài đặt Nginx
 
-- Máy chủ chạy nginx 192.168.1.223
+- Máy chủ chạy nginx 103.124.94.246
 
 - Trước tiên tắt selinux
 
