@@ -310,10 +310,12 @@ vi wp-config.php
 
 <img src="imgservices/149.png">
 
-- Đăng nhập vào http://tudv1.tudv.xyz
+Đăng nhập vào http://tudv1.tudv.xyz
 
 <img src="imgservices/280.png">
 
+và http://tudv2.tudv.xyz
+
 <img src="imgservices/279.png">
 
-và http://tudv2.tudv.xyz
+
