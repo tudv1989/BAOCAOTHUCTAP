@@ -15,7 +15,7 @@ Nó là một chồng các ứng dụng hoạt động cùng nhau trên một m�
 - Cấu hình Virtual host trong Apache: dạng 1 IP mà nhiều domain trỏ vào, mỗi 1 thư mục chứa dataweb chính nằm trong thư mục /home của mỗi 1 user tạo ra. 
 - Ngược lại với kiểu cấu hình namebased trên là kiểu cấu hình nhiều địa chỉ IP trỏ về 1 domain, kiểu này là cấu hình làm ảo card mạng , các card mạng ảo này nhận IP ảo dựa trên 1 IP thật của máy chủ. là ip based
 
-- Dưới đây em sẽ trình bày cách cấu hình LAMP Namespace và cài đặt SSL free cho máy ảo
+- Dưới đây em sẽ trình bày cách cấu hình LAMP name based
 
 ## 1-Cài apache
 
