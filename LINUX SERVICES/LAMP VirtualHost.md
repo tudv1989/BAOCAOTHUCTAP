@@ -292,7 +292,7 @@ tar -xzvf latest.tar.gz
 - Sau khi giải nén sẽ tạo ra một tệp có tên `WordPress`. Tiếp theo cần di chuyển tệp đó và nội dung của nó vào thư mục /home/tudv1/public_html hoặc dùng rsyn
 
 ```
-rsync -av wordpress /home/tudv1/public_html
+rsync -av wordpress/* /home/tudv1/public_html
 ```
 - Làm tương tự cho /home/tudv2/public_html 
 

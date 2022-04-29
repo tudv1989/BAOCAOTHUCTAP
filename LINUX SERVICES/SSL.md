@@ -68,3 +68,12 @@ certbot --apache -d tudv.xyz -d www.tudv.xyz
 
 
 
+Khi cài ssl tự động :  tự Tạo 1 file Virtual Host mới cho domain tudv1.tudv.xyz lắng nghe trên port 443 
+
+File này sẽ đc include vào file cấu hình chính của httpd tại
+
+ /etc/httpd/conf/httpd.conf  
+
+ <img src="imgservices/284.png">
+
+ và tự thêm 1 đoạn chuyển hướng từ http sang https trong file virtual của tudv1.tudv.xyz
