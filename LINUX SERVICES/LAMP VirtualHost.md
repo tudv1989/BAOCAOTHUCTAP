@@ -289,9 +289,12 @@ tar -xzvf latest.tar.gz
 <img src="imgservices/147.png">
 
 
-- Sau khi giải nén sẽ tạo ra một tệp có tên `WordPress`. Tiếp theo cần di chuyển tệp đó và nội dung của nó vào thư mục /home/tudv1/web
+- Sau khi giải nén sẽ tạo ra một tệp có tên `WordPress`. Tiếp theo cần di chuyển tệp đó và nội dung của nó vào thư mục /home/tudv1/public_html hoặc dùng rsyn
 
-<img src="imgservices/148.png">
+```
+rsync -av wordpress /home/tudv1/public_html
+```
+- Làm tương tự cho /home/tudv2/public_html 
 
 - Khai báo kết nối database của wordpress mới tải về
 
@@ -322,3 +325,8 @@ và http://tudv2.tudv.xyz
 ```
 
 vi /home/tudv1/public_html/access.log
+
+```
+- Nhật ký nhận requests:: 
+
+<img src="imgservices/282.png">
