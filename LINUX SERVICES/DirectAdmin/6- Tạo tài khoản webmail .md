@@ -23,6 +23,6 @@
 
 - Phía nhận
 
-<img src="imgservices/405.png">
+<img src="imgservices/406.png">
 
 - Bản ghi: <img src="imgservices/408.png">
