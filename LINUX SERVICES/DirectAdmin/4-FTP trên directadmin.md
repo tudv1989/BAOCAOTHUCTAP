@@ -14,7 +14,7 @@ Bước 1: Tạo tài khoản FTP
 - Ở đây mình tạo tài khoản FTP cho domain của tudv1 tên ftptudv1
 
 <img src="imgservices/386.png">
-
+<img src="imgservices/388.png">
 
 Bước 2: Kết nối FTP với WinSCP
 
@@ -22,7 +22,7 @@ Bước 2: Kết nối FTP với WinSCP
 - Nhấp `Login` để kết nối đến server
 <img src="imgservices/387.png">
 
-<img src="imgservices/388.png">
+
 <img src="imgservices/389.png">
 >> Như vậy ta đã kết nối thành công đến đường dãn chứa file và có thể upload or download file
 
