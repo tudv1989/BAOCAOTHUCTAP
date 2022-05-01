@@ -76,7 +76,7 @@ cd /usr/local/directadmin/custombuild
 - Kiểm tra xem website hiện tại đang dùng phiên bản php nào
 
 
-
+<img src="imgservices/428.png">
 
 <img src="imgservices/424.png">
 
