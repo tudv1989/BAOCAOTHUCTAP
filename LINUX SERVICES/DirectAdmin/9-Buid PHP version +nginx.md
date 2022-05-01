@@ -57,7 +57,7 @@ cd /usr/local/directadmin/custombuild
 
 ```
 
- và tiếp tục với câu lệnh buid nginx. vì trước đó đã chạy lệnh tải về php 7.2
+ và tiếp tục với câu lệnh buid nginx. vì trước đó đã chạy lệnh tải về php 
 
 ```
 
