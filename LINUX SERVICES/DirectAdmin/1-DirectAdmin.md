@@ -59,6 +59,13 @@
 
 - Đổi tên host: tudv.xyz
 
+```
+
+hostnamectl set-hostname tudv.xyz
+exec bash
+
+```
+
 - Đăng ký tài khoản sử dụng phần mềm: tại https://www.directadmin.com/
 
 - Kiểm tra mail : lấy id và mk đăng nhập vào link trial, chọn get trial
