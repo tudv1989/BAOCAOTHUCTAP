@@ -71,6 +71,7 @@ cd /usr/local/directadmin/custombuild
 ```
 
 ./build php n
+./build rewrite_confs
 
 ```
 - Kiểm tra xem website hiện tại đang dùng phiên bản php nào
