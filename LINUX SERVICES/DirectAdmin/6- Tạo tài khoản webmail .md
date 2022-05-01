@@ -25,4 +25,3 @@
 
 <img src="imgservices/406.png">
 
-- Bản ghi: <img src="imgservices/408.png">
