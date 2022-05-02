@@ -38,7 +38,9 @@
 - Đổi tên Máy chủ:
 
 ```
-
+hostnamectl set-hostname tudv.xyz
+exec bash
+```
 
 Bước 1: Cập nhật hệ thống
 ```sh
@@ -57,14 +59,14 @@ sh <(curl https://autoinstall.plesk.com/one-click-installer || wget -O - https:/
 	+ User: root
 	+ Pass: Password của root
 
-![](./images/plesklogin.png)
+<img src="imgservices/429.png">
 
 - Đăng nhập thành công, ta sẽ bắt đầu khởi tạo tài khoản Administrator. Điền các thông tin email, mật khẩu và License Plesk (nếu chưa có License có thể chọn bản dùng thử 15 ngày)
 
-![](./images/plesklogin1.png)
+<img src="imgservices/430.png">
 
 - Hệ thống sẽ bắt đầu khởi tạo, sau khi hoàn tất sẽ hiện ra giao diện quản lý của Plesk
 
-![](./images/plesklogin2.png)
+<img src="imgservices/434.png">
 
-![](./images/plesklogin3.png)
+<img src="imgservices/435.png">
