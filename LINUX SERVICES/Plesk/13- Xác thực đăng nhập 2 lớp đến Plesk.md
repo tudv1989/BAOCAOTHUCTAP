@@ -22,7 +22,7 @@ Cài đặt hoàn tất ta chọn  `Google Authenticator`
 
 - Cài đặt xác minh 2 bước:
 	+ Đầu tiên, click vào `Enable Multi-factor Authentication` để mở chức năng xác thực 2 bước 
-	+ Dùng ứng dụng `Google Authenticator` trên điện thoại (đã tải ở Bước 1) để Scan mã QR như hình dưới
+	+ Dùng ứng dụng `Google Authenticator` trên điện thoại (đã tải ở Bước 1) để Scan mã QR 
 	+ Sau khi Scan bằng ứng dụng trên điện thoại, ta sẽ được cung cấp mã 6 chữ số, hãy nhập mã này vào mục: Verification code
 	+ Pre-select “Remember Device” checkbox: Click vào nếu muốn ghi nhớ thiết bị đã truy cập thành công bằng xác thực 2 bước, không cần nhập mã cho các lần truy cập sau
 	+ Remember device in days: Là thời gian để ghi nhớ đăng nhập cho thiết bị đó, tính bằng ngày
@@ -37,4 +37,4 @@ Cài đặt hoàn tất ta chọn  `Google Authenticator`
 
 >> Nếu không muốn sử dụng chức năng này thì ta có thể bỏ check tại `Enable Multi-factor Authentication`
 
-<img src="imgservices/507.png">
+<img src="imgservices/508.png">
