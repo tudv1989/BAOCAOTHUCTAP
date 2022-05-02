@@ -43,4 +43,16 @@
 <img src="imgservices/533.png">
 
 
+- Tạo package để bán :
 
+<img src="imgservices/571.png">
+
+- Create 1 account mới và gán package cho user
+
+- Sau khi vào giao diện login thì login tài khoản đã tạo trước đó, tài khoản này sẽ được gửi qua email cho Reseller. Kéo xuống phần Advanced >> WebHost Manager
+
+<img src="imgservices/572.png">
+
+- Tại giao diện quản lý này ta cũng bắt đầu tạo Package >> Tạo Account gán vào package >> Vào list Account đễ vào Cpanel của người dùng mới tạo >> Thử tạo site bằng cách install software wordpress auto có sẳn trong tool.
+
+<img src="imgservices/573.png">
