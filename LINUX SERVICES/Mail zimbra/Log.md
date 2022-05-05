@@ -30,7 +30,7 @@ zmamavisdctl start
 4./ Check Logs zimbra
 
 ```
-tail -100f /var/log/zimbra.log
+tail -f /var/log/zimbra.log
 
 ```
 
@@ -139,7 +139,9 @@ nano /opt/zimbra/common/conf/postfix_reject_sender
 
  
 
-zimbra@mail ~# zmprov ms mail.yourdomain.com​​ +zimbraMtaSmtpdSenderRestrictions "check_sender_access lmdb:/opt/zimbra/common/conf/postfix_reject_sender"
+zimbra@mail ~# zmprov ms mail.tudv.xyz.com​​ +zimbraMtaSmtpdSenderRestrictions 
+
+"check_sender_access lmdb:/opt/zimbra/common/conf/postfix_reject_sender"
 
 zimbra@mail ~# /opt/zimbra/common/sbin/postmap /opt/zimbra/common/conf/postfix_reject_sender
 
@@ -216,33 +218,3 @@ Kết quả​​
 Release 8.8.15.GA.3869.UBUNTU18.64 UBUNTU18_64 FOSS edition, Patch 8.8.15_P9.
 
  
-
-17./​​ Kiểm tra queue zimbra
-
-postqueue -p
-
- 
-
-18./​​ Kiểm tra postfix queue domain​​ 
-
-/opt/zimbra/bin/qshape
-
-View 1 Message trong Queue
-
-/opt/zimbra/postfix/sbin/postcat -q EC753D0D00
-
-View nhiều thông tin 1 Message
-
-/opt/zimbra/postfix/sbin/postcat -qv EC753D0D00
-
- 
-
-19./​​ Flush Postfix Queue
-
-/opt/zimbra/postfix/sbin/postqueue -f
-
-https://wiki.zimbra.com/wiki/Managing-The-Postfix-Queues
-
-20./​​ Show tất cả​​ các loại DB​​ 
-
-postconf -m
