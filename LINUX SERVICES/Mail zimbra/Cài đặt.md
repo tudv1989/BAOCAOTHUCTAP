@@ -39,6 +39,20 @@ vi /etc/host
 
 - Chạy lệnh sau để install Zimbra & ZCS dependencies
 
+  - Update
+```
+yum install unzip net-tools sysstat openssh-clients perl-core libaio nmap-ncat libstdc++.so.6 wget -y
+
+```
+
+- Tải về 
+
+```
+mkdir zimbra && cd zimbra
+ wget https://files.zimbra.com/downloads/8.8.15_GA/zcs-8.8.15_GA_3869.RHEL7_64.20190918004220.tgz --no-check-certificate
+
+```
+
 <img src="imgservices/218.png">
 
 - Sau khi download về ta giải nén file ra
@@ -56,7 +70,7 @@ cd zcs* && ./install.sh
 ```
 <img src="imgservices/219.png">
 
-- Chon y toàn bộ , đó là những gói dịch vụ kèm theo
+- Chon y toàn bộ trừ memcache , đó là những gói dịch vụ kèm theo
 
 <img src="imgservices/220.png">
 
