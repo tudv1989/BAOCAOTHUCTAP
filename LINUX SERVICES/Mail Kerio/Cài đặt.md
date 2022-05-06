@@ -97,11 +97,16 @@ firewall-cmd --reload
 <img src="imgservices/918.png">
 <img src="imgservices/919.png">
 
-- Add thêm 1 số port mà Kerio sẽ sử dụng
+- Lệnh khởi động lại dịch vụ
 
-<img src="imgservices/920.png">
+```
+service kerio-connect restart
 
-<img src="imgservices/921.png">
+
+```
 
 
+- Test gửi thư:
+
+<img src="imgservices/922.png">
 
