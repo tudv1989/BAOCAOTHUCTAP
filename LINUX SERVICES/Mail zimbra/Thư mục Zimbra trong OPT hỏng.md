@@ -112,9 +112,7 @@ zmmailboxdctl restart
 
 <img src="imgservices/875.png">
 
-- Dữ liệu của domain tudv10.tudv.xyz
-
-<img src="imgservices/876.png">
+- Domain tudv10.tudv.xyz đã xóa
 
 - Kiểm tra múi giờ
 
