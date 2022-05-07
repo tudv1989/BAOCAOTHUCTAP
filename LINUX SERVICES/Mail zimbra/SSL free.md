@@ -30,7 +30,6 @@ Bước 3:
 
 ```
 export EMAIL="admin@tudv.xyz"
-
 sudo certbot certonly --standalone \
   -d mail.tudv.xyz \
   --preferred-challenges http \
