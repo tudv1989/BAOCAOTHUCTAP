@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        var time = 10;
+        var page = "TrangChu.aspx";
+        function countDown() {
+            time--;
+            gett("container").innerHTML = time;
+            if (time == 0) {
+                window.location = page;
+            }
+        }
+        function gett(id) {
+            if (document.getElementById)
+                return document.getElementById(id);
+            if (document.all)
+                return document.all.id;
+            if (document.layers)
+                return document.layers.id;
+            if (window.opera)
+                return window.opera.id;
+        }
+        function init() {
+            if (gett('container')) {
+                setInterval(countDown, 1000);
+                gett("container").innerHTML = time;
+            } else {
+                setTimeout(init, 50);
+            }
+        }
+        document.onload = init();
+     </script>
+</head>
+<body style="background-color: #0099ff;color:black;">
+        <table style="margin:0 auto;">
+            <tr>
+                <td style="text-align: center;">
+                    <h1>Bạn đã đặt mua thành công  ! <br> Chúng tôi sẽ liên lạc với bạn trong thời gian sớm nhất để xác nhận đơn hàng . <br>Hãy chờ  <span id="container"></span> giây !<br />hoặc click vào <a href="TrangChu.aspx">đây</a> trở về trang chủ.</h1>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
