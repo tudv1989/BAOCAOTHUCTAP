@@ -88,3 +88,22 @@ và 443 nêu có SSL
 <img src="imgservices/1200.png">
 
 <img src="imgservices/1201.png">
+
+# Xem log gửi thư:
+
+Tại giao diện quản trị mail từ xa: ``mail.domain:1000``
+
+- Dannh mục Log lưu trữ nhật ký của hệ thống và nhiều thao tác
+
+<img src="imgservices/1332.png">
+
+
+- Tin nhắn bị máy chủ gmail drop vì ko đủ độ tin cậy( Thiếu bản ghi DKim SPF,DMACRC)
+
+<img src="imgservices/1331.png">
+
+
+- 1 thư gửi thành công đến gmail
+
+<img src="imgservices/1333.png">
+

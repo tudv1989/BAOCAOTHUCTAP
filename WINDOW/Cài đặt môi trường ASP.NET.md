@@ -1,35 +1,56 @@
 # Cài đặt môi trường ASP.net
 
+Windows, IIS, SQL, ASP.NET) Stack
 
-  - Hệ quản trị CSDL SQL Express 2012
 
-  - Webserver IIS
+## 1 - IIS ASP.net
+- Add roll and features
 
-  - Mã nguồn ASP.net
+<img src="imgwindow/1320.png">
 
-## 1 - SQL EXPRESS 2012
+<img src="imgwindow/1323.png">
 
-- Tải bản cài MSSQL:
-https://www.microsoft.com/en-us/download/details.aspx?id=50003
+<img src="imgwindow/1324.png">
 
-<img src="imgwindow/1300.png">
 
-<img src="imgwindow/1301.png">
+<img src="imgwindow/1325.png">
 
-- CÀi mới sql độc lập
+## 2 - Cài đặt sql management studio
 
-<img src="imgwindow/1302.png">
+<img src="imgwindow/1311.png">
 
-<img src="imgwindow/1303.png">
+<img src="imgwindow/1312.png">
 
-- Đồng ý điều khoản
+- Tạo mới 1 server độc lập
 
-<img src="imgwindow/1304.png">
+<img src="imgwindow/1314.png">
 
-<img src="imgwindow/1307.png">
+- Hệ thống sẽ kiểm tra và tải về các bản cập nhật
 
-<img src="imgwindow/1308.png">
+<img src="imgwindow/1316.png">
 
-- Cài ASP.net
+- Next
 
-<img src="imgwindow/1310.png">
+<img src="imgwindow/1317.png">
+
+- Next
+
+<img src="imgwindow/1318.png">
+
+<img src="imgwindow/1319.png">
+
+<img src="imgwindow/1326.png">
+
+
+<img src="imgwindow/1327.png">
+
+- Tùy chọn xác thực windows hoặc 2 mĩ pass sql
+
+<img src="imgwindow/1328.png">
+- Quá trình cài đặt bắt đầu 
+
+## 3- Cài đặt SQL management studio
+
+<img src="imgwindow/1313.png">
+
+
