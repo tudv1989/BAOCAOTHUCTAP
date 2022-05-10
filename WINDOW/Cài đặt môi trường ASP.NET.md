@@ -15,7 +15,7 @@ Windows, IIS, SQL, ASP.NET) Stack
 
 <img src="imgwindow/1325.png">
 
-## 2 - Cài đặt sql management studio
+## 2 - Cài đặt sql server
 
 <img src="imgwindow/1311.png">
 
@@ -47,10 +47,17 @@ Windows, IIS, SQL, ASP.NET) Stack
 - Tùy chọn xác thực windows hoặc 2 mĩ pass sql
 
 <img src="imgwindow/1328.png">
+
 - Quá trình cài đặt bắt đầu 
+
+<img src="imgwindow/1350.png">
 
 ## 3- Cài đặt SQL management studio
 
-<img src="imgwindow/1313.png">
+- Chạy file
+
+<img src="imgwindow/1352.png">
+
+
 
 
