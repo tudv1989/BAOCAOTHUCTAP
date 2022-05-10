@@ -1,0 +1,17 @@
+﻿#wrapper_reg{width:691px;}
+#content_reg
+{
+    width: 400px;
+    height: 250px;
+    margin: 30px auto;
+    background-image: url('../images/login.png');
+    position:relative;
+    top: 0px;
+    left: 0px;
+}
+#content_login {padding:10px;position:absolute;top:15%;left:5%;}
+#content_login p {font-weight:bold;font-size:14px;color:#573F34;}
+#content_login h1 {color:#573F34;padding:0 0 10px 0;text-align:center;}
+.button_login {padding-top:10px;}
+#login_message {width:300px;padding:10px 0 5px 10px;}
+.login_message {font-weight:bold;font-size:14px;color:red;}

@@ -1,0 +1,248 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="GiaoDien.master.cs" Inherits="ShopQuanAo.GiaoDien" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Styles/style.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/nivo-slider.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/default/default.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+    <script src="Scripts/myjs.js" type="text/javascript"></script>
+    <link href="<%=ResolveUrl("~/Styles/style.css") %>" rel="stylesheet" type="text/css" />
+    <link href="Styles/css_dangky.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body >
+    <form id="form1" runat="server">
+    	<div id="menu-scroll" style="display:none;">
+   	        <dl>
+            <dt><a href="#">Thời Trang Nam</a></dt>
+            <dd>
+                <ul>
+                    <li><a href="SanPham.aspx?url=nam0">Áo thun</a></li>
+                    <li><a href="SanPham.aspx?url=nam1">Áo sơ mi</a></li>
+                    <li><a href="SanPham.aspx?url=nam2">Áo khoác</a></li>
+                    <li><a href="SanPham.aspx?url=nam3">Quần Jean</a></li>
+                    <li><a href="SanPham.aspx?url=nam4">Quần Kaki</a></li>
+                </ul>
+            </dd>
+            <dt ><a href="#">Thời Trang Nữ</a></dt>
+            <dd>
+                <ul>
+                   <li><a href ="SanPham.aspx?url=nu0">Áo thun</a></li>
+                   <li><a href="SanPham.aspx?url=nu1">Áo sơ mi</a></li>
+                   <li><a href="SanPham.aspx?url=nu2">Áo khoác</a></li>
+                   <li><a href="SanPham.aspx?url=nu3">Quần Jean</a></li>
+                   <li><a href="SanPham.aspx?url=nu5">Váy Hàn Quốc</a></li>
+                </ul>
+            </dd>
+            <dt><a href="#">Phụ Kiện</a></dt>
+            <dd>
+                <ul>
+                    <li><a href="SanPham.aspx?url=pknam">Nam</a></li>
+                    <li><a href="SanPham.aspx?url=pknu">Nữ</a></li>
+                </ul>
+            </dd>
+            <dt><a href="SanPham.aspx?url=saleoff">Khuyến Mãi</a></dt>
+            
+        </dl>
+    </div>
+	
+	<div id="wrapper" >
+    	<div id="header_top">
+        	<div id="user_login">
+            	Xin chào, <asp:HyperLink ID="hplLogin" runat="server" 
+                    NavigateUrl="DangNhap.aspx?url=dn">[hplLogin]</asp:HyperLink> !
+                <a href="ThoatDangNhap.aspx" runat = "server" id = "lThoat" 
+                    onclick="return confirm('Bạn có chắc chắn muốn thoát không ?')" visible="False">(Thoát)</a>
+             
+            </div>
+            
+            <div id="header_links">
+            	
+            	<ul>
+                	<li>
+                    	<a href="TrangChu.aspx" class="active">Trang Chủ</a>
+                    </li>
+                    <li>
+                    	<a href="DangKy.aspx?url=dk">Đăng ký</a>
+                    </li>
+                    <li>
+                    	<a href="#">Liên Hệ</a>
+                    </li>
+                    
+                </ul>
+                
+            </div>
+            <div id="header_themes">
+            	<ul>
+                	<li><asp:ImageButton ID="ibtnGreen" runat="server" 
+                            ImageUrl="~/images/green_theme.jpg" onclientclick="abc()" /></li>
+                    <li><asp:ImageButton ID="ibtnOrange" runat="server" ImageUrl="~/images/orange_theme.jpg" /></li>
+                    <li><asp:ImageButton ID="ibtnPurple" runat="server" ImageUrl="~/images/purple_theme.jpg" /></li>
+                </ul>
+            </div>
+        </div>
+        <div id="banner">
+        	<div id="logo">
+            	<a href="TrangChu.aspx" title="Fashion Store" ><img src="images/logo1.png" alt = "Fashion Store"/></a>
+            </div>
+            <div id="adv">
+            	<a href="TrangChu.aspx" title="Fashion Store"><img src="images/advertising_custom.png" alt="Fashion Store" /></a>
+            </div>
+            <div id="search">
+                <asp:TextBox ID="txtSearch" runat="server" CssClass="search_query">Nhập vào tên sản phẩm cần tìm</asp:TextBox>
+                <asp:ImageButton ID="ibtnSearch" runat="server" 
+                    ImageUrl="~/images/search_btn.png" onclick="ibtnSearch_Click" />
+                
+            </div>
+        </div>
+        <div id="navigation" >
+        	<ul>
+            	<li>
+                	<a href="#">Thời Trang Nam</a>
+                    <span style="z-index:100;">
+                    	<asp:HyperLink ID="hplAothunam" runat="server" NavigateUrl="SanPham.aspx?url=nam0">Áo thun</asp:HyperLink>
+                        <asp:HyperLink ID="hplAosominam" runat="server" NavigateUrl="SanPham.aspx?url=nam1">Áo sơ mi</asp:HyperLink>
+                        <asp:HyperLink ID="hplAokhoacnam" runat="server" NavigateUrl="SanPham.aspx?url=nam2">Áo Khoác</asp:HyperLink>
+                        <asp:HyperLink ID="hplQuanjeannam" runat="server" NavigateUrl="SanPham.aspx?url=nam3">Quần Jean</asp:HyperLink>
+                        <asp:HyperLink ID="hplQuankakinam" runat="server" NavigateUrl="SanPham.aspx?url=nam4">Quần Kaki</asp:HyperLink>
+                    </span>
+                </li>
+                <li >
+                	<a href="#">Thời Trang Nữ</a>
+                    <span style="z-index:100;">
+                    	<asp:HyperLink ID="hplAothunnu" runat="server" NavigateUrl="SanPham.aspx?url=nu0">Áo thun</asp:HyperLink>
+                        <asp:HyperLink ID="hplAosominu" runat="server" NavigateUrl="SanPham.aspx?url=nu1">Áo sơ mi</asp:HyperLink>
+                        <asp:HyperLink ID="hplAokhoacnu" runat="server" NavigateUrl="SanPham.aspx?url=nu2">Áo Khoác</asp:HyperLink>
+                        <asp:HyperLink ID="hplQuanjeannu" runat="server" NavigateUrl="SanPham.aspx?url=nu3">Quần Jean</asp:HyperLink>
+                        <asp:HyperLink ID="hplVaynu" runat="server" NavigateUrl="SanPham.aspx?url=nu5">Váy</asp:HyperLink>
+                  
+                                           
+                    </span>
+                </li>
+                <li>
+                	 <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="SanPham.aspx?url=pknam">Phụ Kiện Nam</asp:HyperLink>
+                </li>
+                <li>
+                    <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="SanPham.aspx?url=pknu">Phụ Kiện Nữ</asp:HyperLink>
+                </li>
+                <li>
+                    <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="SanPham.aspx?url=saleoff">SaleOff</asp:HyperLink>
+                </li>
+                <li>
+                    <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="SanPham.aspx?url=new">New</asp:HyperLink>
+                </li>
+                <li>
+                   <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="SanPham.aspx?url=hot">Hàng HOT</asp:HyperLink>
+                </li>
+                
+            </ul>
+        	
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        
+        </asp:ContentPlaceHolder>
+       
+        <div id="content">
+        	<div id="title">
+                <asp:Label ID="lblTieuDe" runat="server" Text="Label" Font-Size="X-Large" ForeColor="#663300" Height="50px" Font-Names="Curlz MT" Font-Bold="True" CssClass="title">Sản phẩm nổi bật</asp:Label>
+            </div>
+            <div style="clear:both;"></div>
+        	<div id="left_content">
+            	<div class="list">
+                	 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+             
+                    </asp:ContentPlaceHolder>
+                </div>
+            	 
+            </div>
+            <div id="right_content">
+                
+            	<div id="cart_top">
+                	<h3>Giỏ Hàng </h3>
+                    <a style="cursor:pointer;" id="animation"><img src="images/cart_arrow.png" alt=""  /></a>
+                </div>
+                <div id="cart_mid">
+                	<div class="content_c">
+                         <div id="cart_content1">
+                           
+                                <asp:DataList ID="dtlGioHang" runat="server" DataKeyField="MaSP">
+                                   <ItemTemplate>
+                                     <div class = "SanPham">
+                                        <table style="width: 100%;">
+                                           <tr>
+                                                <td style="text-align:left;width:10px;font-weight:bold;"><asp:Label ID="txtSoLuong" runat="server" Text='<%# Eval("SL")+"x" %>'></asp:Label></td>
+                                                <td style="text-align:left;width:200px;padding-left:10px;font-weight:bold;">
+                                                    <asp:HyperLink ID="hplTenSP" runat="server" 
+                                                        NavigateUrl= "#" ForeColor="#006666" Text ='<%# Eval("Ten") %>'></asp:HyperLink></td>
+                                                <td style="text-align:right;width:10px;font-weight:bold;"> 
+                                                    <asp:HyperLink ID="hptXoaSP" runat="server" NavigateUrl ='<%#  Eval("MaSP","TrangChu.aspx?action=xoa&id={0}") %>'
+                                            ImageUrl ="~/images/nut-xoa.png" ForeColor="#009999"></asp:HyperLink></td>
+                                           </tr>
+                                        </table>
+                                     </div>
+                                   </ItemTemplate>
+                                   
+                                </asp:DataList>
+                               
+                            <div class = "tongtien">
+                                <asp:Label ID="lblTongSL" runat="server" Text="Số lượng : 0 sản phẩm " 
+                                    ForeColor="#663300"></asp:Label>
+                                <hr />
+                                <asp:Label ID="lblTongTien" runat="server" Text="Thành tiền : 0 VNĐ" 
+                                    ForeColor="#663300"></asp:Label>
+                                 <hr />
+
+                            </div>
+                             <div class = "tongtien">
+                                 <asp:ImageButton ID="ibtnXemGio" runat="server" 
+                                     ImageUrl="~/images/nut-xemgio.png" PostBackUrl="~/XemGioHang.aspx?url=xemgio" />
+
+                                 <asp:ImageButton ID="ibtnThanhToang" runat="server" 
+                                     ImageUrl="~/images/nut-thanhtoan.png" PostBackUrl="~/ThanhToan.aspx?url=thanhtoan" />
+                            </div>
+                            
+                            
+                         </div>
+                    </div>
+                </div>
+                <div id="cart_bottom">
+                   
+                </div>
+                <br  />
+                <h3 class="h1_color_green">Quảng</h3><h3 class="h1_color_gray"> cáo</h3>
+                <div id="adv_content">
+                     <asp:AdRotator ID="AdRotator1" runat="server" 
+                         AdvertisementFile="~/QuangCao.xml" Width="100%" />
+                </div>
+            	
+            </div>
+        </div>
+    </div>
+    <div id ="footer">
+    	<div id="footer_inline" >
+        	<div id="footer-column-1">
+			  <p>           
+                   
+              </p>
+            </div> 
+            <div id="footer-column-2">
+                <a href=#>Facebook</a>
+                <a href=#>Twitter</a>
+                <a href=#>Friendster</a>
+            </div>
+        </div>
+    </div>
+    
+       
+   
+    </form>
+     
+</body>
+</html>

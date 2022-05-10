@@ -1,0 +1,19 @@
+﻿<Advertisements>
+  <Ad>
+    <ImageUrl>images\mau_01.jpg</ImageUrl>
+    <NavigateUrl>http://vnexpress.net</NavigateUrl>
+    <AlternateText>Báo vnexpress</AlternateText>
+    <Impressions>80</Impressions>
+    <Keyword>Topic1</Keyword>
+    <Caption>Topic 1</Caption>
+  </Ad>
+
+  <Ad>
+    <ImageUrl>images\mau_02.jpg</ImageUrl>
+    <NavigateUrl>http://dantri.com.vn</NavigateUrl>
+    <AlternateText>Báo dân trí</AlternateText>
+    <Impressions>80</Impressions>
+    <Keyword>Topic2</Keyword>
+    <Caption>Topic 2</Caption>
+  </Ad>
+</Advertisements>
