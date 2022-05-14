@@ -10,10 +10,11 @@
 
 Một số lệnh thường dùng:
 
+- crontab -e: tạo,  chỉnh sửa các crontab
 
-crontab -e: tạo,  chỉnh sửa các crontab
-crontab -l: Xem các Crontab đã tạo
-crontab -r: xóa file crontab
+- crontab -l: xem các Crontab đã tạo
+
+- crontab -r: xóa file crontab
 
 ## 3-Cài đặt crontab
 
@@ -54,99 +55,215 @@ rồi chạy script bằng 1 trong 3 cách: bash test.sh, sh test.sh, ./test.sh
 
 ## 5-Tạo shellscript kết hợp crontab để backup tự động theo thời gian các thư mục chứa dữ liệu
 
-- Chuẩn bị : 2 máy centos1 có ip là 172.16.2.22 chạy webserver,centos2 có ip là 172.16.2.17 chạy NFS shares với centos1
+- Chuẩn bị : 2 máy centos1 có ip là 192.168.19.222 chạy storage nfs,centos2 có ip là 192.168.2.223 chạy webhosting
 
-   -  Thư mục /home trên centos1 chứa toàn bộ data các web /home/tudv1;/home/tudv2...
-   -  Thư mục /backup1 trên centos1 là thư mục sharing với /backup2 trên centos2
+   -  Thư mục /home trên centos2 chứa toàn bộ data các web /home/tudv1.vn;/home/tudv2.vn...
+
+   -  Thư mục /backup/may1 trên centos1 là thư mục sharing với /backup trên centos2
+
    -  Tạm thời tắt selinux và filrewalld để làm lab.
 
+   - Tiến hành backup /home trên centos2 vào /backup trên centos2
 
 
 
-### 5.1 Cấu hình centos2
 
-- Trên máy centos2 tạo thư mục chứa backup của centos1 ,trong backupcentos1 sẽ chứa databackup từ centos1
+### 5.1 Cấu hình centos1
 
+- Làm nfs server:
 
-
-```
-mkdir -p /backup/backupcentos1
-
-```
-<img src="imgservices/1502.png">
-
-- Kiểm tra 2 gói cần thiết , thông thường 2 gói này sẽ được cài sẵn là rpcbind và nfs-utils
-
-<img src="imgservices/1503.png">
+- Cài packages NFS vào máy bằng lệnh:
 
 ```
-chown -R nfsnobody:nfsnobody /backup/backupcentos1
-
-chmod 755 /backup/backupcentos1
-
-``` 
-- Chỉnh sửa trong exports
+yum install nfs-utils nfs-utils-lib
 
 ```
-vi /etc/exports
- 
+
+- Enable auto start service khi start/reboot server:
+
 ```
 
-Chèn nội dung sau:
+systemctl enable rpcbind
 
-/backup/backupcentos1 172.16.2.0/20(root_squash,rw,sync)
+systemctl enable nfs-server
 
-<img src="imgservices/1504.png">
+systemctl enable nfs-lock
 
-- Cho dải kết nối là 172.16.2.0/20
+systemctl enable nfs-idmap
 
-- (root_squash,rw,sync): Thiết lập quyền thư mục share với quyền read-write, root_squash - truy 
+```
+
+Start service:
+
+```
+
+systemctl start rpcbind
+
+systemctl start nfs-server
+
+systemctl start nfs-lock
+
+systemctl start nfs-idmap
+
+```
+- Tiếp theo, tạo share folder trên server.
+
+- Tạo một share folder tên ‘/backup/may1’ trên máy server và cho phép client user có thể đọc và ghi lên thư mục này.
+
+```
+
+mkdir -p /backup/may1
+
+chmod 666 /backup/may1/
+
+chown -R nfsnobody:nfsnobody /backup/may1
+
+```
+- Lệnh chown trên là client sẽ truy 
 cập nfs bằng user nfsnobody
 
 
-- Khởi động lại dịch vụ
+- Export shared directory trên NFS Server:
 
-<img src="imgservices/1505.png">
-
-<img src="imgservices/1506.png">
-
-
-
-### 5.2 Trên máy centos1
+   - Edit file /etc/exports,
 
 ```
-mkdir /backup
+vi /etc/exports
 
-mount -t nfs 172.16.2.17:/backup/backupcentos1 /backupcentos1
+```
+   - Thêm đoạn sau vào /etc/exports
+
+```
+/backup/may1 192.168.19.0/24(root_squash,rw,sync)
 
 ```
 
-- Lưu vào fstab
+<img src="imgservices/1518.png">
 
-<img src="imgservices/1508.png">
+  - /backup/may1: Thư mục chỉ định share trên server
+192.168.19.0/24: Lớp mạng được phép sử dụng thông tin share từ server 
+  - (root_squash,rw,sync): Thiết lập quyền thư mục share với quyền read-write, root_squash - truy 
+cập nfs bằng user nfsnobody
 
-- Khởi động lại 2 dịch rpcbind và nfs-utils
+<img src="imgservices/1519.png">
 
-### 5.3 Tạo script backup tự động data tên centos1 về centos2
+- Lưu lại và thoát ra khởi động lại nfs
 
-- Lên lịch Crontab và đoạn shellscript tại centos1
+```
+systemctl restart nfs-server
+
+```
+
+### 5.2 Cấu hình máy chạy webserver
+
+- Cấu hình bên máy Client:
+
+- Cài đặt package NFS :
+
+```
+yum install nfs-utils nfs-utils-lib
+
+```
+
+- Enable NFS services :
+
+```
+systemctl enable rpcbind
+
+systemctl enable nfs-server
+
+systemctl enable nfs-lock
+
+systemctl enable nfs-idmap
+
+```
+
+- Start NFS service:
+
+```
+systemctl start rpcbind
+
+systemctl start nfs-server
+
+systemctl start nfs-lock
+
+systemctl start nfs-idmap
+
+```
+
+- Tạo share từ server vào client như lệnh dưới
+
+```
+mount -t nfs 192.168.19.222:/backup/may1 /backup
+
+```
+- Lưu moutn khi khởi động
+
+```
+vi /etc/fstab
+
+```
+- Thêm vào dưới cùng:
+
+<img src="imgservices/1522.png">
 
 
-<img src="imgservices/1511.png">
 
-- Giải thích như sau:
+Như vậy là NFS đã được mount thành công.
 
-  - Lên lịch 2 phút 1 lần chạy script
+<img src="imgservices/1520.png">
 
-  - Khi chạy script : Đóng gói và nén toàn bộ /home vào backupcentos1 với ``tên đặt theo BACKUPWEB+ biến Filename thay đổi theo thời gian tương ứng ``
+### 5.3 Tự động hóa backup:
 
-  - sau đó cd vào /backupcentos1  tìm và xóa tất cả các file mà quá 12 phút tính từ thời điểm script chạy
+- Trên máy chạy web có thư mục home chứa dữ liệu các domain
 
-- Kết quả: 
+<img src="imgservices/1523.png">
 
-- Home trên centos1
+- Trên máy webserver tạo file bk.sh tại /
 
-<img src="imgservices/1513.png">
+```
+vi bk.sh
 
-- Trên centos2 :
+```
+- Thêm vào đoạn sau:
 
+```
+#!/bin/bash
+TODAY=`/bin/date +%Y%m%d-%H%M`
+FILENAME="WEBMAY1-${TODAY}"
+tar -cvzf /backup/${FILENAME}.tar.gz /home
+cd /backup
+find /backup/* -mmin +12 -type f -delete
+echo Da backup thanh cong ${FILENAME} >> /backup/log.txt
+exit 0
+```
+- Chú thích:
+  - Biến TODAY thay đổi theo thời gian của máy
+  - Biến FILENAME thay đổi theo TODAY
+  - tar.. Đóng gói và nén thư mục /home tại /backup với tên là FILENAME ,FILENAME là biến tên, tên này thay đổi theo biến thời gian TODAY
+  - sau đó di chuyển vào thư mục /backup
+  - tìm tất cả các file trong backup và xóa tất cả các file mà cớ thời gian >12 phút kể từ lúc thực thi lúc tìm kiếm này và ghi 1 đoạn nhật ký " Da backup thanh cong FILENAME tại log.txt
+  - Không trả giá trị (ko in)gì nếu ko lỗi
+
+- Tạo cronetab:
+
+```
+crontab -e
+
+```
+- Thêm vào 1 đoạn có ý nghĩa là cữ mỗi 2 phút mọi thời gian cd vào / và chạy bk.sh( bk.sh đã cấp quyền thực thi)
+
+```
+*/2 * * * * cd /;./bk.sh
+
+```
+
+- Kiểm tra kết quả: Trên máy nfs storage
+
+<img src="imgservices/1526.png">
+
+- Cách 2 phút máy web backup 1 lần, đến bản cuối cùng máy đã tự xóa bản 20h00
+
+<img src="imgservices/1527.png">
+
+<img src="imgservices/1528.png">
