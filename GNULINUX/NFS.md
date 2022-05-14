@@ -70,6 +70,8 @@ Chỉnh sửa trong exports
 
 vi /etc/exports
 
+
+
 <img src="img/79.png">
 
 

@@ -45,7 +45,7 @@ Là một giao thức dựa trên IP, iSCSI tận dụng lợi ích của TCP/IP
 
 Đặc biệt hiệu quả khi sử dụng với card mạng Ethernet 10G phổ biến.
 
-**Nếu không có SAN cứng ta có thể triển khai giao thức này dùng tăng tính chịu lỗi**
+*Nếu không có SAN cứng ta có thể triển khai giao thức này dùng tăng tính chịu lỗi*
 
 # Thực hành
 
