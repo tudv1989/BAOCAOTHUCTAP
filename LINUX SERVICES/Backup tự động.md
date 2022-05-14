@@ -55,7 +55,7 @@ rồi chạy script bằng 1 trong 3 cách: bash test.sh, sh test.sh, ./test.sh
 
 ## 5-Tạo shellscript kết hợp crontab để backup tự động theo thời gian các thư mục chứa dữ liệu
 
-- Chuẩn bị : 2 máy centos1 có ip là 192.168.19.222 chạy storage nfs,centos2 có ip là 192.168.2.223 chạy webhosting
+- Chuẩn bị : 2 máy centos1 có ip là 192.168.19.222 chạy storage nfs,centos2 có ip là 192.168.19.223 chạy webhosting
 
    -  Thư mục /home trên centos2 chứa toàn bộ data các web /home/tudv1.vn;/home/tudv2.vn...
 
