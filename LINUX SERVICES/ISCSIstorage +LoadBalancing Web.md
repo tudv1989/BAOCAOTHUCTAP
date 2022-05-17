@@ -17,126 +17,85 @@
 
 <img src="imgservices/1516.png">
 
-## 1.2- SERVER : Cài centos7, add thêm 3 ổ cứng sdb sdc sdd , nhóm 3 ổ tạo thành 1 lvm , chia lvm này thành các LUNs
+## 1.2- SERVER : Cài centos7, add thêm  ổ cứng sdb
 
 
-<img src="imgservices/1621.png">
+- Cài đặt lvm2
 
-- Tạo logical volum trên sdb sdc sdd: lấy hết phần cứng gắn vào thêm ở sdb sdc sdd:
+```
+yum install lvm2 y
+
+```
+
+- Phân vùng 8e  trên sdb(sdb1,sdb2,sdb3) : 3 ổ mỗi ổ 20G
+
+
 
 ```
 fdisk /dev/sdb
 
 ```
+<img src="imgservices/1717.png">
 
-```
+- Làm tương tự cho sdb2 sdb3
 
-[root@iscsi ~]# fdisk /dev/sdb
-Welcome to fdisk (util-linux 2.23.2).
+<img src="imgservices/1716.png">
 
-Changes will remain in memory only, until you decide to write them.
-Be careful before using the write command.
 
-Device does not contain a recognized partition table
-Building a new DOS disklabel with disk identifier 0xf7cedab2.
-
-Command (m for help): n
-Partition type:
-   p   primary (0 primary, 0 extended, 4 free)
-   e   extended
-Select (default p): 
-Using default response p
-Partition number (1-4, default 1): 
-First sector (2048-41943039, default 2048): 
-Using default value 2048
-Last sector, +sectors or +size{K,M,G} (2048-41943039, default 41943039): 
-Using default value 41943039
-Partition 1 of type Linux and of size 20 GiB is set
-
-Command (m for help): m
-Command action
-   a   toggle a bootable flag
-   b   edit bsd disklabel
-   c   toggle the dos compatibility flag
-   d   delete a partition
-   g   create a new empty GPT partition table
-   G   create an IRIX (SGI) partition table
-   l   list known partition types
-   m   print this menu
-   n   add a new partition
-   o   create a new empty DOS partition table
-   p   print the partition table
-   q   quit without saving changes
-   s   create a new empty Sun disklabel
-   t   change a partition's system id
-   u   change display/entry units
-   v   verify the partition table
-   w   write table to disk and exit
-   x   extra functionality (experts only)
-
-Command (m for help): t
-Selected partition 1
-Hex code (type L to list all codes): 8e
-Changed type of partition 'Linux' to 'Linux LVM'
-
-Command (m for help): w
-The partition table has been altered!
-
-Calling ioctl() to re-read partition table.
-Syncing disks.
-[root@iscsi ~]# 
-
-```
-
-- Làm tương tự cho sdc và sdd
-
-<img src="imgservices/1622.png">
-
-<img src="imgservices/1624.png">
 
 - Tạo Physical Volum :
 
-    - Từ các partition /dev/sdb1 /dev/sdc1 /dev/sdd1 ta tạo các Physical Volume bằng lệnh sau
+    - Từ các partition /dev/sdb1 /dev/sdb2 /dev/sdb3 ta tạo các Physical Volume bằng lệnh sau
     
 ```
 pvcreate /dev/sdb1
 
-pvcreate /dev/sdc1
+pvcreate /dev/sdb2
 
-pvcreate /dev/sdd1
+pvcreate /dev/sdb3
 
 ```
-<img src="imgservices/1625.png">
+
+<img src="imgservices/1719.png">
 
 - Kiểm tra bằng lệnh pvs hoặc pvdisplay xem các physical volume đã được tạo chưa :
 
-<img src="imgservices/1626.png">
 
 - Tạo Volume group:
+
     - Sau khi tạo các Physical Volume ta gộp các PV đó thành 1 Volume Group bằng lệnh sau :
 
 ```
-vgcreate vgstorage /dev/sdb1 /dev/sdc1 /dev/sdd1
+vgcreate vg1 /dev/sdb1 
+
+vgcreate vg2 /dev/sdb2
+
+vgcreate vg3 /dev/sdb3 
+
+
 
 ```
 
 - Dùng các lệnh vgs hoặc vgdisplay để kiểm tra :
 
-<img src="imgservices/1627.png">
+<img src="imgservices/1720.png">
 
-<img src="imgservices/1628.png">
 
 - Tạo Logical Volume:
 
-Từ một Volume group , ta tạo các Logical Volume để sử dụng bằng lệnh sau :
+Từ một Volume group , ta tạo các Logical Volume lv1 lv2 lv3 để sử dụng bằng lệnh sau :
 
 ```
 
-lvcreate -L 50Gi -n lv1 vgstorage  ; tạo lvm tên "lv1" dung lượng 50Gi .
+lvcreate -L 15Gi -n lv1 vg1  ; tạo lvm tên "lv1" dung lượng 15Gi
 
+lvcreate -L 15Gi -n lv2 vg2  ; tạo lvm tên "lv2" dung lượng 15Gi 
+
+lvcreate -L 15Gi -n lv3 vg3  ; tạo lvm tên "lv3" dung lượng 15Gi 
 
 
 ```
+
 
 - Trong đó :
 
@@ -146,7 +105,7 @@ lvcreate -L 50Gi -n lv1 vgstorage  ; tạo lvm tên "lv1" dung lượng 50Gi .
 
   - Kiểm tra bằng lệnh lvs hoặc lvdisplay
 
-<img src="imgservices/1633.png">
+<img src="imgservices/1721.png">
 
 
 ## 1.3 - Thiết lập ISCSI trên server:
@@ -158,10 +117,17 @@ lvcreate -L 50Gi -n lv1 vgstorage  ; tạo lvm tên "lv1" dung lượng 50Gi .
 
 <img src="imgservices/1635.png">
 
-- Chúng ta có 1 LVM tên là lv1
+- Chúng ta có 3 LVM tên là lv1,lv2,lv3
+
+
 
 
 - Sử dụng công cụ Targetcli và cd vào blockstores 
+
+```
+yum install targetcli -y
+
+```
 
 ```
 Trong Enterprise Linux 6, thuật ngữ lưu trữ sao lưu được sử dụng cho các ánh xạ được tạo trong mục tiêu. Bây giờ chúng được gọi là các đối tượng lưu trữ. Trong Enterprise Linux 7, chúng tôi sử dụng thuật ngữ backstore để chỉ các loại thiết bị hỗ trợ khác nhau như thiết bị khối và khối lượng logic. Backstore được hỗ trợ bởi mục tiêu LIO iSCSI bao gồm FILEIO, BLOCK, PSCSI và các đĩa RAM sao chép bộ nhớ. Các kho lưu trữ FILEIO là lưu trữ được hỗ trợ bởi tệp Linux. FILEIO có thể là viết lại hoặc viết qua. Sử dụng tính năng ghi ngược cho phép bộ đệm ẩn của hệ thống tệp Linux có thể cải thiện hiệu suất. Tuy nhiên, nó cũng làm tăng khả năng mất dữ liệu, vì vậy bạn nên ghi lại. Để tạo một kho lưu trữ FILEIO, chúng tôi sẽ sử dụng đường dẫn / backstores / fileio với một lệnh phụ tạo. Chúng ta có thể tắt ghi lại bằng cách thêm tùy chọn write_back = false cho thiết bị. Các kho lưu trữ BLOCK có thể là bất kỳ thiết bị nào tồn tại trong / sys / block.
@@ -179,17 +145,18 @@ targetcli
 
 ```
 
-<img src="imgservices/1637.png">
-
-```
-create disk1 /dev/vgstorage/lv1
+- Tạo một block ISCSIx có tên là disk1 trong logical volume lv1,lv2 và lv3 đã tạo
 
 ```
 
-<img src="imgservices/1637.png">
+/backstores/block> create disk1 /dev/vg1/lv1
 
+/backstores/block> create disk2 /dev/vg2/lv2
+
+/backstores/block> create disk3 /dev/vg3/lv3
 ```
 
+<img src="imgservices/1722.png">
 
 - Trở lại targetcli
 
@@ -208,6 +175,8 @@ create iqn.2022-05.tudv.xyz.target:iscsi
 
   - iscsi tên máy chủ iscsi storage
 
+<img src="imgservices/1723.png">  
+
 TPG1 dùng port 3260 để chuyển storage xuống
 
 <img src="imgservices/1639.png">
@@ -219,33 +188,91 @@ TPG1 dùng port 3260 để chuyển storage xuống
 cd /iscsi/iqn.2022-05.tudv.xyz.target:iscsi/tpg1/acls
 
 ```
-
+<img src="imgservices/1724.png">
 
 acls: accesslist, kiểu điều kiện kết nối
 
 ```
 create iqn.2022-05.tudv.xyz.target:web1
 
-```
+create iqn.2022-05.tudv.xyz.target:web2
 
-<img src="imgservices/1640.png">
-
-```
-cd /iscsi/iqn.2020-05.tudv.xyz.target:iscsi/tpg1/luns
+create iqn.2022-05.tudv.xyz.target:nginx
 
 ```
 
-<img src="imgservices/1641.png">
+<img src="imgservices/1725.png">
+
+<img src="imgservices/1726.png">
+
+- Dùng cd.. ra ngoài một node và set set attribute authentication bằng 0, và tại sao lại là không vì 0 là không xác thực (No Authentication)
+
+```
+
+/iscsi/iqn.20...ter/tpg1/>set attribute authentication=0
+
+```
+
+<img src="imgservices/1727.png">
+
+
+- Tiếp theo set attribute generate_node_acls=1 là bỏ qua chế độ ALC
+
+```
+
+/iscsi/iqn.20...ter/tpg1/>set attribute generate_node_acls=1
+
+```
+
+<img src="imgservices/1728.png">
+
+
+- Và bước tiếp theo đó là đi đến vùng LUNs để tạo LUN
+
+
 
 ```
 create /backstores/block/disk1
 
+create /backstores/block/disk2
 
-<img src="imgservices/1642.png">
+create /backstores/block/disk3
 
->> LUN0 đã đc map cho máy tên là web1
 
-<img src="imgservices/1643.png">
+```
+
+<img src="imgservices/1729.png">
+
+- 3 iqn này map ping vào các LUns 0  1 2  , Luns nào cũng đc vì độ lớn lvm hiện tại nó cũng bằng nhau, Trong San hay Nas có chức năng **Bind to LunX >< Client** nên 1 khi đã fix cứng thì sau ko thể lẫn map
+
+>> **Muốn tạo các LUNs map với tên disk1 2 3 trong ví dụ như nào đó mình chưa rõ ,vì mình cũng test các làm lần lượt**
+
+
+- Đây là ảnh tạo lun1 xong tạo lun2 nó map thế này
+<img src="imgservices/1729.png">
+
+- Bây giờ mình đi mapping hết 2 web1 và web2: iqn xong mới tạo nốt cái thứ 3 xem nó có map lun2 với nginx ko.
+
+Ở đây làm 1 phát 3 LUNs và 3 máy nên ta sẽ cấu hình theo trình tự như sau
+
+  - LUN0  map cho máy tên là web1
+  - LUN1  map cho máy tên là web2
+  - LUN2  map cho máy tên là nginx
+
+>> Đây là cách làm lần lượt các disk và iqn
+
+<img src="imgservices/1741.png">
+
+
+- Sau khi add config xong dùng cd.. ra node ngoài cùng và dùng ls để check lại xem chính xác hay chưa trước khi lưu lại
+
+<img src="imgservices/1730.png">
+
+
+
+- Lưu lại
+
+<img src="imgservices/1740.png">
 
 
 ```
@@ -253,7 +280,10 @@ systemctl enable iscsi.service
 
 firewall-cmd --permanent --add-port=3260/tcp
 
+firewall-cmd --zone=public --permanent --add-service=iscsi-target
+
 success
+
 
 firewall-cmd --reload
 
@@ -264,14 +294,76 @@ firewall-cmd --reload
 
 - Trên máy chạy iscsi target: `` Tắt selinux``
 
+- web1: 
 
-<img src="imgservices/1647.png">
+<img src="imgservices/1746.png">
+<img src="imgservices/1747.png">
+<img src="imgservices/1748.png">
+<img src="imgservices/1749.png">
 
-- Trên máy vps1:
+<img src="imgservices/1750.png">
+<img src="imgservices/1751.png">
+<img src="imgservices/1752.png">
 
-Khi cài đặt :
+<img src="imgservices/1753.png">
+
+- Đây toàn lỗi do file iso chưa có bổ trợ hoặc j đó. ko cài đc nó làm bootloader
+
+<img src="imgservices/1754.png">
+
+- Phải kết hợp với 1 ổ khác trên vmw mới cài đc, ổ trên là 20 của máy và 15Gb của iscsi tạo thành 35G tổng
+
+```
+
+Native UEFI iSCSI iBOOT installation not supported in Linux - IBM BladeCenter and System x
+Troubleshooting
+
+Problem
+Current Linux kernels do not detect the iSCSI Boot Firmware Table (iBFT) when the iscsi_ibft module is loading in a native Unified Extensible Firmware Interface (UEFI) iBOOT installation. The result is that iBOOT on internet Small Computer System Interface (iSCSI) will not work during a native UEFI installation, resulting in installation failure. The issue is due to a bug in the Linux code. This failure occurs only during an iBOOT native UEFI installation. Legacy iBOOT installation is unaffected.
+
+Resolving The Problem
+Source
+RETAIN tip: H205193
+
+Symptom
+Current Linux kernels do not detect the iSCSI Boot Firmware Table (iBFT) when the iscsi_ibft module is loading in a native Unified Extensible Firmware Interface (UEFI) iBOOT installation. The result is that iBOOT on internet Small Computer System Interface (iSCSI) will not work during a native UEFI installation, resulting in installation failure. The issue is due to a bug in the Linux code.
+
+This failure occurs only during an iBOOT native UEFI installation. Legacy iBOOT installation is unaffected.
+
+The behavior occurs during the native UEFI Linux installation, when the vendor-specific Linux installer gets to a point where the user chooses an iSCSI target as the boot device. Currently the iBFTs are not copied by the UEFI boot kernel into operating system memory space, and so no targets would be available for choosing.
+
+There are no errors or warnings as the UEFI kernel simply cannot detect any target devices due to a bug in the Linux code, which attempts to evaluate the tables before they are copied to operating system memory.
+
+Affected configurations
+The system is configured with at least one of the following:
+
+Red Hat Enterprise Linux 6 update 1, update 2
+SUSE Linux Enterprise Server 11, any service pack
+This tip is not system specific.
+
+This tip is not option specific.
+
+Note: This does not imply that the network operating system will work under all combinations of hardware and software.
+
+Please see the compatibility page for more information: http://www.ibm.com/systems/info/x86servers/serverproven/compat/us/
+Solution
+There is a proposed fix for this bug by the Linux open source community. This fix would require each individual vendor to pull this fix in and incorporate it into a future release.
+
+There is no end user applicable fix for currently GA versions of the vendor operating systems. The fix must be incorporated into the installation kernel of any vendor that plans to support this function in a future release.
+
+Workaround
+If a UEFI iBOOT installation is not specifically needed, then the user can instead perform a legacy iBOOT installation, which is unaffected by this native UEFI iBOOT installation kernel issue. This workaround is viable only if a native UEFI iBOOT installation is not required.
+
+Applicable countries and regions
+Worldwide
+
+```
+
+- Tiếp theo là lỗi khi iscsi mất kết nối: các máy client bị hỏng luôn
 
 
-<img src="imgservices/1649.png">
+
+
+
 
 
